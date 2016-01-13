@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Game Over.unity
-=======
 - path: Assets/Scenes/Level1.unity
->>>>>>> b339a2de940d37d594910cb17bd6af01ea33e254
   isLoaded: 1
   isActive: 1
