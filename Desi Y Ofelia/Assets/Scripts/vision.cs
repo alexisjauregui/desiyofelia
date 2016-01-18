@@ -4,6 +4,8 @@ using System.Collections;
 public class vision : MonoBehaviour {
 
     // Use this for initialization
+    // Add Stuff to stuff
+
     RaycastHit Hit1;
     public float distanceToSee;
     //public Text text;
