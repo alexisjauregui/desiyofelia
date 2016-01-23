@@ -16,7 +16,7 @@ public class FieldOfVision : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log("start ");
+       
         StartCoroutine("FindTargetsWithDelay", .2f);
     }
 
@@ -24,7 +24,7 @@ public class FieldOfVision : MonoBehaviour {
     IEnumerator FindTargetsWithDelay(float delay)
     {
 
-        Debug.Log(" Find Target with delay ");
+       
         while (true)
         {
             yield return new WaitForSeconds(delay);
@@ -34,13 +34,13 @@ public class FieldOfVision : MonoBehaviour {
 
     void FindVisTarget()
     {
-        Debug.Log(" Find Vis Called ");
+       
         visibleTargets.Clear();
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
         for(int i = 0; i <targetVisibleRadius.Length; i++)
         {
-            Debug.Log(" in for loop ");
+            
             Transform target = targetVisibleRadius[i].transform;
             Vector3 dirtoTarget = (target.position - transform.position).normalized;
             if(Vector3.Angle(transform.forward,dirtoTarget)< viewAngle / 2)
@@ -50,6 +50,9 @@ public class FieldOfVision : MonoBehaviour {
                 if(!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
                 {
                     Debug.Log("Target found!!!");
+                    // Add Code Here Stella 
+
+
                     visibleTargets.Add(target);
                 }
             }
