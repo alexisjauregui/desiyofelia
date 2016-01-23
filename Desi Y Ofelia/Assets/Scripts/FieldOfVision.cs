@@ -11,16 +11,20 @@ public class FieldOfVision : MonoBehaviour {
     public LayerMask targetMask;
     public LayerMask obstaclesMask;
 
-    public List<Transform> visibleTarget = new List<Transform>();
+    [HideInInspector]
+    public List<Transform> visibleTargets = new List<Transform>();
 
     void Start()
     {
+        Debug.Log("start ");
         StartCoroutine("FindTargetsWithDelay", .2f);
     }
 
 
-    IEnumerable FindTargetsWithDelay(float delay)
+    IEnumerator FindTargetsWithDelay(float delay)
     {
+
+        Debug.Log(" Find Target with delay ");
         while (true)
         {
             yield return new WaitForSeconds(delay);
@@ -30,11 +34,13 @@ public class FieldOfVision : MonoBehaviour {
 
     void FindVisTarget()
     {
-        visibleTarget.Clear();
+        Debug.Log(" Find Vis Called ");
+        visibleTargets.Clear();
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
         for(int i = 0; i <targetVisibleRadius.Length; i++)
         {
+            Debug.Log(" in for loop ");
             Transform target = targetVisibleRadius[i].transform;
             Vector3 dirtoTarget = (target.position - transform.position).normalized;
             if(Vector3.Angle(transform.forward,dirtoTarget)< viewAngle / 2)
@@ -43,7 +49,8 @@ public class FieldOfVision : MonoBehaviour {
 
                 if(!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
                 {
-                    visibleTarget.Add(target);
+                    Debug.Log("Target found!!!");
+                    visibleTargets.Add(target);
                 }
             }
         }
