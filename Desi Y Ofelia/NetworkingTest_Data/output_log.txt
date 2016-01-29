@@ -2,9 +2,9 @@ Initialize engine version: 5.3.1f1 (cc9cbbcc37b4)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Microsoft Basic Render Driver (ID=0x8c)
-    Vendor:   Microsoft
-    VRAM:     128 MB
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1185)
+    Vendor:   NVIDIA
+    VRAM:     1475 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -18,20 +18,15 @@ Platform assembly: C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\Networki
 Loading C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.151 seconds
+- Completed reload, in  0.412 seconds
 Platform assembly: C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\swong30\Documents\desiyofelia\Desi Y Ofelia\NetworkingTest_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1200 64Hz; virtual: 1920x1200 at 0,0
+desktop: 1920x1200 59Hz; virtual: 3840x1358 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 423.045990 ms
+UnloadTime: 1.471850 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1df8 -> priority: 1 
-  Thread -> id: 1fa8 -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.666199 ms
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 271.
-Total: 0.227989 ms (FindLiveObjects: 0.012348 ms CreateObjectMapping: 0.011444 ms MarkObjects: 0.200582 ms  DeleteObjects: 0.003011 ms)
-
+  Thread -> id: 2518 -> priority: 1 
+  Thread -> id: 195c -> priority: 1 
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:52794}
