@@ -32,7 +32,7 @@ public class cageSwitch : MonoBehaviour {
         {
             passCode += "X";
         }
-
+        //Code for activation 
         if(passCode == "XZXZ")
         {
             Destroy(Cage, 0);
