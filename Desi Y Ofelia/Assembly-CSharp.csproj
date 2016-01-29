@@ -47,8 +47,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scenes\Quit.cs" />
      <Compile Include="Assets\Scripts\FieldOfVision.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
+=======
+>>>>>>> feature/trail
      <Compile Include="Assets\Scripts\grabndrop.cs" />
+     <Compile Include="Assets\Scripts\trail.cs" />
      <Compile Include="Assets\Scripts\vision.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
