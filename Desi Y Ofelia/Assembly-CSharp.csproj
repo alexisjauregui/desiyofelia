@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scenes\Quit.cs" />
-     <Compile Include="Assets\Scripts\checkAngle.cs" />
+     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
+     <Compile Include="Assets\Scripts\cageSwitch.cs" />
      <Compile Include="Assets\Scripts\grabndrop.cs" />
      <Compile Include="Assets\Scripts\vision.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
