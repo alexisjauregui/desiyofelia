@@ -45,12 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\Quit.cs" />
      <Compile Include="Assets\Scripts\FieldOfVision.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
-=======
->>>>>>> feature/Controller
      <Compile Include="Assets\Scripts\grabndrop.cs" />
      <Compile Include="Assets\Scripts\trail.cs" />
      <Compile Include="Assets\Scripts\vision.cs" />

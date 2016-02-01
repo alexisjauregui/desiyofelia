@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,8 +12,12 @@ public class FieldOfVision : MonoBehaviour {
     public LayerMask targetMask;
     public LayerMask obstaclesMask;
 
+  
+
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
+
+    public GameObject look;
 
     void Start()
     {
@@ -51,9 +56,12 @@ public class FieldOfVision : MonoBehaviour {
                 {
                     Debug.Log("Target found!!!");
                     // Add Code Here Stella 
-
-
+                    look.GetComponentInChildren<CanvasGroup>().alpha = 1;
                     visibleTargets.Add(target);
+                }
+                else
+                {
+                    look.GetComponentInChildren<CanvasGroup>().alpha = 0;
                 }
             }
         }
