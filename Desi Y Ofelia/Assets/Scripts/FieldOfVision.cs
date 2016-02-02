@@ -41,6 +41,7 @@ public class FieldOfVision : MonoBehaviour {
     {
        
         visibleTargets.Clear();
+        look.GetComponentInChildren<CanvasGroup>().alpha = 0;
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
         for(int i = 0; i <targetVisibleRadius.Length; i++)
