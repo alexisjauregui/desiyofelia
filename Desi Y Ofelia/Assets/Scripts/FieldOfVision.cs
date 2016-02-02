@@ -39,8 +39,8 @@ public class FieldOfVision : MonoBehaviour {
 
     void FindVisTarget()
     {
-       
         visibleTargets.Clear();
+        look.GetComponentInChildren<CanvasGroup>().alpha = 0;
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
         for(int i = 0; i <targetVisibleRadius.Length; i++)
@@ -58,6 +58,7 @@ public class FieldOfVision : MonoBehaviour {
                     // Add Code Here Stella 
                     look.GetComponentInChildren<CanvasGroup>().alpha = 1;
                     visibleTargets.Add(target);
+
                 }
                 else
                 {
