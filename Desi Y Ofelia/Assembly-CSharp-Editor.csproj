@@ -52,11 +52,7 @@
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
  <Reference Include="Assembly-UnityScript">
-<<<<<<< HEAD
- <HintPath>C:/Users/stjilee/Documents/desiyofelia/Desi Y Ofelia/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
-=======
  <HintPath>C:/Users/swong30/Documents/desiyofelia/Desi Y Ofelia/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
->>>>>>> 3fe7ff418d40e21fc698e7da61328c20de0711a6
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
