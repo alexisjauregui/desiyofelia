@@ -68,7 +68,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Quit.cs" />
     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
