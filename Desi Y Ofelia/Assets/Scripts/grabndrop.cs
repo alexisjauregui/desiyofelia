@@ -45,10 +45,11 @@ public class grabndrop : MonoBehaviour {
     {
         //Debug.Log(GetMouseHoverObject(10));
 
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("AButton"))
         {
             if (grabbedObject == null)
-                TryGrabObject(GetMouseHoverObject(10));
+                TryGrabObject(GetMouseHoverObject(20));
             else
                 DropObject();
 
