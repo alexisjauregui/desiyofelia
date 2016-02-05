@@ -7,8 +7,8 @@ public class cageSwitch : MonoBehaviour
 {
 
     private string passCode;
-    public GameObject Cage;
-    public Text text;
+    private GameObject Cage;
+    private Text text;
     AudioSource audio;
     bool hasPlayed = false;
 
@@ -16,6 +16,10 @@ public class cageSwitch : MonoBehaviour
     {
         passCode = "";
         audio = GetComponent<AudioSource>();
+        Cage = GameObject.Find("Cage");
+        text = GameObject.Find("SwitchText").GetComponent<Text>();
+        
+        
     }
 
 
@@ -32,12 +36,12 @@ public class cageSwitch : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            passCode += "X";
+            passCode += "C";
         }
         //Code for activation 
-        if (passCode == "XZXZ")
+        if (passCode == "CZCZ")
         {
             Destroy(Cage, 0);
             if (hasPlayed == false)

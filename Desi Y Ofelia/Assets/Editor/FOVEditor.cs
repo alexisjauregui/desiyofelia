@@ -13,6 +13,7 @@ public class FOVEditor : Editor {
         Vector3 viewAngleA = fov.DirFromAngle(-fov.viewAngle / 2, false);
         Vector3 viewAngleB = fov.DirFromAngle(fov.viewAngle / 2, false);
 
+
         Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleA * fov.viewRadius);
         Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleB * fov.viewRadius);
 

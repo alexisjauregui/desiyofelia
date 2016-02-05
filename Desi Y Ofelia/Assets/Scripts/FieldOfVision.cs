@@ -37,6 +37,11 @@ public class FieldOfVision : MonoBehaviour {
         }
     }
 
+    void dontLook(Vector3 dirtoTarget, Transform target)
+    {
+
+    }
+    
     void FindVisTarget()
     {
         visibleTargets.Clear();
@@ -48,11 +53,13 @@ public class FieldOfVision : MonoBehaviour {
             
             Transform target = targetVisibleRadius[i].transform;
             Vector3 dirtoTarget = (target.position - transform.position).normalized;
-            if(Vector3.Angle(transform.forward,dirtoTarget)< viewAngle / 2)
+
+            //if it is in the small circle
+            if (Vector3.Angle(transform.forward, dirtoTarget) < viewAngle / 2)
             {
                 float dsttoTarget = Vector3.Distance(transform.position, target.position);
 
-                if(!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
+                if (!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
                 {
                     Debug.Log("Target found!!!");
                     // Add Code Here Stella 
@@ -65,6 +72,11 @@ public class FieldOfVision : MonoBehaviour {
                     look.GetComponentInChildren<CanvasGroup>().alpha = 0;
                 }
             }
+
+
+
+
+
         }
     }
 
