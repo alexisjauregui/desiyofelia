@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -64,13 +62,15 @@ public class NetManagerCustom : NetworkManager
     // you want for your player
     public void UpdatePC()
     {
-        if (GameObject.Find("DesiPlayer").GetComponent<Toggle>().isOn)
+        if (GameObject.FindGameObjectWithTag("Desi").GetComponent<Toggle>().isOn)
         {
             playerPrefabIndex = 0;
+            Debug.Log("You chose Desi!");
         }
-        else if (GameObject.Find("OfeliaPlayer").GetComponent<Toggle>().isOn)
+        else if (GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn)
         {
             playerPrefabIndex = 1;
+            Debug.Log("You chose Ofelia!");
         }
     }
 }
