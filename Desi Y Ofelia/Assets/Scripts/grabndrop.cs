@@ -6,6 +6,7 @@ public class grabndrop : MonoBehaviour {
     private GameObject Candle;
     public RaycastHit hit;
     public float distanceToSee;
+    private Vector3 dropLoc;
 
     
 
@@ -20,6 +21,8 @@ public class grabndrop : MonoBehaviour {
     {
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
 
+        dropLoc = Candle.transform.position; 
+
         if (Candle.transform.IsChildOf(transform))
         {
             Candle.GetComponent<CapsuleCollider>().enabled = false;
@@ -27,6 +30,8 @@ public class grabndrop : MonoBehaviour {
             if (Input.GetButtonDown("AButton"))
             {
                 Candle.transform.parent = null;
+                Candle.transform.position = new Vector3(dropLoc.x,0.75f,dropLoc.z);
+                Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
                 Candle.GetComponent<CapsuleCollider>().enabled = true;
             }
         }
