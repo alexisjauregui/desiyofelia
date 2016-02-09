@@ -29,14 +29,14 @@ public class cageSwitch : MonoBehaviour
 
         text.text = passCode;
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetButtonDown("AButton"))
         {
             passCode += "Z";
             Debug.Log(passCode.Length);
 
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetButtonDown("BButton"))
         {
             passCode += "C";
         }

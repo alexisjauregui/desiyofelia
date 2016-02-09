@@ -2,64 +2,67 @@
 using System.Collections;
 
 public class grabndrop : MonoBehaviour {
-    GameObject grabbedObject;
-    float grabbedObjectSize;
-    Renderer yo;
 
-    GameObject GetMouseHoverObject(float range)
+    private GameObject Candle;
+    public RaycastHit hit;
+    public float distanceToSee;
+
+    
+
+
+    void Start()
     {
-        Vector3 position = gameObject.transform.position;
-        RaycastHit raycastHit;
-        Vector3 target = position + Camera.main.transform.forward * range;
-        if (Physics.Linecast(position, target, out raycastHit))
-            return raycastHit.collider.gameObject;
-        return null;
-    }
-
-    void TryGrabObject(GameObject grabObject)
-    {
-        if (gameObject == null )
-            return;
-
-        if (grabObject.tag == "Candle")
-        {
-            grabbedObject = grabObject;
-            yo = grabbedObject.GetComponent<Renderer>();
-            grabbedObjectSize = yo.bounds.size.magnitude;
-            
-        }
-    }
-
-    void DropObject()
-    {
-        if (gameObject == null)
-            return;
-
-        
-        grabbedObject = null;
+        Candle = GameObject.Find("CandleHolder");
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(GetMouseHoverObject(10));
+        Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
 
-
-        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("AButton"))
+        if (Candle.transform.IsChildOf(transform))
         {
-            if (grabbedObject == null)
-                TryGrabObject(GetMouseHoverObject(20));
-            else
-                DropObject();
+            Candle.GetComponent<CapsuleCollider>().enabled = false;
 
+            if (Input.GetButtonDown("AButton"))
+            {
+                Candle.transform.parent = null;
+                Candle.GetComponent<CapsuleCollider>().enabled = true;
+            }
         }
-
-        if(grabbedObject != null)
+        else
         {
-            Vector3 newPositon = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
-            grabbedObject.transform.position = newPositon;
 
+            if (checkIfForward())
+            {
+                Debug.Log("Yes");
+                if (Input.GetButtonDown("AButton"))
+                {
+
+                   
+                    Candle.transform.parent = transform;
+                }
+            }
         }
     }
+
+    bool checkIfForward()
+    {
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee)){
+
+            if (hit.collider.name == "CandleHolder")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }
