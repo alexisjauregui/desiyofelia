@@ -20,7 +20,7 @@ public class trail : MonoBehaviour {
 	// Update is called once per frame
 	void Update (){
 
-        if (Mathf.Abs(currentPosition.x - Desi.position.x) > 2 || Mathf.Abs(currentPosition.z - Desi.position.z) > 2)
+        if (Mathf.Abs(currentPosition.x - Desi.position.x) > 1 || Mathf.Abs(currentPosition.z - Desi.position.z) > 1)
         {
             currentPosition.y = 0;
             Instantiate(flower,currentPosition,Rot);
