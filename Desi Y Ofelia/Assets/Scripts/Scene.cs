@@ -7,7 +7,6 @@ public class Scene : MonoBehaviour {
     //public GameObject Desi;
     public GameObject Candle;
     public Transform Desi;
-    public Transform Candle;
     private Vector3 curr_position;
 
 	// Use this for initialization
