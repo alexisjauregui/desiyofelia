@@ -19,7 +19,7 @@ public class Scene : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
-            if (Desi.position.z <= -35 && Desi.position.x > -4.7 && Desi.position.x < 4.5)
+            if (Desi.position.z <= -35 && Desi.position.x > -4.7 && Desi.position.x < 4.5 && HasCandle())
             {
                 Debug.Log("Lobby Opened");
                 SceneManager.LoadScene("Level Lobby");
@@ -49,6 +49,13 @@ public class Scene : MonoBehaviour {
             }
         }
 
+    }
+
+    bool HasCandle()
+    {
+        if (GameObject.FindGameObjectWithTag("Candle").transform.IsChildOf(transform))
+            return true;
+        return false;
     }
     
 
