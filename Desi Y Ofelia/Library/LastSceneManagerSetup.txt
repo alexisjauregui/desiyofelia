@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Level 1.unity
-=======
-- path: Assets/Scenes/Level Lobby.unity
->>>>>>> 3cc254682c32022fbe365bafef24957348eff165
   isLoaded: 1
   isActive: 1
