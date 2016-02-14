@@ -30,7 +30,7 @@ public class grabndrop : MonoBehaviour {
             if (Input.GetButtonDown("AButton"))
             {
                 Candle.transform.parent = null;
-                Candle.transform.position = new Vector3(dropLoc.x,0.75f,dropLoc.z);
+                Candle.transform.position = new Vector3(dropLoc.x,0.19f,dropLoc.z);
                 Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
                 Candle.GetComponent<CapsuleCollider>().enabled = true;
             }
