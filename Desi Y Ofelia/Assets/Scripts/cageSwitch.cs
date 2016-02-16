@@ -5,21 +5,14 @@ using System.Collections;
 
 public class cageSwitch : MonoBehaviour
 {
-
-    private string passCode;
-    private GameObject Cage;
+    //[HideInInspector]
+    public string passCode;
     private Text text;
-    AudioSource audio;
-    bool hasPlayed = false;
 
     void Start()
     {
         passCode = "";
-        audio = GetComponent<AudioSource>();
-        Cage = GameObject.Find("Cage");
-        text = GameObject.Find("SwitchText").GetComponent<Text>();
-        
-        
+        text = GameObject.Find("SwitchText").GetComponent<Text>();      
     }
 
 
@@ -31,32 +24,28 @@ public class cageSwitch : MonoBehaviour
 
         if (Input.GetButtonDown("AButton"))
         {
-            passCode += "Z";
-            Debug.Log(passCode.Length);
-
+            passCode += "K";
+            
         }
 
         if (Input.GetButtonDown("BButton"))
         {
-            passCode += "C";
-        }
-        //Code for activation 
-        if (passCode == "CZCZ")
-        {
-            Destroy(Cage, 0);
-            if (hasPlayed == false)
-            {
-                hasPlayed = true;
-                audio.Play();
-            }
-            
+            passCode += "L";
         }
 
-        if (passCode.Length == 5)
+        if (Input.GetButtonDown("YButton"))
         {
-            passCode = "";
+            passCode += "I";
+        }
+        if (Input.GetButtonDown("XButton"))
+        {
+            passCode += "J";
         }
 
+        if(passCode.Length == 5)
+        {
+            passCode = ""; 
+        }
     }
 
 }
