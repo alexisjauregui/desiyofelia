@@ -26,12 +26,15 @@ public class grabndrop : MonoBehaviour {
         if (Candle.transform.IsChildOf(transform))
         {
             Candle.GetComponent<CapsuleCollider>().enabled = false;
+            Candle.GetComponent<BoxCollider>().enabled = false;
+            Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
 
             if (Input.GetButtonDown("AButton"))
             {
                 Candle.transform.parent = null;
-                Candle.transform.position = new Vector3(dropLoc.x,0.19f,dropLoc.z);
+                Candle.transform.position = new Vector3(dropLoc.x,0.376f,dropLoc.z);
                 Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
+                Candle.GetComponent<BoxCollider>().enabled = true;
                 Candle.GetComponent<CapsuleCollider>().enabled = true;
             }
         }
