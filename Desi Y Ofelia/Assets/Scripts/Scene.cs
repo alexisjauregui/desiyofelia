@@ -109,7 +109,7 @@ public class Scene : MonoBehaviour {
 
     bool HasCandle()
     {
-        if (GameObject.FindGameObjectWithTag("Candle").transform.IsChildOf(transform))
+        if (GameObject.Find("CandleHolder").transform.IsChildOf(transform))
             return true;
         return false;
     }

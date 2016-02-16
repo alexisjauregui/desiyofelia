@@ -3,7 +3,7 @@ using System.Collections;
 
 public class grabndrop : MonoBehaviour {
 
-    private GameObject Candle;
+    private GameObject PickUp;
     public RaycastHit hit;
     public float distanceToSee;
     private Vector3 dropLoc;
@@ -13,7 +13,7 @@ public class grabndrop : MonoBehaviour {
 
     void Start()
     {
-        Candle = GameObject.Find("CandleHolder");
+        PickUp = GameObject.FindGameObjectWithTag("Pickup");
 
     }
 
@@ -21,21 +21,20 @@ public class grabndrop : MonoBehaviour {
     {
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
 
-        dropLoc = Candle.transform.position; 
+        dropLoc = PickUp.transform.position; 
 
-        if (Candle.transform.IsChildOf(transform))
+        if (PickUp.transform.IsChildOf(transform))
         {
-            Candle.GetComponent<CapsuleCollider>().enabled = false;
-            Candle.GetComponent<BoxCollider>().enabled = false;
-            Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
+ 
+            PickUp.GetComponent<BoxCollider>().enabled = false;
+            PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
 
             if (Input.GetButtonDown("AButton"))
             {
-                Candle.transform.parent = null;
-                Candle.transform.position = new Vector3(dropLoc.x,0.376f,dropLoc.z);
-                Candle.transform.rotation = new Quaternion(0, 0, 0, 0);
-                Candle.GetComponent<BoxCollider>().enabled = true;
-                Candle.GetComponent<CapsuleCollider>().enabled = true;
+                PickUp.transform.parent = null;
+                PickUp.transform.position = new Vector3(dropLoc.x,0.376f,dropLoc.z);
+                PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
+                PickUp.GetComponent<BoxCollider>().enabled = true;
             }
         }
         else
@@ -44,11 +43,12 @@ public class grabndrop : MonoBehaviour {
             if (checkIfForward())
             {
                 Debug.Log("Yes");
+                PickUp = hit.collider.gameObject;
                 if (Input.GetButtonDown("AButton"))
                 {
 
                    
-                    Candle.transform.parent = transform;
+                    PickUp.transform.parent = transform;
                 }
             }
         }
@@ -58,8 +58,9 @@ public class grabndrop : MonoBehaviour {
     {
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee)){
 
-            if (hit.collider.name == "CandleHolder")
+            if (hit.collider.tag == "Pickup")
             {
+               
                 return true;
             }
             else
