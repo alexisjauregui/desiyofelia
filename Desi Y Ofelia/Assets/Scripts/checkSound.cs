@@ -3,17 +3,19 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-public class cageSwitch : MonoBehaviour
+public class checkSound : MonoBehaviour
 {
     //[HideInInspector]
     public string passCode;
     private Text text;
+    public AudioSource audio;
 
 
     void Start()
     {
         passCode = "";
         text = GameObject.Find("SwitchText").GetComponent<Text>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -26,26 +28,7 @@ public class cageSwitch : MonoBehaviour
         if (Input.GetButtonDown("AButton"))
         {
             passCode += "K";
-        }
-
-        if (Input.GetButtonDown("BButton"))
-        {
-            passCode += "L";
-        }
-
-        if (Input.GetButtonDown("YButton"))
-        {
-            passCode += "I";
-        }
-        if (Input.GetButtonDown("XButton"))
-        {
-            passCode += "J";
-        }
-
-        if(passCode.Length == 5)
-        {
-            passCode = ""; 
+            audio.Play();
         }
     }
-
 }
