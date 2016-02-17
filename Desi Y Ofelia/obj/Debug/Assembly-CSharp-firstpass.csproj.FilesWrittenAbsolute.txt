@@ -1,0 +1,17 @@
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/UnityEngine.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/UnityEditor.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Mono.Cecil.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Unity.DataContract.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/michael/Downloads/Archive/Desi Y Ofelia/Temp/bin/Debug/Mono.Cecil.Mdb.dll
