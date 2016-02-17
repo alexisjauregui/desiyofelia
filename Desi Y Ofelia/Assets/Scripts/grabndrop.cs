@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class grabndrop : MonoBehaviour {
@@ -19,36 +20,44 @@ public class grabndrop : MonoBehaviour {
 
     void Update()
     {
-        Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
-
-        dropLoc = PickUp.transform.position; 
-
-        if (PickUp.transform.IsChildOf(transform))
+        if (SceneManager.GetActiveScene().name != "Level lobby")
         {
- 
-            PickUp.GetComponent<BoxCollider>().enabled = false;
-            PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
-
-            if (Input.GetButtonDown("AButton"))
+            Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
+            PickUp = GameObject.FindGameObjectWithTag("Pickup");
+            if (PickUp != null)
             {
-                PickUp.transform.parent = null;
-                PickUp.transform.position = new Vector3(dropLoc.x,0.376f,dropLoc.z);
-                PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
-                PickUp.GetComponent<BoxCollider>().enabled = true;
+                dropLoc = PickUp.transform.position;
             }
-        }
-        else
-        {
 
-            if (checkIfForward())
+            if (PickUp.transform.IsChildOf(transform))
             {
-                Debug.Log("Yes");
-                PickUp = hit.collider.gameObject;
+
+                PickUp.GetComponent<BoxCollider>().enabled = false;
+                PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
+
                 if (Input.GetButtonDown("AButton"))
                 {
+                    PickUp.transform.parent = null;
+                    PickUp.transform.position = new Vector3(dropLoc.x, 0.376f, dropLoc.z);
+                    if(SceneManager.GetActiveScene().name == "Level 1")
+                        PickUp.transform.position = new Vector3(dropLoc.x, -1.2f, dropLoc.z);
+                    PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
+                    PickUp.GetComponent<BoxCollider>().enabled = true;
+                }
+            }
+            else
+            {
 
-                   
-                    PickUp.transform.parent = transform;
+                if (checkIfForward())
+                {
+                    Debug.Log("Yes");
+                    PickUp = hit.collider.gameObject;
+                    if (Input.GetButtonDown("AButton"))
+                    {
+
+
+                        PickUp.transform.parent = transform;
+                    }
                 }
             }
         }

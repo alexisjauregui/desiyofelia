@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MsgTypes
@@ -19,7 +20,6 @@ public class NetManagerCustom : NetworkManager
     // in the Network Manager component, you must put your player prefabs 
     // in the Spawn Info -> Registered Spawnable Prefabs section 
     public short playerPrefabIndex;
-
 
     public override void OnStartServer()
     {
@@ -54,6 +54,13 @@ public class NetManagerCustom : NetworkManager
         MsgTypes.PlayerPrefabMsg msg = new MsgTypes.PlayerPrefabMsg();
         msg.controllerID = playerControllerId;
         NetworkServer.SendToClient(conn.connectionId, MsgTypes.PlayerPrefab, msg);
+    }
+
+    bool HasCandle()
+    {
+        if (GameObject.Find("CandleHolder").transform.IsChildOf(transform))
+            return true;
+        return false;
     }
 
     // I have put a toggle UI on gameObjects called PC1 and PC2 to select two different character types.
