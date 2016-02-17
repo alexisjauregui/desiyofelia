@@ -5,7 +5,7 @@ using System.Collections;
 
 public class cageSwitch : MonoBehaviour
 {
-    //[HideInInspector]
+ 
     public string passCode;
     private Text text;
 
@@ -13,6 +13,12 @@ public class cageSwitch : MonoBehaviour
     void Start()
     {
         passCode = "";
+
+        if (GameObject.Find("SwitchText").GetComponent<Text>())
+        {
+            Debug.Log("YoYOYO");
+        }
+
         text = GameObject.Find("SwitchText").GetComponent<Text>();
     }
 
@@ -39,6 +45,7 @@ public class cageSwitch : MonoBehaviour
         }
         if (Input.GetButtonDown("XButton"))
         {
+            
             passCode += "J";
         }
 

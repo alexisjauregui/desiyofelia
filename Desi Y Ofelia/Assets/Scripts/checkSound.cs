@@ -5,16 +5,13 @@ using System.Collections;
 
 public class checkSound : MonoBehaviour
 {
-    //[HideInInspector]
-    public string passCode;
-    private Text text;
+  
     public AudioSource audio;
 
 
     void Start()
     {
-        passCode = "";
-        text = GameObject.Find("SwitchText").GetComponent<Text>();
+  
         audio = GetComponent<AudioSource>();
     }
 
@@ -23,11 +20,10 @@ public class checkSound : MonoBehaviour
     void Update()
     {
 
-        text.text = passCode;
 
         if (Input.GetButtonDown("AButton"))
         {
-            passCode += "K";
+ 
             audio.Play();
         }
     }
