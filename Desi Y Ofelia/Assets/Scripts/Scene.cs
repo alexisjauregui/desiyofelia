@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using System.Collections;
 
 public class Scene : MonoBehaviour {
@@ -8,6 +9,8 @@ public class Scene : MonoBehaviour {
     public GameObject Candle;
     public Transform Desi;
     private Vector3 curr_position;
+    private bool doorCollision0;
+    private bool doorCollision1;
 
 	// Use this for initialization
 	void Start () {
@@ -19,25 +22,27 @@ public class Scene : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
-            if (Desi.position.z <= -35 && Desi.position.x > -4.7 && Desi.position.x < 4.5 && HasCandle())
+            //if (Desi.position.z <= -35 && Desi.position.x > -4.7 && Desi.position.x < 4.5 && HasCandle())
+            if(HasCandle())
             {
-                Debug.Log("Lobby Opened");
-                SceneManager.LoadScene("Level Lobby");
-                //SceneManager.MoveGameObjectToScene(Desi, Level Lobby);
+                Debug.Log("You are holding a candle");
+                if (doorCollision0)
+                {
+                    Debug.Log("Lobby Opened");
+                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                }
             }
         }else if(SceneManager.GetActiveScene().name == "Level Lobby")
         {
-            if (Desi.position.x <= -8 && Desi.position.z > 34.4 && Desi.position.z < 38)
+            if (doorCollision0)
             {
                 Debug.Log("Level 0 Opened");
-                SceneManager.LoadScene("Level 0");
-                //SceneManager.MoveGameObjectToScene(Desi, Level 0);
+                NetworkManager.singleton.ServerChangeScene("Level 0");
             }
-            else if(Desi.position.x >= 10.25 && Desi.position.z > 48.64 && Desi.position.z < 53.85)
+            else if(doorCollision1)
             {
                 Debug.Log("Level 1 Opened");
-                SceneManager.LoadScene("Level 1");
-                //SceneManager.MoveGameObjectToScene(Desi, Level 1);
+                NetworkManager.singleton.ServerChangeScene("Level 1");
             }
 			else if (Desi.position.x <= -8 && Desi.position.z > 75 && Desi.position.z < 80)
 			{
@@ -65,13 +70,16 @@ public class Scene : MonoBehaviour {
 			}
         }else if(SceneManager.GetActiveScene().name == "Level 1")
         {
-			if (Desi.position.x >= 1.11 && Desi.position.z > -2.29 && Desi.position.z < 4.38 && HasCandle())
+            if (HasCandle())
             {
-                Debug.Log("Lobby Opened");
-                SceneManager.LoadScene("Level Lobby");
-                //SceneManager.MoveGameObjectToScene(Desi, Level Lobby);
+                Debug.Log("You are holding a candle");
+                if (doorCollision1)
+                {
+                    Debug.Log("Lobby Opened");
+                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                }
             }
-		}/*else if(SceneManager.GetActiveScene().name == "Level 2")
+        }/*else if(SceneManager.GetActiveScene().name == "Level 2")
 		{
 			if (Desi.position.x >= 1.11 && Desi.position.z > -2.29 && Desi.position.z < 4.38 && HasCandle())
 			{
@@ -105,6 +113,22 @@ public class Scene : MonoBehaviour {
 			}
 		}*/
 
+    }
+
+    void OnTriggerEnter(Collider door)
+    {
+        if (door.gameObject.tag == "Door0")
+            doorCollision0 = true;
+        if (door.gameObject.tag == "Door1")
+            doorCollision1 = true; 
+    }
+
+    void OnTriggerExit(Collider door)
+    {
+        if (door.gameObject.tag == "Door0")
+            doorCollision0 = false;
+        if (door.gameObject.tag == "Door1")
+            doorCollision1 = false;
     }
 
     bool HasCandle()
