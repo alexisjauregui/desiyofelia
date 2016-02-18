@@ -18,19 +18,31 @@ public class checkChords : MonoBehaviour {
     {
    
         Ofelia = GameObject.FindGameObjectWithTag("Switch");
-        Cage = GameObject.Find("Cage");
+
+       
         audio = GetComponent<AudioSource>();
     }
 	// Update is called once per frame
 	void Update () {
 
+        if (GameObject.FindGameObjectWithTag("Cage"))
+        {
+            Debug.Log("Cage Found");
+        }
+
+        Cage = GameObject.FindGameObjectWithTag("Cage");
+
+
+
         newText = Ofelia.GetComponent<Text>();
 
         chords = newText.text;
 
+
+
         if (chords== pass)
         {
-            
+            Debug.Log("Got to pass");
             Destroy(Cage, 0);
             if (hasPlayed == false)
             {
