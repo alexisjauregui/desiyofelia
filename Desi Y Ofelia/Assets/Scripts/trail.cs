@@ -5,7 +5,6 @@ public class trail : MonoBehaviour {
 
     public Object flower;
     public Transform Desi;
-
     private Vector3 lastPosition;
     private Vector3 currentPosition;
     private Quaternion Rot;

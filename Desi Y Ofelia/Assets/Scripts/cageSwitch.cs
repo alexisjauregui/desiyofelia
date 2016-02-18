@@ -2,29 +2,23 @@
 using UnityEngine.UI;
 using System.Collections;
 
+/*
+   Cage Switch should be renamed
+   Code Gets input from Ofelia Places corresponding letter to button. 
+
+    Code Is attached to Ofelia.
+    Current Max of code is 4 inputs. 
+
+*/
 
 public class cageSwitch : MonoBehaviour
 {
-
-    public Object cage;
     public string passCode;
     private Text text;
-    private Vector3 cPos;
-    private Quaternion cRot;
-
-
+   
     void Start()
     {
-        cPos = new Vector3(0, 1.1f, 0);
-        cRot = new Quaternion(0, 0, 0, 0);
-        Object cageclone = Instantiate(cage, cPos, cRot);
         passCode = "";
-
-        if (GameObject.Find("SwitchText").GetComponent<Text>())
-        {
-            Debug.Log("YoYOYO");
-        }
-
         text = GameObject.Find("SwitchText").GetComponent<Text>();
     }
 
@@ -32,7 +26,7 @@ public class cageSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        text = GameObject.Find("SwitchText").GetComponent<Text>();
         text.text = passCode;
 
         if (Input.GetButtonDown("AButton"))
@@ -55,7 +49,7 @@ public class cageSwitch : MonoBehaviour
             passCode += "J";
         }
 
-        if(passCode.Length == 5)
+        if(passCode.Length > 4)
         {
             passCode = ""; 
         }
