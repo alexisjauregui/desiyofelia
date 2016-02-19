@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 using System.Collections;
 
 /*
@@ -7,7 +8,7 @@ using System.Collections;
 
 */ 
 
-public class checkChords : MonoBehaviour {
+public class checkChords : NetworkBehaviour {
 
     public string pass;
     private string chords;
@@ -39,9 +40,15 @@ public class checkChords : MonoBehaviour {
                 hasPlayed = true;
                 audio.Play();
             }
-            Destroy(gameObject, 0);
+            CmdDestroy();
             
         }
         
 	}
+
+    [Command]
+    void CmdDestroy()
+    {
+        Destroy(gameObject, 0);
+    }
 }
