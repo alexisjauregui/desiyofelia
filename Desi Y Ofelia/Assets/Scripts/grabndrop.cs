@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class grabndrop : MonoBehaviour {
+public class grabndrop : NetworkBehaviour
+{
 
     private GameObject PickUp;
     public RaycastHit hit;
     public float distanceToSee;
     private Vector3 dropLoc;
 
-    
+
 
 
     void Start()
@@ -37,12 +39,7 @@ public class grabndrop : MonoBehaviour {
 
                 if (Input.GetButtonDown("AButton"))
                 {
-                    PickUp.transform.parent = null;
-                    PickUp.transform.position = new Vector3(dropLoc.x, 0.376f, dropLoc.z);
-                    if(SceneManager.GetActiveScene().name == "Level 1")
-                        PickUp.transform.position = new Vector3(dropLoc.x, -1.2f, dropLoc.z);
-                    PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
-                    PickUp.GetComponent<BoxCollider>().enabled = true;
+                    CmdDrop();
                 }
             }
             else
@@ -52,11 +49,10 @@ public class grabndrop : MonoBehaviour {
                 {
                     Debug.Log("Yes");
                     PickUp = hit.collider.gameObject;
+                    Debug.Log(PickUp.name);
                     if (Input.GetButtonDown("AButton"))
                     {
-
-
-                        PickUp.transform.parent = transform;
+                        CmdPickup();
                     }
                 }
             }
@@ -65,11 +61,12 @@ public class grabndrop : MonoBehaviour {
 
     bool checkIfForward()
     {
-        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee)){
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+        {
 
             if (hit.collider.tag == "Pickup")
             {
-               
+
                 return true;
             }
             else
@@ -83,4 +80,20 @@ public class grabndrop : MonoBehaviour {
         }
     }
 
+    //[Command]
+    void CmdPickup()
+    {
+        PickUp.transform.parent = transform;
+    }
+
+    //[Command]
+    void CmdDrop()
+    {
+        PickUp.transform.parent = null;
+        PickUp.transform.position = new Vector3(dropLoc.x, 0.376f, dropLoc.z);
+        if (SceneManager.GetActiveScene().name == "Level 1")
+            PickUp.transform.position = new Vector3(dropLoc.x, -1.2f, dropLoc.z);
+        PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
+        PickUp.GetComponent<BoxCollider>().enabled = true;
+    }
 }
