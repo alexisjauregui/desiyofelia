@@ -79,51 +79,7 @@ public class Scene : MonoBehaviour {
                     NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }
             }
-        }/*else if(SceneManager.GetActiveScene().name == "Level 2")
-		{
-			if (HasCandle())
-			{
-				Debug.Log("You are holding a candle");
-				if (doorCollision2)
-				{
-					Debug.Log("Lobby Opened");
-					//NetworkManager.singleton.ServerChangeScene("Level Lobby");
-				}
-			}
-		}else if(SceneManager.GetActiveScene().name == "Level 3")
-		{
-			if (HasCandle())
-			{
-				Debug.Log("You are holding a candle");
-                if (doorCollision3)
-                {
-					Debug.Log("Lobby Opened");
-					//NetworkManager.singleton.ServerChangeScene("Level Lobby");
-				}
-			}
-		}else if(SceneManager.GetActiveScene().name == "Level 4")
-		{
-			if (HasCandle())
-			{
-				Debug.Log("You are holding a candle");
-				if(doorCollision4)
-				{
-					Debug.Log("Lobby Opened");
-					//NetworkManager.singleton.ServerChangeScene("Level Lobby");
-				}
-			}
-		}else if(SceneManager.GetActiveScene().name == "Level 5")
-		{
-			if (HasCandle())
-			{
-				Debug.Log("You are holding a candle");
-				if(doorCollision5)
-				{
-					Debug.Log("Lobby Opened");
-					//NetworkManager.singleton.ServerChangeScene("Level Lobby");
-				}
-			}
-		}*/
+        }
 
     }
 

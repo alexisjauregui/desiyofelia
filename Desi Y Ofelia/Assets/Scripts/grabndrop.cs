@@ -17,7 +17,6 @@ public class grabndrop : NetworkBehaviour
     void Start()
     {
         PickUp = GameObject.FindGameObjectWithTag("Pickup");
-
     }
 
     void Update()
@@ -31,9 +30,8 @@ public class grabndrop : NetworkBehaviour
                 dropLoc = PickUp.transform.position;
             }
 
-            if (PickUp.transform.IsChildOf(transform))
+            if (HasCandle())
             {
-
                 PickUp.GetComponent<BoxCollider>().enabled = false;
                 PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
 
@@ -42,6 +40,16 @@ public class grabndrop : NetworkBehaviour
                     CmdDrop();
                 }
             }
+            /*if (HasKey())
+            {
+                PickUp.GetComponent<BoxCollider>().enabled = false;
+                PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+                if (Input.GetButtonDown("AButton"))
+                {
+                    CmdDrop();
+                }
+            }*/
             else
             {
 
@@ -49,7 +57,6 @@ public class grabndrop : NetworkBehaviour
                 {
                     Debug.Log("Yes");
                     PickUp = hit.collider.gameObject;
-                    Debug.Log(PickUp.name);
                     if (Input.GetButtonDown("AButton"))
                     {
                         CmdPickup();
@@ -57,7 +64,9 @@ public class grabndrop : NetworkBehaviour
                 }
             }
         }
+        Debug.Log(HasCandle());
     }
+
 
     bool checkIfForward()
     {
@@ -80,6 +89,20 @@ public class grabndrop : NetworkBehaviour
         }
     }
 
+    bool HasCandle()
+    {
+        if (GameObject.Find("CandleHolder").transform.IsChildOf(transform))
+            return true;
+        return false;
+    }
+
+    bool HasKey()
+    {
+        if (GameObject.Find("Key").transform.IsChildOf(transform))
+            return true;
+        return false;
+    }
+
     //[Command]
     void CmdPickup()
     {
@@ -88,11 +111,9 @@ public class grabndrop : NetworkBehaviour
 
     //[Command]
     void CmdDrop()
-    {
+    {   
         PickUp.transform.parent = null;
         PickUp.transform.position = new Vector3(dropLoc.x, 0.376f, dropLoc.z);
-        if (SceneManager.GetActiveScene().name == "Level 1")
-            PickUp.transform.position = new Vector3(dropLoc.x, -1.2f, dropLoc.z);
         PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
         PickUp.GetComponent<BoxCollider>().enabled = true;
     }

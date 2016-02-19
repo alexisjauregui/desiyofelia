@@ -74,7 +74,7 @@ public class NetManagerCustom : NetworkManager
             playerPrefabIndex = 0;
             Debug.Log("You chose Desi!");
         }
-        else if (GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn)
+        if (GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn)
         {
             playerPrefabIndex = 1;
             Debug.Log("You chose Ofelia!");
