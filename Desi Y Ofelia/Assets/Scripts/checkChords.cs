@@ -12,6 +12,7 @@ public class checkChords : NetworkBehaviour {
 
     public string pass;
     private string chords;
+    private GameObject Cage;
     private Text newText;
     public AudioSource audio;
     bool hasPlayed = false;
@@ -22,6 +23,7 @@ public class checkChords : NetworkBehaviour {
         newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
         audio = GetComponent<AudioSource>();
         chords = "";
+        Cage = GameObject.FindGameObjectWithTag("Cage");
     }
 	// Update is called once per frame
 	void Update () {
@@ -49,6 +51,6 @@ public class checkChords : NetworkBehaviour {
     [Command]
     void CmdDestroy()
     {
-        Destroy(gameObject, 0);
+        NetworkServer.Destroy(Cage);
     }
 }
