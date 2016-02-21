@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 /*
   Code made to check if player made correct combination of keys;
@@ -15,6 +16,7 @@ public class checkChords : NetworkBehaviour {
     private Text newText;
     public AudioSource audio;
     bool hasPlayed = false;
+
 
     // Use this for initialization
     void Start()
@@ -30,10 +32,13 @@ public class checkChords : NetworkBehaviour {
 
         chords = newText.text;
 
-  
-     
+        if (SceneManager.GetActiveScene().name == "Level 0")
+            pass = "KLIJ";
+        else if (SceneManager.GetActiveScene().name == "Level 1")
+            pass = "JJLK";
 
-        if (chords== pass)
+
+            if (chords== pass)
         {
             if (hasPlayed == false)
             {
@@ -49,6 +54,9 @@ public class checkChords : NetworkBehaviour {
     [Command]
     void CmdDestroy()
     {
-        Destroy(gameObject, 0);
+        GameObject networkCage = GameObject.FindGameObjectWithTag("Cage");
+        NetworkServer.Destroy(networkCage);
     }
+
+    
 }

@@ -71,11 +71,13 @@ public class NetManagerCustom : NetworkManager
     {
         if (GameObject.FindGameObjectWithTag("Desi").GetComponent<Toggle>().isOn)
         {
+            GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn = false;
             playerPrefabIndex = 0;
             Debug.Log("You chose Desi!");
         }
-        if (GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn)
+        else if (GameObject.FindGameObjectWithTag("Desi").GetComponent<Toggle>().isOn == false)
         {
+            GameObject.FindGameObjectWithTag("Ofelia").GetComponent<Toggle>().isOn = true;
             playerPrefabIndex = 1;
             Debug.Log("You chose Ofelia!");
         }

@@ -91,7 +91,7 @@ public class grabndrop : NetworkBehaviour
 
     bool HasCandle()
     {
-        if (GameObject.Find("CandleHolder").transform.IsChildOf(transform))
+        if (GameObject.Find("CandleHolder(Clone)").transform.IsChildOf(transform))
             return true;
         return false;
     }
