@@ -8,7 +8,6 @@ public class Scene : MonoBehaviour {
     //public GameObject Desi;
     public GameObject Candle;
     public Transform Desi;
-    private Vector3 curr_position;
     private bool doorCollision0;
     private bool doorCollision1;
 	private bool doorCollision2;
@@ -18,7 +17,6 @@ public class Scene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        curr_position = Desi.position;
 	}
 	
 	// Update is called once per frame
@@ -117,7 +115,7 @@ public class Scene : MonoBehaviour {
 
     bool HasCandle()
     {
-        if (GameObject.Find("CandleHolder").transform.IsChildOf(transform))
+        if (GameObject.Find("CandleHolder(Clone)").transform.IsChildOf(transform))
             return true;
         return false;
     }
