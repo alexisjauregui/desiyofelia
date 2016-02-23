@@ -69,6 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioSync.cs" />
     <Compile Include="Assets\Scripts\FOVAlpha.cs" />
     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
@@ -77,9 +78,6 @@
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\checkChords.cs" />
     <Compile Include="Assets\Scripts\checkSound.cs" />
-    <Compile Include="Assets\Scripts\checkSound1.cs" />
-    <Compile Include="Assets\Scripts\checkSound2.cs" />
-    <Compile Include="Assets\Scripts\checkSound3.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
