@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 
-[RequireComponent(typeof(AudioSync))]
+
 public class checkSound : NetworkBehaviour
 {
 
@@ -20,7 +20,7 @@ public class checkSound : NetworkBehaviour
 
     void Start()
     {
-        audiosyc = this.GetComponent<AudioSync>();
+
     }
 
     public AudioSource AddAudio(AudioClip clip, bool playAwake)
@@ -44,19 +44,19 @@ public class checkSound : NetworkBehaviour
     {
         if (Input.GetButtonDown("AButton"))
         {
-            audiosyc.PlaySound(audioA);
+
         }
         if (Input.GetButtonDown("BButton"))
         {
-            audiosyc.PlaySound(audioB);
+
         }
         if (Input.GetButtonDown("XButton"))
         {
-            audiosyc.PlaySound(audioX);
+
         }
         if (Input.GetButtonDown("YButton"))
         {
-            audiosyc.PlaySound(audioY);
+
         }
     }
 }
