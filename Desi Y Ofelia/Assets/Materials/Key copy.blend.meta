@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 3f62951b657b72d4d906c45c186ec689
-timeCreated: 1456189817
+guid: e558612f2203a9b42b87875f3e536589
+timeCreated: 1456196238
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Candle
-    100002: //RootNode
-    100004: Fire
-    400000: Candle
-    400002: //RootNode
-    400004: Fire
-    2300000: Candle
-    2300002: Fire
-    3300000: Candle
-    3300002: Fire
-    4300000: Fire
-    4300002: Candle
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Torus_001
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -16,7 +16,6 @@ public class checkSound : NetworkBehaviour
     private AudioSource audioB;
     private AudioSource audioX;
     private AudioSource audioY;
-    private AudioSync audiosyc;
 
     void Start()
     {
