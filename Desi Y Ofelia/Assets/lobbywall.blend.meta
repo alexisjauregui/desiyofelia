@@ -15,6 +15,12 @@ ModelImporter:
     100014: Wall_Right
     100016: Plane
     100018: Wall_End
+    100020: Lamp
+    100022: Lamp_001
+    100024: Lamp_002
+    100026: Lamp_003
+    100028: Lamp_004
+    100030: Lamp_005
     400000: //RootNode
     400002: Balcony_Left_1
     400004: Balcony_Left_2
@@ -25,6 +31,12 @@ ModelImporter:
     400014: Wall_Right
     400016: Plane
     400018: Wall_End
+    400020: Lamp
+    400022: Lamp_001
+    400024: Lamp_002
+    400026: Lamp_003
+    400028: Lamp_004
+    400030: Lamp_005
     2300000: //RootNode
     2300002: Balcony_Left_1
     2300004: Balcony_Left_2
@@ -35,6 +47,12 @@ ModelImporter:
     2300014: Wall_Right
     2300016: Plane
     2300018: Wall_End
+    2300020: Lamp
+    2300022: Lamp_001
+    2300024: Lamp_002
+    2300026: Lamp_003
+    2300028: Lamp_004
+    2300030: Lamp_005
     3300000: //RootNode
     3300002: Balcony_Left_1
     3300004: Balcony_Left_2
@@ -45,6 +63,12 @@ ModelImporter:
     3300014: Wall_Right
     3300016: Plane
     3300018: Wall_End
+    3300020: Lamp
+    3300022: Lamp_001
+    3300024: Lamp_002
+    3300026: Lamp_003
+    3300028: Lamp_004
+    3300030: Lamp_005
     4300000: Plane
     4300002: Plane_002
     4300004: Plane_000
@@ -56,6 +80,12 @@ ModelImporter:
     4300016: Wall_Right
     4300018: Balcony_Left_1
     4300020: Wall_End
+    4300022: Lamp
+    4300024: Lamp_002
+    4300026: Lamp_001
+    4300028: Lamp_005
+    4300030: Lamp_004
+    4300032: Lamp_003
     7400000: Default Take
     9500000: //RootNode
   materials:
