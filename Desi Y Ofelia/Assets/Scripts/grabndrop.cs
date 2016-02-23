@@ -25,6 +25,7 @@ public class grabndrop : NetworkBehaviour
         {
             Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
             PickUp = GameObject.FindGameObjectWithTag("Pickup");
+            Debug.Log(PickUp.name);
             if (PickUp != null)
             {
                 dropLoc = PickUp.transform.position;
