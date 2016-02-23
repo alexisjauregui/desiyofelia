@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class checkChords : NetworkBehaviour {
 
-    public string pass;
+    private string pass;
     private string chords;
     private Text newText;
     public AudioSource audio;
@@ -31,11 +31,11 @@ public class checkChords : NetworkBehaviour {
         newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
 
         chords = newText.text;
-
+        //Add combo according to levels here!
         if (SceneManager.GetActiveScene().name == "Level 0")
-            pass = "KLIJ";
+            pass = "ABYX";
         else if (SceneManager.GetActiveScene().name == "Level 1")
-            pass = "JJLK";
+            pass = "XXBA";
 
 
             if (chords== pass)

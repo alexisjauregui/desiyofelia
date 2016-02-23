@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 /*
@@ -31,28 +32,31 @@ public class cageSwitch : MonoBehaviour
 
         if (Input.GetButtonDown("AButton"))
         {
-            passCode += "K";
+            passCode += "A";
         }
 
         if (Input.GetButtonDown("BButton"))
         {
-            passCode += "L";
+            passCode += "B";
         }
 
         if (Input.GetButtonDown("YButton"))
         {
-            passCode += "I";
+            passCode += "Y";
         }
         if (Input.GetButtonDown("XButton"))
         {
             
-            passCode += "J";
+            passCode += "X";
         }
 
-        if(passCode.Length > 4)
-        {
-            passCode = ""; 
-        }
+       // if (SceneManager.GetActiveScene().name == "Level 0")
+       // {
+            if (passCode.Length > 4)
+            {
+                passCode = "";
+            }
+       // }
     }
 
 }
