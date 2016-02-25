@@ -21,6 +21,28 @@ ModelImporter:
     100026: Lamp_003
     100028: Lamp_004
     100030: Lamp_005
+    100032: Wall_Left_Balcony_2
+    100034: Wall_Left_Balcony_3
+    100036: Wall_Left_Balcony__1
+    100038: Wall_Right_Balcony_1
+    100040: Wall_Right_Balcony_2
+    100042: Wall_Left_Frame_1
+    100044: Wall_Left_Frame_2
+    100046: Wall_Left_Frame_3
+    100048: Wall_Right_Frame_1
+    100050: Wall_Right_Frame_2
+    100052: Balcony_Left_In_1
+    100054: Balcony_In_Left_1
+    100056: Lamp_Left_1
+    100058: Lamp_Left_2
+    100060: Lamp_Left_3
+    100062: Lamp_Right_1
+    100064: Lamp_Right_2
+    100066: Lamp_Right_3
+    100068: Wall_End_000
+    100070: Wall_End_001
+    100072: Wall_End_003
+    100074: Wall
     400000: //RootNode
     400002: Balcony_Left_1
     400004: Balcony_Left_2
@@ -37,6 +59,28 @@ ModelImporter:
     400026: Lamp_003
     400028: Lamp_004
     400030: Lamp_005
+    400032: Wall_Left_Balcony_2
+    400034: Wall_Left_Balcony_3
+    400036: Wall_Left_Balcony__1
+    400038: Wall_Right_Balcony_1
+    400040: Wall_Right_Balcony_2
+    400042: Wall_Left_Frame_1
+    400044: Wall_Left_Frame_2
+    400046: Wall_Left_Frame_3
+    400048: Wall_Right_Frame_1
+    400050: Wall_Right_Frame_2
+    400052: Balcony_Left_In_1
+    400054: Balcony_In_Left_1
+    400056: Lamp_Left_1
+    400058: Lamp_Left_2
+    400060: Lamp_Left_3
+    400062: Lamp_Right_1
+    400064: Lamp_Right_2
+    400066: Lamp_Right_3
+    400068: Wall_End_000
+    400070: Wall_End_001
+    400072: Wall_End_003
+    400074: Wall
     2300000: //RootNode
     2300002: Balcony_Left_1
     2300004: Balcony_Left_2
@@ -53,6 +97,28 @@ ModelImporter:
     2300026: Lamp_003
     2300028: Lamp_004
     2300030: Lamp_005
+    2300032: Wall_Left_Balcony_2
+    2300034: Wall_Left_Balcony_3
+    2300036: Wall_Left_Balcony__1
+    2300038: Wall_Right_Balcony_1
+    2300040: Wall_Right_Balcony_2
+    2300042: Wall_Left_Frame_1
+    2300044: Wall_Left_Frame_2
+    2300046: Wall_Left_Frame_3
+    2300048: Wall_Right_Frame_1
+    2300050: Wall_Right_Frame_2
+    2300052: Balcony_Left_In_1
+    2300054: Balcony_In_Left_1
+    2300056: Lamp_Left_1
+    2300058: Lamp_Left_2
+    2300060: Lamp_Left_3
+    2300062: Lamp_Right_1
+    2300064: Lamp_Right_2
+    2300066: Lamp_Right_3
+    2300068: Wall_End_000
+    2300070: Wall_End_001
+    2300072: Wall_End_003
+    2300074: Wall
     3300000: //RootNode
     3300002: Balcony_Left_1
     3300004: Balcony_Left_2
@@ -69,6 +135,28 @@ ModelImporter:
     3300026: Lamp_003
     3300028: Lamp_004
     3300030: Lamp_005
+    3300032: Wall_Left_Balcony_2
+    3300034: Wall_Left_Balcony_3
+    3300036: Wall_Left_Balcony__1
+    3300038: Wall_Right_Balcony_1
+    3300040: Wall_Right_Balcony_2
+    3300042: Wall_Left_Frame_1
+    3300044: Wall_Left_Frame_2
+    3300046: Wall_Left_Frame_3
+    3300048: Wall_Right_Frame_1
+    3300050: Wall_Right_Frame_2
+    3300052: Balcony_Left_In_1
+    3300054: Balcony_In_Left_1
+    3300056: Lamp_Left_1
+    3300058: Lamp_Left_2
+    3300060: Lamp_Left_3
+    3300062: Lamp_Right_1
+    3300064: Lamp_Right_2
+    3300066: Lamp_Right_3
+    3300068: Wall_End_000
+    3300070: Wall_End_001
+    3300072: Wall_End_003
+    3300074: Wall
     4300000: Plane
     4300002: Plane_002
     4300004: Plane_000
@@ -86,6 +174,28 @@ ModelImporter:
     4300028: Lamp_005
     4300030: Lamp_004
     4300032: Lamp_003
+    4300034: Wall_Right_Balcony_2
+    4300036: Wall_Right_Balcony_1
+    4300038: Wall_Left_Balcony_3
+    4300040: Wall_Left_Balcony_2
+    4300042: Wall_Left_Balcony__1
+    4300044: Wall_Left_Frame_1
+    4300046: Wall_Right_Frame_1
+    4300048: Wall_Right_Frame_2
+    4300050: Wall_Left_Frame_3
+    4300052: Wall_Left_Frame_2
+    4300054: Balcony_Left_In_1
+    4300056: Balcony_In_Left_1
+    4300058: Lamp_Right_3
+    4300060: Lamp_Right_2
+    4300062: Lamp_Right_1
+    4300064: Lamp_Left_3
+    4300066: Lamp_Left_2
+    4300068: Lamp_Left_1
+    4300070: Wall_End_000
+    4300072: Wall_End_003
+    4300074: Wall_End_001
+    4300076: Wall
     7400000: Default Take
     9500000: //RootNode
   materials:
