@@ -23,15 +23,16 @@ public class grabndrop : NetworkBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Level lobby")
         {
+            if(PickUp == null)
+                PickUp = GameObject.FindGameObjectWithTag("Pickup");
             Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
-            PickUp = GameObject.FindGameObjectWithTag("Pickup");
             Debug.Log(PickUp.name);
             if (PickUp != null)
             {
                 dropLoc = PickUp.transform.position;
             }
 
-            if (HasCandle())
+            if (HasItem())
             {
                 PickUp.GetComponent<BoxCollider>().enabled = false;
                 PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -41,22 +42,11 @@ public class grabndrop : NetworkBehaviour
                     CmdDrop();
                 }
             }
-            /*if (HasKey())
-            {
-                PickUp.GetComponent<BoxCollider>().enabled = false;
-                PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
-
-                if (Input.GetButtonDown("AButton"))
-                {
-                    CmdDrop();
-                }
-            }*/
             else
             {
 
                 if (checkIfForward())
                 {
-                    Debug.Log("Yes");
                     PickUp = hit.collider.gameObject;
                     if (Input.GetButtonDown("AButton"))
                     {
@@ -65,7 +55,6 @@ public class grabndrop : NetworkBehaviour
                 }
             }
         }
-        Debug.Log(HasCandle());
     }
 
 
@@ -90,16 +79,9 @@ public class grabndrop : NetworkBehaviour
         }
     }
 
-    bool HasCandle()
+    bool HasItem()
     {
-        if (GameObject.Find("CandleHolder(Clone)").transform.IsChildOf(transform))
-            return true;
-        return false;
-    }
-
-    bool HasKey()
-    {
-        if (GameObject.Find("Key").transform.IsChildOf(transform))
+        if (PickUp.transform.parent == transform && PickUp != null)
             return true;
         return false;
     }
