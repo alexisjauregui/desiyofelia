@@ -48,22 +48,17 @@
      <Compile Include="Assets\Scripts\FOVAlpha.cs" />
      <Compile Include="Assets\Scripts\FieldOfVision.cs" />
      <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
+     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\Scene.cs" />
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
      <Compile Include="Assets\Scripts\checkChords.cs" />
      <Compile Include="Assets\Scripts\checkSound.cs" />
-     <Compile Include="Assets\Scripts\checkSound1.cs" />
-     <Compile Include="Assets\Scripts\checkSound2.cs" />
-     <Compile Include="Assets\Scripts\checkSound3.cs" />
      <Compile Include="Assets\Scripts\grabndrop.cs" />
      <Compile Include="Assets\Scripts\openDoor.cs" />
      <Compile Include="Assets\Scripts\trail.cs" />
      <Compile Include="Assets\Scripts\trailDestroy.cs" />
-     <Compile Include="Assets\Scripts\vision.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
