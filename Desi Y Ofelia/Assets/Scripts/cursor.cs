@@ -17,7 +17,7 @@ public class cursor : MonoBehaviour {
     {
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distance))
         {
-            if(hit.collider.gameObject.transform.GetChild(1).gameObject.tag == "Interact")
+            if(hit.collider.gameObject.transform.GetChild(0).gameObject.tag == "Interact")
             {
                 // Write switch canvas
 
