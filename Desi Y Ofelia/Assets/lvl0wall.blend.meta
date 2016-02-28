@@ -15,6 +15,30 @@ ModelImporter:
     100014: Walls_Outer
     100016: Walls_Outer_001
     100018: Walls_Inner
+    100020: Balcony_Left_1
+    100022: Wall_Main
+    100024: Arch_Lining
+    100026: Balcony_Lining
+    100028: Balcony_Left_
+    100030: Balcony_Left__001
+    100032: Balcony_Left__002
+    100034: Balcony_Left__003
+    100036: Balcony_Left__004
+    100038: Balcony_Left__005
+    100040: Balcony_Left__006
+    100042: Arch_Lining_001
+    100044: Balcony_Lining_001
+    100046: Wall_Lining
+    100048: Wall_Lining_001
+    100050: Wall_Main_001
+    100052: Arch_Lining_002
+    100054: Balcony_Lining_002
+    100056: Wall_Lining_002
+    100058: Wall_Main_002
+    100060: Arch_Lining_003
+    100062: Balcony_Lining_003
+    100064: Wall_Lining_003
+    100066: Wall_Main_003
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -25,6 +49,30 @@ ModelImporter:
     400014: Walls_Outer
     400016: Walls_Outer_001
     400018: Walls_Inner
+    400020: Balcony_Left_1
+    400022: Wall_Main
+    400024: Arch_Lining
+    400026: Balcony_Lining
+    400028: Balcony_Left_
+    400030: Balcony_Left__001
+    400032: Balcony_Left__002
+    400034: Balcony_Left__003
+    400036: Balcony_Left__004
+    400038: Balcony_Left__005
+    400040: Balcony_Left__006
+    400042: Arch_Lining_001
+    400044: Balcony_Lining_001
+    400046: Wall_Lining
+    400048: Wall_Lining_001
+    400050: Wall_Main_001
+    400052: Arch_Lining_002
+    400054: Balcony_Lining_002
+    400056: Wall_Lining_002
+    400058: Wall_Main_002
+    400060: Arch_Lining_003
+    400062: Balcony_Lining_003
+    400064: Wall_Lining_003
+    400066: Wall_Main_003
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -35,6 +83,30 @@ ModelImporter:
     2300014: Walls_Outer
     2300016: Walls_Outer_001
     2300018: Walls_Inner
+    2300020: Balcony_Left_1
+    2300022: Wall_Main
+    2300024: Arch_Lining
+    2300026: Balcony_Lining
+    2300028: Balcony_Left_
+    2300030: Balcony_Left__001
+    2300032: Balcony_Left__002
+    2300034: Balcony_Left__003
+    2300036: Balcony_Left__004
+    2300038: Balcony_Left__005
+    2300040: Balcony_Left__006
+    2300042: Arch_Lining_001
+    2300044: Balcony_Lining_001
+    2300046: Wall_Lining
+    2300048: Wall_Lining_001
+    2300050: Wall_Main_001
+    2300052: Arch_Lining_002
+    2300054: Balcony_Lining_002
+    2300056: Wall_Lining_002
+    2300058: Wall_Main_002
+    2300060: Arch_Lining_003
+    2300062: Balcony_Lining_003
+    2300064: Wall_Lining_003
+    2300066: Wall_Main_003
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -45,6 +117,30 @@ ModelImporter:
     3300014: Walls_Outer
     3300016: Walls_Outer_001
     3300018: Walls_Inner
+    3300020: Balcony_Left_1
+    3300022: Wall_Main
+    3300024: Arch_Lining
+    3300026: Balcony_Lining
+    3300028: Balcony_Left_
+    3300030: Balcony_Left__001
+    3300032: Balcony_Left__002
+    3300034: Balcony_Left__003
+    3300036: Balcony_Left__004
+    3300038: Balcony_Left__005
+    3300040: Balcony_Left__006
+    3300042: Arch_Lining_001
+    3300044: Balcony_Lining_001
+    3300046: Wall_Lining
+    3300048: Wall_Lining_001
+    3300050: Wall_Main_001
+    3300052: Arch_Lining_002
+    3300054: Balcony_Lining_002
+    3300056: Wall_Lining_002
+    3300058: Wall_Main_002
+    3300060: Arch_Lining_003
+    3300062: Balcony_Lining_003
+    3300064: Wall_Lining_003
+    3300066: Wall_Main_003
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -55,6 +151,30 @@ ModelImporter:
     4300014: Walls_Outer_001
     4300016: Walls_Outer
     4300018: Walls_Inner
+    4300020: Balcony_Left_1
+    4300022: Wall_Main
+    4300024: Arch_Lining
+    4300026: Balcony_Lining
+    4300028: Balcony_Left__006
+    4300030: Balcony_Left__005
+    4300032: Balcony_Left__004
+    4300034: Balcony_Left__003
+    4300036: Balcony_Left__002
+    4300038: Balcony_Left__001
+    4300040: Balcony_Left_
+    4300042: Balcony_Lining_001
+    4300044: Wall_Main_001
+    4300046: Arch_Lining_001
+    4300048: Wall_Lining_001
+    4300050: Wall_Lining
+    4300052: Balcony_Lining_002
+    4300054: Wall_Main_002
+    4300056: Arch_Lining_002
+    4300058: Wall_Lining_002
+    4300060: Wall_Lining_003
+    4300062: Arch_Lining_003
+    4300064: Wall_Main_003
+    4300066: Balcony_Lining_003
     7400000: Default Take
     9500000: //RootNode
   materials:
