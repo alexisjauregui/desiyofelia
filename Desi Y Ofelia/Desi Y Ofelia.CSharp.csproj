@@ -69,10 +69,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BirdFlight.cs" />
+    <Compile Include="Assets\Scripts\BirdSwitch.cs" />
+    <Compile Include="Assets\Scripts\DesiPlaySound.cs" />
     <Compile Include="Assets\Scripts\FOVAlpha.cs" />
     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
+    <Compile Include="Assets\Scripts\OfeliaPlaySound.cs" />
     <Compile Include="Assets\Scripts\Scene.cs" />
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\checkChords.cs" />
