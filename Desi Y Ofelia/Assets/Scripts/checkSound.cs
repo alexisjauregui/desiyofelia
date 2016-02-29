@@ -3,59 +3,40 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 
-
 public class checkSound : NetworkBehaviour
 {
 
-    public AudioClip clipA;
-    public AudioClip clipB;
-    public AudioClip clipX;
-    public AudioClip clipY;
+    public AudioClip[] clips;
 
-    private AudioSource audioA;
-    private AudioSource audioB;
-    private AudioSource audioX;
-    private AudioSource audioY;
+    private AudioSource audiosource;
+
 
     void Start()
     {
-
-    }
-
-    public AudioSource AddAudio(AudioClip clip, bool playAwake)
-    {
-        AudioSource newAudio = gameObject.AddComponent<AudioSource>();
-        newAudio.clip = clip;
-        newAudio.playOnAwake = playAwake;
-        return newAudio;
-    }
-
-    void Awake()
-    {
-        audioA = AddAudio(clipA, false);
-        audioB = AddAudio(clipB, false);
-        audioX = AddAudio(clipX, false);
-        audioY = AddAudio(clipY, false);
+        audiosource = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("AButton"))
-        {
 
-        }
-        if (Input.GetButtonDown("BButton"))
-        {
+    }
 
-        }
-        if (Input.GetButtonDown("XButton"))
-        {
+    public void PlaySound(int index)
+    {
+        if (index >= 0 && index < clips.Length)
+            CmdSendServerSoundIndex(index);
+    }
 
-        }
-        if (Input.GetButtonDown("YButton"))
-        {
+    [Command]
+    void CmdSendServerSoundIndex(int index)
+    {
+        RpcSendSoundIndex(index);
+    }
 
-        }
+    [ClientRpc]
+    void RpcSendSoundIndex(int index)
+    {
+        audiosource.PlayOneShot(clips[index]);
     }
 }
