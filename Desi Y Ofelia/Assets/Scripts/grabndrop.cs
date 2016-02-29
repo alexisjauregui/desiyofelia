@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class grabndrop : NetworkBehaviour
+public class grabndrop : MonoBehaviour
 {
 
     private GameObject PickUp;
