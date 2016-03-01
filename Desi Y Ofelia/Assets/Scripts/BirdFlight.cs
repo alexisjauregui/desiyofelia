@@ -51,20 +51,30 @@ public class BirdFlight : MonoBehaviour {
     void Position1()
     {
         Bird1.transform.position = new Vector3(-3, 3, -18);
-
+        Bird2.transform.position = new Vector3(0, 3, -18);
+        Bird3.transform.position = new Vector3(2, 3, -18);
+        Bird4.transform.position = new Vector3(5, 3, -18);
     }
     void Position2()
     {
         Bird1.transform.position = new Vector3(-18, 3, 5);
+        Bird2.transform.position = new Vector3(-18, 3, 2);
+        Bird3.transform.position = new Vector3(-18, 3, 7);
+        Bird4.transform.position = new Vector3(-18, 3, 1);
 
     }
     void Position3()
     {
         Bird1.transform.position = new Vector3(-4, 3, 18);
-
+        Bird2.transform.position = new Vector3(0, 3, 18);
+        Bird3.transform.position = new Vector3(2, 3, 18);
+        Bird4.transform.position = new Vector3(5, 3, 18);
     }
     void Position4()
     {
         Bird1.transform.position = new Vector3(18, 3, 3);
+        Bird2.transform.position = new Vector3(18, 3, 2);
+        Bird3.transform.position = new Vector3(18, 3, 6);
+        Bird4.transform.position = new Vector3(18, 3, 5);
     }
 }
