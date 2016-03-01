@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\OfeliaPlaySound.cs" />
      <Compile Include="Assets\Scripts\Scene.cs" />
+     <Compile Include="Assets\Scripts\buttonChange.cs" />
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
      <Compile Include="Assets\Scripts\checkChords.cs" />
      <Compile Include="Assets\Scripts\checkSound.cs" />
