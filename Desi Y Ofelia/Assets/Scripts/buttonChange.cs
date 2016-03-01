@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 /*
-   
-
-*/
-
 public class buttonChange : MonoBehaviour
 {
 	private Image button;
@@ -30,3 +24,4 @@ public class buttonChange : MonoBehaviour
 
 	}
 }
+*/
