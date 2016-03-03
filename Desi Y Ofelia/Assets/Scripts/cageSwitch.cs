@@ -16,11 +16,22 @@ public class cageSwitch : MonoBehaviour
 {
     public string passCode;
     private Text text;
-   
+
+    //Ripple Effect
+    public GameObject Ripple;
+    public Transform Ofelia;
+    private Vector3 currentPosition;
+    private Quaternion Rot;
+
+
     void Start()
     {
         passCode = "";
         text = GameObject.Find("SwitchText").GetComponent<Text>();
+
+        // Ripple Effect
+        currentPosition = Ofelia.position;
+        Rot = new Quaternion(0, 0, 0, 0);
     }
 
 
