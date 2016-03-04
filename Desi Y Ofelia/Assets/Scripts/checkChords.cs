@@ -38,8 +38,9 @@ public class checkChords : NetworkBehaviour {
             pass = "XXBA";
 
 
-            if (chords== pass)
+		if (chords.Contains(pass))
         {
+			Debug.Log ("Yes");
             if (hasPlayed == false)
             {
                 hasPlayed = true;

@@ -33,7 +33,7 @@ public class cageSwitch : MonoBehaviour
         text = GameObject.Find("SwitchText").GetComponent<Text>();
 
         // Ripple Effect
-        currentPosition = Ofelia.position;
+		currentPosition = Ofelia.position;
         Rot = new Quaternion(0, 90, 90, 0);
     }
 
@@ -46,7 +46,7 @@ public class cageSwitch : MonoBehaviour
 
         //Ripple 
         currentPosition = Ofelia.position;
-        currentPosition.y = 1.0f;
+        currentPosition.y = 0.1f;
 
 
         if (Input.GetButtonDown("AButton"))
@@ -73,13 +73,13 @@ public class cageSwitch : MonoBehaviour
             Instantiate(RippleX, currentPosition, Rot);
         }
 
-       /* if (SceneManager.GetActiveScene().name == "Level 0")
-       // {
+       // if (SceneManager.GetActiveScene().name == "Level 0")
+       /* {
             if (passCode.Length > 4)
             {
                 passCode = "";
             }
-       */ }
+     */}
     }
 
 
