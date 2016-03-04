@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class BirdSwitch : NetworkBehaviour {
+public class BirdSwitch : MonoBehaviour {
     private GameObject Idol;
     public RaycastHit hit;
     public float distanceToSee;
@@ -26,9 +26,8 @@ public class BirdSwitch : NetworkBehaviour {
         {
             if (seeingIdol())
             {
-                if (Input.GetButtonDown("AButton"))
+               if (Input.GetButtonDown("AButton"))
                 {
-                    Debug.Log("Got here Before!!!");
                     CmdTurnIdol();
                 }
             }
@@ -48,7 +47,6 @@ public class BirdSwitch : NetworkBehaviour {
             {
                 return false;
             }
-            
         }
         return false;
     }
@@ -57,7 +55,11 @@ public class BirdSwitch : NetworkBehaviour {
     void CmdTurnIdol()
     {
         Idol = GameObject.Find("Idol(Clone)");
-        Idol.transform.Rotate(45, 0, 0);
+        //Debug.Log(Idol.transform.eulerAngles.y);
+
+        Idol.transform.eulerAngles = new Vector3(Idol.transform.eulerAngles.x, Idol.transform.eulerAngles.y+90, Idol.transform.eulerAngles.z);
+
+
     }
 
 }

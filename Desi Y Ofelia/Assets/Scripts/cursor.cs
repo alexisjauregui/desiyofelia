@@ -24,7 +24,7 @@ public class cursor : MonoBehaviour {
 
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distance))
         {
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             if (hit.collider.gameObject.transform.childCount > 0)
             {
                 if (hit.collider.gameObject.transform.GetChild(0).gameObject.tag == "Interact")

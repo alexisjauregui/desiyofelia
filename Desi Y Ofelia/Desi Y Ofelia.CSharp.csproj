@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\checkSound.cs" />
     <Compile Include="Assets\Scripts\cursor.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
+    <Compile Include="Assets\Scripts\level3Chords.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
     <Compile Include="Assets\Scripts\trailDestroy.cs" />
