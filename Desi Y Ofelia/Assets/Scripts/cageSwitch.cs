@@ -14,11 +14,14 @@ using System.Collections;
 
 public class cageSwitch : MonoBehaviour
 {
-    public string passCode;
+    private string passCode;
     private Text text;
 
     //Ripple Effect
-    public GameObject Ripple;
+    public GameObject RippleA;
+    public GameObject RippleB;
+    public GameObject RippleX;
+    public GameObject RippleY;
     public Transform Ofelia;
     private Vector3 currentPosition;
     private Quaternion Rot;
@@ -31,7 +34,7 @@ public class cageSwitch : MonoBehaviour
 
         // Ripple Effect
         currentPosition = Ofelia.position;
-        Rot = new Quaternion(0, 0, 0, 0);
+        Rot = new Quaternion(0, 90, 90, 0);
     }
 
 
@@ -41,33 +44,42 @@ public class cageSwitch : MonoBehaviour
         text = GameObject.Find("SwitchText").GetComponent<Text>();
         text.text = passCode;
 
+        //Ripple 
+        currentPosition = Ofelia.position;
+        currentPosition.y = 1.0f;
+
+
         if (Input.GetButtonDown("AButton"))
         {
             passCode += "A";
+            Instantiate(RippleA, currentPosition, Rot);
         }
 
         if (Input.GetButtonDown("BButton"))
         {
             passCode += "B";
+            Instantiate(RippleB, currentPosition, Rot);
         }
 
         if (Input.GetButtonDown("YButton"))
         {
             passCode += "Y";
+            Instantiate(RippleY, currentPosition, Rot);
         }
         if (Input.GetButtonDown("XButton"))
         {
             
             passCode += "X";
+            Instantiate(RippleX, currentPosition, Rot);
         }
 
-       // if (SceneManager.GetActiveScene().name == "Level 0")
+       /* if (SceneManager.GetActiveScene().name == "Level 0")
        // {
             if (passCode.Length > 4)
             {
                 passCode = "";
             }
-       // }
+       */ }
     }
 
-}
+
