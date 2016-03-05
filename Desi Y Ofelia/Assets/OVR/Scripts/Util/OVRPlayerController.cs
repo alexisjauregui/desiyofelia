@@ -123,6 +123,8 @@ public class OVRPlayerController : MonoBehaviour
 		InitialYRotation = transform.rotation.eulerAngles.y;
 	}
 
+	public bool isMine;
+
 	void OnEnable()
 	{
 		OVRManager.display.RecenteredPose += ResetOrientation;

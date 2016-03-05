@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\DesiPlaySound.cs" />
      <Compile Include="Assets\Scripts\FOVAlpha.cs" />
      <Compile Include="Assets\Scripts\FieldOfVision.cs" />
+     <Compile Include="Assets\Scripts\LocalAuthority.cs" />
      <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\OfeliaPlaySound.cs" />
