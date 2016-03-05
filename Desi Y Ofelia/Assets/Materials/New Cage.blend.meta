@@ -1,17 +1,29 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Desi Y Ofelia/Assets/Materials/New Cage.blend.meta
 guid: 698ef5ff83be039428c293592c8b3a68
 timeCreated: 1456870318
+=======
+guid: e60adebc08ab77448af99ad962e6f8c5
+timeCreated: 1457131408
+>>>>>>> e41a08231476c3bb3dc05dae7251e9a5edaa4eb3:Desi Y Ofelia/Assets/OVR/Meshes/Cone.obj.meta
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+<<<<<<< HEAD:Desi Y Ofelia/Assets/Materials/New Cage.blend.meta
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cage
     7400000: Default Take
     9500000: //RootNode
+=======
+    400002: Mesh1_Model
+    2300000: Mesh1_Model
+    3300000: Mesh1_Model
+    4300000: Mesh1_Model
+>>>>>>> e41a08231476c3bb3dc05dae7251e9a5edaa4eb3:Desi Y Ofelia/Assets/OVR/Meshes/Cone.obj.meta
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +82,11 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< HEAD:Desi Y Ofelia/Assets/Materials/New Cage.blend.meta
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> e41a08231476c3bb3dc05dae7251e9a5edaa4eb3:Desi Y Ofelia/Assets/OVR/Meshes/Cone.obj.meta
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
