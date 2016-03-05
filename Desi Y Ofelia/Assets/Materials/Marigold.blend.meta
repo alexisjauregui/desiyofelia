@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: e60adebc08ab77448af99ad962e6f8c5
-timeCreated: 1457131408
+guid: 1bea7f47448bda34da84d38303dc2d23
+timeCreated: 1456870306
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Mesh1_Model
     400000: //RootNode
-    400002: Mesh1_Model
-    2300000: Mesh1_Model
-    3300000: Mesh1_Model
-    4300000: Mesh1_Model
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Marigold
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,5 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\buttonChange.cs">
+    <Files>
+      <File FileName="Assets\Scripts\buttonChange.cs" Line="28" Column="24" />
+=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LocalAuthority.cs">
     <Files>
       <File FileName="Assets\Scripts\PlayerNetworkManagerFP.js" Line="10" Column="2" />
@@ -12,6 +17,7 @@
       <File FileName="Assets\Scripts\Scene.cs" Line="27" Column="75" />
       <File FileName="Assets\OVR\Scripts\Util\OVRPlayerController.cs" Line="149" Column="3" />
       <File FileName="Assets\Scripts\LocalAuthority.cs" Line="9" Column="32" />
+>>>>>>> e41a08231476c3bb3dc05dae7251e9a5edaa4eb3
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
