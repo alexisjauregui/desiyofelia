@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using System.Collections;
 
 /*
@@ -12,7 +13,7 @@ using System.Collections;
 
 */
 
-public class cageSwitch : MonoBehaviour
+public class cageSwitch : NetworkBehaviour
 {
     private string passCode;
     private Text text;
@@ -53,34 +54,8 @@ public class cageSwitch : MonoBehaviour
         currentPosition = Ofelia.position;
         currentPosition.y = 0.1f;
 
-
-        if (Input.GetButtonDown("AButton"))
-        {
-            passCode += "A";
-            Instantiate(RippleA, currentPosition, Rot);
-            startTime = Time.time;
-        }
-
-        if (Input.GetButtonDown("BButton"))
-        {
-            passCode += "B";
-            Instantiate(RippleB, currentPosition, Rot);
-            startTime = Time.time;
-        }
-
-        if (Input.GetButtonDown("YButton"))
-        {
-            passCode += "Y";
-            Instantiate(RippleY, currentPosition, Rot);
-            startTime = Time.time;
-        }
-        if (Input.GetButtonDown("XButton"))
-        {
-            
-            passCode += "X";
-            Instantiate(RippleX, currentPosition, Rot);
-            startTime = Time.time;
-        }
+        
+        
 
         elapseTime = Time.time - startTime;
 
@@ -88,16 +63,46 @@ public class cageSwitch : MonoBehaviour
         {
             passCode = "";
         }
-        
 
-
-       // if (SceneManager.GetActiveScene().name == "Level 0")
-       /* {
-            if (passCode.Length > 4)
+        if(isLocalPlayer)
+        {
+            if (Input.GetButtonDown("AButton"))
             {
-                passCode = "";
+                passCode += "A";
+                Instantiate(RippleA, currentPosition, Rot);
+                startTime = Time.time;
             }
-     */}
+
+            if (Input.GetButtonDown("BButton"))
+            {
+                passCode += "B";
+                Instantiate(RippleB, currentPosition, Rot);
+                startTime = Time.time;
+            }
+
+            if (Input.GetButtonDown("YButton"))
+            {
+                passCode += "Y";
+                Instantiate(RippleY, currentPosition, Rot);
+                startTime = Time.time;
+            }
+            if (Input.GetButtonDown("XButton"))
+            {
+
+                passCode += "X";
+                Instantiate(RippleX, currentPosition, Rot);
+                startTime = Time.time;
+            }
+        }
+
+        // if (SceneManager.GetActiveScene().name == "Level 0")
+        /* {
+             if (passCode.Length > 4)
+             {
+                 passCode = "";
+             }
+      */
     }
+}
 
 

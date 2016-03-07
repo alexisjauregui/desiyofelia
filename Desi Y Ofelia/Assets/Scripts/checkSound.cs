@@ -19,7 +19,25 @@ public class checkSound : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(isLocalPlayer)
+        {
+            if (Input.GetButtonDown("AButton"))
+            {
+                PlaySound(0);
+            }
+            if (Input.GetButtonDown("BButton"))
+            {
+                PlaySound(1);
+            }
+            if (Input.GetButtonDown("XButton"))
+            {
+                PlaySound(2);
+            }
+            if (Input.GetButtonDown("YButton"))
+            {
+                PlaySound(3);
+            }
+        }
     }
 
     public void PlaySound(int index)

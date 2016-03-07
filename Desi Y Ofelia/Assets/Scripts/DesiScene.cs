@@ -3,17 +3,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class Scene : MonoBehaviour {
+public class DesiScene : MonoBehaviour {
 
     //public GameObject Desi;
     public GameObject Candle;
     public Transform Desi;
-    private bool doorCollision0;
-    private bool doorCollision1;
-	private bool doorCollision2;
-	private bool doorCollision3;
-	private bool doorCollision4;
-	private bool doorCollision5;
+    [SerializeField] public bool doorCollision0;
+    [SerializeField] private bool doorCollision1;
+    [SerializeField] private bool doorCollision2;
+    [SerializeField] private bool doorCollision3;
+    [SerializeField] private bool doorCollision4;
+    [SerializeField] private bool doorCollision5;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +30,8 @@ public class Scene : MonoBehaviour {
                 Debug.Log("You are holding a candle");
                 if (doorCollision0)
                 {
-                    Debug.Log("Lobby Opened");
+                    Debug.Log("WAIT FOR YOUR PARTNER");
+                    if(GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0)
                     NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }
             }
@@ -38,8 +39,10 @@ public class Scene : MonoBehaviour {
         {
             if (doorCollision0)
             {
-                Debug.Log("Level 0 Opened");
-                NetworkManager.singleton.ServerChangeScene("Level 0");
+                Debug.Log("WAIT FOR YOUR PARTNER");
+                Debug.Log(GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0);
+                if (GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0)
+                    NetworkManager.singleton.ServerChangeScene("Level 0");
             }
             else if(doorCollision1)
             {
