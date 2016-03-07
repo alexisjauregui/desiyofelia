@@ -9,8 +9,8 @@ public class growRipple : MonoBehaviour {
 
     void Start()
     {
-        growthRate = 1.0f;
-        maxSize = 2.5f;
+        growthRate = 1.5f;
+        maxSize = 3.5f;
         scale = 1.0f;
 
     }

@@ -34,15 +34,15 @@ public class level3Chords : NetworkBehaviour {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = newText.text;
 
-            if(chords == "AAAA")
+            if(chords.Contains("AAAA"))
             {
                 pass1 = true;
             }
-            if (chords == "BBBB")
+            if (chords.Contains("BBBB"))
             {
                 pass2 = true;
             }
-            if (chords == "XXXX")
+            if (chords.Contains("XXXX"))
             {
                 pass3 = true;
             }

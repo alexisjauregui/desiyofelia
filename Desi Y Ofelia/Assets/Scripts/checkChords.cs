@@ -28,26 +28,30 @@ public class checkChords : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
-
-        chords = newText.text;
-        //Add combo according to levels here!
-        if (SceneManager.GetActiveScene().name == "Level 0")
-            pass = "ABYX";
-        else if (SceneManager.GetActiveScene().name == "Level 1")
-            pass = "XXBA";
-
-
-		if (chords.Contains(pass))
+        if (SceneManager.GetActiveScene().name == "Level 0" || SceneManager.GetActiveScene().name == "Level 1")
         {
-			Debug.Log ("Yes");
-            if (hasPlayed == false)
+
+            newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
+
+            chords = newText.text;
+            //Add combo according to levels here!
+            if (SceneManager.GetActiveScene().name == "Level 0")
+                pass = "ABYX";
+            else if (SceneManager.GetActiveScene().name == "Level 1")
+                pass = "XXBA";
+
+
+            if (chords.Contains(pass))
             {
-                hasPlayed = true;
-                audio.Play();
+                Debug.Log("Yes");
+                if (hasPlayed == false)
+                {
+                    hasPlayed = true;
+                    audio.Play();
+                }
+                CmdDestroy();
+
             }
-            CmdDestroy();
-            
         }
         
 	}

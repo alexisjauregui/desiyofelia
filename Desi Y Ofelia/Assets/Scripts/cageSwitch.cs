@@ -25,6 +25,8 @@ public class cageSwitch : MonoBehaviour
     public Transform Ofelia;
     private Vector3 currentPosition;
     private Quaternion Rot;
+    private float startTime;
+    private float elapseTime; 
 
 
     void Start()
@@ -35,6 +37,9 @@ public class cageSwitch : MonoBehaviour
         // Ripple Effect
 		currentPosition = Ofelia.position;
         Rot = new Quaternion(0, 90, 90, 0);
+
+        //timed Reset
+        startTime = Time.time;
     }
 
 
@@ -53,25 +58,38 @@ public class cageSwitch : MonoBehaviour
         {
             passCode += "A";
             Instantiate(RippleA, currentPosition, Rot);
+            startTime = Time.time;
         }
 
         if (Input.GetButtonDown("BButton"))
         {
             passCode += "B";
             Instantiate(RippleB, currentPosition, Rot);
+            startTime = Time.time;
         }
 
         if (Input.GetButtonDown("YButton"))
         {
             passCode += "Y";
             Instantiate(RippleY, currentPosition, Rot);
+            startTime = Time.time;
         }
         if (Input.GetButtonDown("XButton"))
         {
             
             passCode += "X";
             Instantiate(RippleX, currentPosition, Rot);
+            startTime = Time.time;
         }
+
+        elapseTime = Time.time - startTime;
+
+        if(elapseTime > 2)
+        {
+            passCode = "";
+        }
+        
+
 
        // if (SceneManager.GetActiveScene().name == "Level 0")
        /* {
