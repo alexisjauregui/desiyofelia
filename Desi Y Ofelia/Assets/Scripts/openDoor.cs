@@ -9,14 +9,14 @@ public class openDoor : NetworkBehaviour {
 
 	void Start()
     {
-        Desi = GameObject.FindGameObjectWithTag("DesiPos");
+        Desi = GameObject.FindGameObjectWithTag("DesiPlayer");
         Key = GameObject.Find("Key");
     }
 	
 	// Update is called once per frame
 	void Update ()
 	{
-        Desi = GameObject.FindGameObjectWithTag("DesiPos");
+        Desi = GameObject.FindGameObjectWithTag("DesiPlayer");
 
         if (Vector3.Distance(this.transform.position, Desi.transform.position)<5)
         {

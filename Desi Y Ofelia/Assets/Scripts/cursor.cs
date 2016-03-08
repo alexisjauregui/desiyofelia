@@ -7,12 +7,13 @@ public class cursor : MonoBehaviour {
     private GameObject crosshair;
     public Texture image1;
     public Texture image2;
+    private float scale;
     
 
 	// Use this for initialization
 	void Start ()
     {
-        distance = 2;
+        distance = 15;
         crosshair = GameObject.Find("Crosshair");
 
 	}
@@ -29,7 +30,11 @@ public class cursor : MonoBehaviour {
             {
                 if (hit.collider.gameObject.transform.GetChild(0).gameObject.tag == "Interact")
                 {
+                    Debug.Log(Vector3.Distance(transform.position,hit.collider.transform.position));
                     crosshair.GetComponent<Renderer>().material.mainTexture = image2;
+                    crosshair.transform.localScale = new Vector3( xScale(Vector3.Distance(transform.position, hit.collider.transform.position)), xScale(Vector3.Distance(transform.position, hit.collider.transform.position)), 0);
+
+
                 }
       
                
@@ -37,11 +42,18 @@ public class cursor : MonoBehaviour {
             }
            
           
-        }
-
-
-       
+        }       
     }
 
+    float xScale(float distance)
+    {
+        Debug.Log(distance);
+        scale = (distance / 20);
+        scale = scale * .48f;
+        scale += 0.025f;
+        scale = 1 - scale;
+        scale -= 0.6f;
+        return scale;
+    }
 
 }
