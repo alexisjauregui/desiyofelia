@@ -19,10 +19,10 @@ public class cageSwitch : NetworkBehaviour
     private Text text;
 
     //Ripple Effect
-    public GameObject RippleA;
-    public GameObject RippleB;
-    public GameObject RippleX;
-    public GameObject RippleY;
+    public Object RippleA;
+    public Object RippleB;
+    public Object RippleX;
+    public Object RippleY;
     public Transform Ofelia;
     private Vector3 currentPosition;
     private Quaternion Rot;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class trail : MonoBehaviour {
 
-    public Object flower;
+    public GameObject flower;
     public Transform Desi;
     private Vector3 lastPosition;
     private Vector3 currentPosition;
@@ -12,7 +12,7 @@ public class trail : MonoBehaviour {
     void Start()
     {
         currentPosition = Desi.position;
-        Rot = new Quaternion(0, 0, 0,0);
+        Rot = flower.transform.rotation;
     }
 
 	
@@ -21,8 +21,8 @@ public class trail : MonoBehaviour {
 
         if (Mathf.Abs(currentPosition.x - Desi.position.x) > 1 || Mathf.Abs(currentPosition.z - Desi.position.z) > 1)
         {
-            currentPosition.y = 0;
-            Instantiate(flower,currentPosition,Rot);
+            currentPosition.y = 0.2f;
+            Instantiate(flower,currentPosition, Rot);
             
             currentPosition = Desi.position;
            
