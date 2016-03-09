@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class DesiScene : MonoBehaviour {
+public class DesiScene : NetworkBehaviour {
 
     //public GameObject Desi;
     public GameObject Candle;
@@ -31,8 +31,8 @@ public class DesiScene : MonoBehaviour {
                 if (doorCollision0)
                 {
                     Debug.Log("WAIT FOR YOUR PARTNER");
-                    if(GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0)
-                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }
             }
         }else if(SceneManager.GetActiveScene().name == "Level Lobby")
@@ -40,35 +40,39 @@ public class DesiScene : MonoBehaviour {
             if (doorCollision0)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
-                Debug.Log(GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0);
-                if (GameObject.FindGameObjectWithTag("OfeliaPlayer").GetComponent<OfeliaScene>().doorCollision0)
+                if(Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     NetworkManager.singleton.ServerChangeScene("Level 0");
             }
             else if(doorCollision1)
             {
-                Debug.Log("Level 1 Opened");
-                NetworkManager.singleton.ServerChangeScene("Level 1");
+                Debug.Log("WAIT FOR YOUR PARTNER");
+                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                    NetworkManager.singleton.ServerChangeScene("Level 1");
             }
 			else if (doorCollision2)
 			{
-				Debug.Log ("Level 2 Opened");
-				//NetworkManager.singleton.ServerChangeScene("Level 2");
-			}
+                Debug.Log("WAIT FOR YOUR PARTNER");
+               // if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                //NetworkManager.singleton.ServerChangeScene("Level 2");
+            }
 			else if (doorCollision3)
 			{
-				Debug.Log ("Level 3 Opened");
-				//NetworkManager.singleton.ServerChangeScene("Level 3");
-			}
+                Debug.Log("WAIT FOR YOUR PARTNER");
+                //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                //NetworkManager.singleton.ServerChangeScene("Level 3");
+            }
 			else if (doorCollision4)
 			{
-				Debug.Log ("Level 4 Opened");
-				//NetworkManager.singleton.ServerChangeScene("Level 4");
-			}
+                Debug.Log("WAIT FOR YOUR PARTNER");
+               // if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                //NetworkManager.singleton.ServerChangeScene("Level 4");
+            }
 			else if (doorCollision5)
 			{
-				Debug.Log ("Level 5 Opened");
-				//NetworkManager.singleton.ServerChangeScene("Level 5");
-			}
+                Debug.Log("WAIT FOR YOUR PARTNER");
+                //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                //NetworkManager.singleton.ServerChangeScene("Level 5");
+            }
         }else if(SceneManager.GetActiveScene().name == "Level 1")
         {
             if (HasCandle())
@@ -76,8 +80,8 @@ public class DesiScene : MonoBehaviour {
                 Debug.Log("You are holding a candle");
                 if (doorCollision1)
                 {
-                    Debug.Log("Lobby Opened");
-                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }
             }
         }
