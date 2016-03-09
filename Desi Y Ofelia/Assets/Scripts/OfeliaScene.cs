@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class OfeliaScene : MonoBehaviour {
+public class OfeliaScene : NetworkBehaviour {
 
     //public GameObject Desi;
     public GameObject Candle;
@@ -28,8 +28,8 @@ public class OfeliaScene : MonoBehaviour {
             if (doorCollision0)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
-                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().doorCollision0)
-                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+				if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+					CmdSceneChange("Level Lobby");
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
@@ -38,13 +38,13 @@ public class OfeliaScene : MonoBehaviour {
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-                    NetworkManager.singleton.ServerChangeScene("Level 0");
+					CmdSceneChange("Level 0");
             }
             else if (doorCollision1)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-                    NetworkManager.singleton.ServerChangeScene("Level 1");
+					CmdSceneChange("Level 1");
             }
             else if (doorCollision2)
             {
@@ -111,6 +111,11 @@ public class OfeliaScene : MonoBehaviour {
             doorCollision5 = false;
     }
 
+	[ServerCallback]
+	void CmdSceneChange(string level)
+	{
+		NetworkManager.singleton.ServerChangeScene(level);
+	}
 
 
 

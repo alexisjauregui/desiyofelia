@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class DesiScene : MonoBehaviour {
+public class DesiScene : NetworkBehaviour {
 
     //public GameObject Desi;
     public GameObject Candle;

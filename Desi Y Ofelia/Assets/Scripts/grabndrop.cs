@@ -80,9 +80,14 @@ public class grabndrop : MonoBehaviour
 
     bool HasItem()
     {
-        if (PickUp.transform.parent == transform && PickUp != null)
-            return true;
-        return false;
+		if (SceneManager.GetActiveScene().name != "Level Lobby") 
+		{
+			if (PickUp.transform.parent == transform && PickUp != null)
+				return true;
+			return false;
+		}
+		else
+			return false;
     }
 
     //[Command]
