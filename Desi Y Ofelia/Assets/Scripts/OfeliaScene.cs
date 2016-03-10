@@ -25,11 +25,14 @@ public class OfeliaScene : NetworkBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
-            if (doorCollision0)
+            if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-				if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-					CmdSceneChange("Level Lobby");
+                if (doorCollision0)
+                {
+                    Debug.Log("WAIT FOR YOUR PARTNER");
+                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                        CmdSceneChange("Level Lobby");
+                }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
@@ -69,11 +72,14 @@ public class OfeliaScene : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
-            if (doorCollision1)
+            if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-                    NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                if (doorCollision1)
+                {
+                    Debug.Log("WAIT FOR YOUR PARTNER");
+                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                }
             }
         }
 
