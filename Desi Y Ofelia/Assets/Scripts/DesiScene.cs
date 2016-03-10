@@ -120,7 +120,7 @@ public class DesiScene : NetworkBehaviour {
 			doorCollision5 = false;
     }
 
-    bool HasCandle()
+    public bool HasCandle()
     {
         if (GameObject.Find("CandleHolder(Clone)").transform.IsChildOf(transform))
             return true;
