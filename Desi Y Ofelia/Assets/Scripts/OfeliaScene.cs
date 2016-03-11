@@ -8,6 +8,7 @@ public class OfeliaScene : NetworkBehaviour {
 
     //public GameObject Desi;
     public GameObject Candle;
+    public Text text;
     [SerializeField] public bool doorCollision0;
     [SerializeField] private bool doorCollision1;
     [SerializeField] private bool doorCollision2;
@@ -18,39 +19,48 @@ public class OfeliaScene : NetworkBehaviour {
     // Use this for initialization
     void Start()
     {
+        text = GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>();
+        text.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        text.enabled = false;
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
-                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
                 if (doorCollision0)
                 {
-                    GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
+                    text.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    {
+                        text.enabled = false;
                         CmdSceneChange("Level Lobby");
+                    }
                 }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
         {
-            GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
             if (doorCollision0)
             {
-                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
+                text.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-					CmdSceneChange("Level 0");
+                {
+                    text.enabled = false;
+                    CmdSceneChange("Level 0");
+                }
             }
             else if (doorCollision1)
             {
-                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
+                text.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
-					CmdSceneChange("Level 1");
+                {
+                    text.enabled = false;
+                    CmdSceneChange("Level 1");
+                }
             }
             else if (doorCollision2)
             {
@@ -75,14 +85,16 @@ public class OfeliaScene : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
-            GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
                 if (doorCollision1)
                 {
-                    GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
+                    text.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    {
+                        text.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                    }
                 }
             }
         }
