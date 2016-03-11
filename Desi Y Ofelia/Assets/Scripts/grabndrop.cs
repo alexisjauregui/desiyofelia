@@ -17,11 +17,12 @@ public class grabndrop : MonoBehaviour
     void Start()
     {
         PickUp = GameObject.FindGameObjectWithTag("Pickup");
+        
     }
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Level lobby")
+        if (SceneManager.GetActiveScene().name != "Level Lobby")
         {
             if(PickUp == null)
                 PickUp = GameObject.FindGameObjectWithTag("Pickup");
@@ -93,15 +94,21 @@ public class grabndrop : MonoBehaviour
     //[Command]
     void CmdPickup()
     {
+        
         PickUp.transform.parent = transform;
+
     }
 
     //[Command]
     void CmdDrop()
     {   
         PickUp.transform.parent = null;
-        PickUp.transform.position = new Vector3(dropLoc.x, 0.376f, dropLoc.z);
+        PickUp.transform.position = new Vector3(dropLoc.x, dropLoc.y, dropLoc.z);
         PickUp.transform.rotation = new Quaternion(0, 0, 0, 0);
         PickUp.GetComponent<BoxCollider>().enabled = true;
+  
+
+
+
     }
 }

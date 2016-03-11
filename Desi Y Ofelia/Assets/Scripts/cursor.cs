@@ -5,8 +5,8 @@ public class cursor : MonoBehaviour {
     private RaycastHit hit;
     private float distance;
     private GameObject crosshair;
-    public Texture image1;
-    public Texture image2;
+    public Sprite image2;
+    private float scale;
     
 
 	// Use this for initialization
@@ -14,14 +14,12 @@ public class cursor : MonoBehaviour {
     {
         distance = 2;
         crosshair = GameObject.Find("Crosshair");
-
 	}
 
     // Update is called once per frame
     void Update()
     {
-        crosshair.GetComponent<Renderer>().material.mainTexture = image1;
-
+        crosshair.GetComponent<SpriteRenderer>().sprite = null;
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distance))
         {
             //Debug.Log(hit.collider.name);
@@ -29,19 +27,10 @@ public class cursor : MonoBehaviour {
             {
                 if (hit.collider.gameObject.transform.GetChild(0).gameObject.tag == "Interact")
                 {
-                    crosshair.GetComponent<Renderer>().material.mainTexture = image2;
+                    crosshair.GetComponent<SpriteRenderer>().sprite = image2;
+
                 }
-      
-               
-           
-            }
-           
-          
-        }
-
-
-       
+            }         
+        }       
     }
-
-
 }

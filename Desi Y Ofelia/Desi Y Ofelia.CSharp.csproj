@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -105,6 +99,7 @@
     <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
     <Compile Include="Assets\Scripts\BirdFlight.cs" />
     <Compile Include="Assets\Scripts\BirdSwitch.cs" />
+    <Compile Include="Assets\Scripts\DesiInteract.cs" />
     <Compile Include="Assets\Scripts\DesiPlaySound.cs" />
     <Compile Include="Assets\Scripts\DesiScene.cs" />
     <Compile Include="Assets\Scripts\FOVAlpha.cs" />
@@ -113,6 +108,7 @@
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OfeliaScene.cs" />
+    <Compile Include="Assets\Scripts\alwaysface.cs" />
     <Compile Include="Assets\Scripts\buttonChange.cs" />
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\checkChords.cs" />
@@ -120,6 +116,7 @@
     <Compile Include="Assets\Scripts\cursor.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
     <Compile Include="Assets\Scripts\growRipple.cs" />
+    <Compile Include="Assets\Scripts\interact.cs" />
     <Compile Include="Assets\Scripts\level3Chords.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
