@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 
@@ -27,9 +28,10 @@ public class OfeliaScene : NetworkBehaviour {
         {
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
+                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
                 if (doorCollision0)
                 {
-                    Debug.Log("WAIT FOR YOUR PARTNER");
+                    GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                         CmdSceneChange("Level Lobby");
                 }
@@ -37,15 +39,16 @@ public class OfeliaScene : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
         {
+            GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
             if (doorCollision0)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
+                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
 					CmdSceneChange("Level 0");
             }
             else if (doorCollision1)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
+                GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
 					CmdSceneChange("Level 1");
             }
@@ -72,11 +75,12 @@ public class OfeliaScene : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
+            GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = false;
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
                 if (doorCollision1)
                 {
-                    Debug.Log("WAIT FOR YOUR PARTNER");
+                    GameObject.FindGameObjectWithTag("OfeliaWait").GetComponent<Text>().enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }

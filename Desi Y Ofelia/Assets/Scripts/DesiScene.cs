@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DesiScene : NetworkBehaviour {
@@ -24,10 +25,10 @@ public class DesiScene : NetworkBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
-            //if (Desi.position.z <= -35 && Desi.position.x > -4.7 && Desi.position.x < 4.5 && HasCandle())
-            if(HasCandle())
+            GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = false;
+            if (HasCandle())
             {
-                Debug.Log("You are holding a candle");
+                GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = true;
                 if (doorCollision0)
                 {
                     Debug.Log("WAIT FOR YOUR PARTNER");
@@ -37,15 +38,16 @@ public class DesiScene : NetworkBehaviour {
             }
         }else if(SceneManager.GetActiveScene().name == "Level Lobby")
         {
+            GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = false;
             if (doorCollision0)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                if(Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = true;
+                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     NetworkManager.singleton.ServerChangeScene("Level 0");
             }
             else if(doorCollision1)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
+                GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     NetworkManager.singleton.ServerChangeScene("Level 1");
             }
@@ -75,11 +77,13 @@ public class DesiScene : NetworkBehaviour {
             }
         }else if(SceneManager.GetActiveScene().name == "Level 1")
         {
+            GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = false;
             if (HasCandle())
             {
                 Debug.Log("You are holding a candle");
                 if (doorCollision1)
                 {
+                    GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>().enabled = false;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                 }
