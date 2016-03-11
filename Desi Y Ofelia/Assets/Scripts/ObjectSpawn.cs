@@ -33,7 +33,7 @@ public class ObjectSpawn : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
-            Vector3 newpos = new Vector3(-5, 1.1f, 4.5f);
+            Vector3 newpos = new Vector3(-5, .5f, 4.5f);
             GameObject spawnNetworkCage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/cage"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkCage);
             Debug.Log("Cage spawned");
