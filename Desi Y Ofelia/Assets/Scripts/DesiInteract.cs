@@ -44,6 +44,8 @@ public class DesiInteract : MonoBehaviour {
     {
         visibleTargets.Clear();
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+        Cursor = GameObject.Find("Retical");
+        Cursor.GetComponent<SpriteRenderer>().enabled = false;
 
         for (int i = 0; i < targetVisibleRadius.Length; i++)
         {
@@ -62,13 +64,12 @@ public class DesiInteract : MonoBehaviour {
                     // Add Code Here Stella 
                     visibleTargets.Add(target);
                     Debug.Log(target.name);
+
+                    Cursor.GetComponent<SpriteRenderer>().enabled = true;
                     
 
                 }
-                else
-                {
-
-                }
+               
             }
 
 
