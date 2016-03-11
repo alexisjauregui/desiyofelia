@@ -50,31 +50,33 @@ public class BirdFlight : MonoBehaviour {
 
     void Position1()
     {
-        Bird1.transform.position = new Vector3(-3, 3, -18);
-        Bird2.transform.position = new Vector3(0, 3, -18);
-        Bird3.transform.position = new Vector3(2, 3, -18);
-        Bird4.transform.position = new Vector3(5, 3, -18);
+        Bird1.transform.position = new Vector3(1.8f, 6.25f, -29.5f);
+        Bird2.transform.position = new Vector3(-5.75f, 6.25f, -29.5f);
+        Bird3.transform.position = new Vector3(-7.75f, 6.25f, -29.5f);
+        Bird4.transform.position = new Vector3(-3, 6.25f, -29.5f);
+
     }
     void Position2()
     {
-        Bird1.transform.position = new Vector3(-18, 3, 5);
-        Bird2.transform.position = new Vector3(-18, 3, 2);
-        Bird3.transform.position = new Vector3(-18, 3, 7);
-        Bird4.transform.position = new Vector3(-18, 3, 1);
+        Bird1.transform.position = new Vector3(-30, 6.25f, -7.5f);
+        Bird2.transform.position = new Vector3(-30, 6.25f, 0);
+        Bird3.transform.position = new Vector3(-30, 6.25f, 2);
+        Bird4.transform.position = new Vector3(-30, 6.25f, 7);
 
     }
     void Position3()
     {
-        Bird1.transform.position = new Vector3(-4, 3, 18);
-        Bird2.transform.position = new Vector3(0, 3, 18);
-        Bird3.transform.position = new Vector3(2, 3, 18);
-        Bird4.transform.position = new Vector3(5, 3, 18);
+        Bird1.transform.position = new Vector3(-8, 6.25f, 29);
+        Bird2.transform.position = new Vector3(6.75f, 6.25f, 29);
+        Bird3.transform.position = new Vector3(-1.1f, 6.25f, 29);
+        Bird4.transform.position = new Vector3(-5.5f, 6.25f, 29);
     }
     void Position4()
     {
-        Bird1.transform.position = new Vector3(18, 3, 3);
-        Bird2.transform.position = new Vector3(18, 3, 2);
-        Bird3.transform.position = new Vector3(18, 3, 6);
-        Bird4.transform.position = new Vector3(18, 3, 5);
+        Bird1.transform.position = new Vector3(30f, 6.25f, 5.25f);
+        Bird2.transform.position = new Vector3(30f, 6.25f, -2.3f);
+        Bird3.transform.position = new Vector3(30f, 6.25f, -4.3f);
+        Bird4.transform.position = new Vector3(30f, 6.25f, 0.6f);
+        
     }
 }

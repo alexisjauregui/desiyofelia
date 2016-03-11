@@ -33,14 +33,14 @@ public class ObjectSpawn : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
-            Vector3 newpos = new Vector3(-5, .9f, 4.5f);
+            Vector3 newpos = new Vector3(25, 0.7f, 19f);
             GameObject spawnNetworkCage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/cage"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkCage);
             Debug.Log("Cage spawned");
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            Vector3 newpos = new Vector3(-5, 1.1f, 4.5f);
+            Vector3 newpos = new Vector3(-25, 1f, 25f);
             GameObject spawnNetworkCage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/cage"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkCage);
             Debug.Log("Cage spawned");
@@ -59,14 +59,14 @@ public class ObjectSpawn : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
         {
-            Vector3 newpos = new Vector3(-5, 0.4f, 4.5f);
+            Vector3 newpos = new Vector3(25, 0.5f, 19f);
             GameObject spawnNetworkcandle = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CandleHolder"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkcandle);
             Debug.Log("Candle spawned");
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            Vector3 newpos = new Vector3(-5, 0.4f, 4.5f);
+            Vector3 newpos = new Vector3(-25, 0.7f, 25f);
             GameObject spawnNetworkcandle = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CandleHolder"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkcandle);
             Debug.Log("Candle spawned");
