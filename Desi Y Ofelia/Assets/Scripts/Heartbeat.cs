@@ -39,11 +39,6 @@ public class Heartbeat : MonoBehaviour {
         }
     }
 
-    void dontLook(Vector3 dirtoTarget, Transform target)
-    {
-
-    }
-
     void FindVisTarget()
     {
         audiosource = GetComponent<AudioSource>();
@@ -70,22 +65,21 @@ public class Heartbeat : MonoBehaviour {
                     Debug.Log("Target found!!!");
                     // Add Code Here Stella 
                     visibleTargets.Add(target);
-                    audiosource.loop = true;
-                    audiosource.Play();
 
-            
-                }
-                else
-                {
-                  
+                    if(target.position.x - transform.position.x < 0)
+                    {
+                        audiosource.panStereo = -1;
+                    }
+                    if (target.position.x - transform.position.x > 0)
+                    {
+                        audiosource.panStereo = 1;
+                    }
+
+                    audiosource.loop = true;  
+                    audiosource.Play();
 
                 }
             }
-
-
-
-
-
         }
     }
 
