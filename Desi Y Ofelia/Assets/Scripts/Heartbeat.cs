@@ -1,19 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class FOVAlpha : MonoBehaviour
-{
-
+public class Heartbeat : MonoBehaviour {
     public float viewRadius;
     [Range(0, 360)]
-    public float bigViewAngle;
-    public float smallViewAngle;
+    public float viewAngle;
 
     public LayerMask targetMask;
     public LayerMask obstaclesMask;
 
+    public AudioClip beats;
+    private AudioSource audiosource;
 
 
     [HideInInspector]
@@ -25,6 +23,8 @@ public class FOVAlpha : MonoBehaviour
     {
 
         StartCoroutine("FindTargetsWithDelay", .2f);
+       
+       
     }
 
 
@@ -41,27 +41,18 @@ public class FOVAlpha : MonoBehaviour
 
     void dontLook(Vector3 dirtoTarget, Transform target)
     {
-        float dsttoTarget = Vector3.Distance(transform.position, target.position);
 
-        if (!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
-        {
-            Debug.Log("Target found!!!");
-            // Add Code Here Stella 
-            look.GetComponentInChildren<CanvasGroup>().alpha = 1;
-            visibleTargets.Add(target);
-
-        }
-        else
-        {
-            look.GetComponentInChildren<CanvasGroup>().alpha = 0;
-        }
     }
 
     void FindVisTarget()
     {
+        audiosource = GetComponent<AudioSource>();
         visibleTargets.Clear();
-        look.GetComponentInChildren<CanvasGroup>().alpha = 0;
+        audiosource.Pause();
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+
+        //Heartbeats
+       
 
         for (int i = 0; i < targetVisibleRadius.Length; i++)
         {
@@ -70,20 +61,27 @@ public class FOVAlpha : MonoBehaviour
             Vector3 dirtoTarget = (target.position - transform.position).normalized;
 
             //if it is in the small circle
-            if (Vector3.Angle(transform.forward, dirtoTarget) < smallViewAngle / 2)
+            if (Vector3.Angle(transform.forward, dirtoTarget) < viewAngle / 2)
             {
-                dontLook(dirtoTarget, target);
-            }
-            //if it is in the big circle
-            else if (Vector3.Angle(transform.forward, dirtoTarget) < bigViewAngle / 2)
-            {
-                //if the object is not in the "red zone"
-                if (true)
-                {
-                    dontLook(dirtoTarget, target);
-                }
+                float dsttoTarget = Vector3.Distance(transform.position, target.position);
 
+                if (!Physics.Raycast(transform.position, dirtoTarget, dsttoTarget, obstaclesMask))
+                {
+                    Debug.Log("Target found!!!");
+                    // Add Code Here Stella 
+                    visibleTargets.Add(target);
+                    audiosource.loop = true;
+                    audiosource.Play();
+
+            
+                }
+                else
+                {
+                  
+
+                }
             }
+
 
 
 
