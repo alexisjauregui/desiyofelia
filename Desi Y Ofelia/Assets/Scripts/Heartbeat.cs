@@ -68,7 +68,6 @@ public class Heartbeat : MonoBehaviour {
 
                     //Inverse Transform 
                     ofeliaRelative = ofelia.InverseTransformPoint(target.transform.position);
-                    Debug.Log(ofeliaRelative);
 
 
                     if(ofeliaRelative.x < 0)

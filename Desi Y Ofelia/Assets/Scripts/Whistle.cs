@@ -18,7 +18,7 @@ public class Whistle : NetworkBehaviour {
     {
         if (isLocalPlayer)
         {
-            if (Input.GetButtonDown("AButton"))
+            if (Input.GetButtonDown("BButton"))
             {
                 source.Play();
             }
