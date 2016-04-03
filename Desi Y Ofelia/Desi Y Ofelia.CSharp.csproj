@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -114,6 +108,7 @@
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OfeliaScene.cs" />
+    <Compile Include="Assets\Scripts\Whistle.cs" />
     <Compile Include="Assets\Scripts\alwaysface.cs" />
     <Compile Include="Assets\Scripts\buttonChange.cs" />
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
