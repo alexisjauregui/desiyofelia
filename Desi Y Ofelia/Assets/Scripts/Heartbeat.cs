@@ -13,6 +13,9 @@ public class Heartbeat : MonoBehaviour {
     public AudioClip beats;
     private AudioSource audiosource;
 
+    public Transform ofelia;
+    public Vector3 ofeliaRelative;
+
 
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
@@ -21,10 +24,7 @@ public class Heartbeat : MonoBehaviour {
 
     void Start()
     {
-
         StartCoroutine("FindTargetsWithDelay", .2f);
-       
-       
     }
 
 
@@ -46,8 +46,8 @@ public class Heartbeat : MonoBehaviour {
         audiosource.Pause();
         Collider[] targetVisibleRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
-        //Heartbeats
-       
+        //Inverse Transformpoint
+        ofelia = this.transform;
 
         for (int i = 0; i < targetVisibleRadius.Length; i++)
         {
@@ -66,11 +66,15 @@ public class Heartbeat : MonoBehaviour {
                     // Add Code Here Stella 
                     visibleTargets.Add(target);
 
-                    if(target.position.x - transform.position.x < 0)
+                    //Inverse Transform 
+                    ofeliaRelative = ofelia.InverseTransformPoint(target.transform.position);
+
+
+                    if(ofeliaRelative.x < 0)
                     {
                         audiosource.panStereo = -1;
                     }
-                    if (target.position.x - transform.position.x > 0)
+                    if (ofeliaRelative.x > 0)
                     {
                         audiosource.panStereo = 1;
                     }
