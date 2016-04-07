@@ -9,7 +9,11 @@ public class DesiScene : NetworkBehaviour
 
     //public GameObject Desi;
     public GameObject Candle;
-    public Text text;
+    public Text Sign0;
+    public Text Sign1;
+    public Text Sign2;
+    public Text Sign3;
+    public Text Sign4;
     [SerializeField]
     public bool doorCollision0;
     [SerializeField]
@@ -26,8 +30,12 @@ public class DesiScene : NetworkBehaviour
     // Use this for initialization
     void Start()
     {
-        text = GameObject.FindGameObjectWithTag("DesiWait").GetComponent<Text>();
-        text.enabled = false;
+        Sign0 = GameObject.Find("Sign0").GetComponent<Text>();
+        Sign0.enabled = false;
+        Sign1 = GameObject.Find("Sign1").GetComponent<Text>();
+        Sign1.enabled = false;
+        Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
+        Sign2.enabled = false;
     }
 
     // Update is called once per frame
@@ -40,46 +48,61 @@ public class DesiScene : NetworkBehaviour
             {
                 if (doorCollision0)
                 {
-                    text.enabled = true;
+                    Sign0.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     {
-                        text.enabled = false;
+                        Sign0.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
+                }
+                else
+                {
+                    Sign0.enabled = false;
                 }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
         {
-            text.enabled = false;
             if (doorCollision0)
             {
-                text.enabled = true;
+                Sign0.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
-                    text.enabled = false;
+                    Sign0.enabled = false;
                     NetworkManager.singleton.ServerChangeScene("Level 0");
                 }
             }
-            else if (doorCollision1)
+            else
             {
-                text.enabled = true;
+                Sign0.enabled = false;
+            }
+            if (doorCollision1)
+            {
+                Sign1.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
-                    text.enabled = false;
+                    Sign1.enabled = false;
                     NetworkManager.singleton.ServerChangeScene("Level 1");
                 }
             }
-            else if (doorCollision2)
+            else
             {
-                text.enabled = true;
+                Sign1.enabled = false;
+            }
+            if (doorCollision2)
+            {
+                Sign2.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
-                    text.enabled = false;
+                    Sign2.enabled = false;
                     NetworkManager.singleton.ServerChangeScene("Level 3");
                 }
             }
-            else if (doorCollision3)
+            else
+            {
+                Sign2.enabled = false;
+            } 
+            if (doorCollision3)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
                 //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
@@ -105,12 +128,16 @@ public class DesiScene : NetworkBehaviour
                 Debug.Log("You are holding a candle");
                 if (doorCollision1)
                 {
-                    text.enabled = true;
+                    Sign1.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     {
-                        text.enabled = false;
+                        Sign1.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
+                }
+                else
+                {
+                    Sign1.enabled = false;
                 }
             }
         }
@@ -121,12 +148,16 @@ public class DesiScene : NetworkBehaviour
                 Debug.Log("You are holding a candle");
                 if (doorCollision2)
                 {
-                    text.enabled = true;
+                    Sign2.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     {
-                        text.enabled = false;
+                        Sign2.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
+                }
+                else
+                {
+                    Sign2.enabled = false;
                 }
             }
         }
