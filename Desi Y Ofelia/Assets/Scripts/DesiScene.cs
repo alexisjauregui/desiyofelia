@@ -72,7 +72,11 @@ public class DesiScene : NetworkBehaviour
                     NetworkManager.singleton.ServerChangeScene("Level 0");
                 }
             }
-            else if (doorCollision1)
+            else
+            {
+                Sign0.enabled = false;
+            }
+            if (doorCollision1)
             {
                 Sign1.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
@@ -81,7 +85,11 @@ public class DesiScene : NetworkBehaviour
                     NetworkManager.singleton.ServerChangeScene("Level 1");
                 }
             }
-            else if (doorCollision2)
+            else
+            {
+                Sign1.enabled = false;
+            }
+            if (doorCollision2)
             {
                 Sign2.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
@@ -90,7 +98,11 @@ public class DesiScene : NetworkBehaviour
                     NetworkManager.singleton.ServerChangeScene("Level 3");
                 }
             }
-            else if (doorCollision3)
+            else
+            {
+                Sign2.enabled = false;
+            } 
+            if (doorCollision3)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
                 //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
@@ -142,6 +154,10 @@ public class DesiScene : NetworkBehaviour
                         Sign2.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
+                }
+                else
+                {
+                    Sign2.enabled = false;
                 }
             }
         }

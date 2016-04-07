@@ -71,7 +71,11 @@ public class OfeliaScene : NetworkBehaviour
                     CmdSceneChange("Level 0");
                 }
             }
-            else if (doorCollision1)
+            else
+            {
+                Sign0.enabled = false;
+            } 
+            if (doorCollision1)
             {
                 Sign1.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
@@ -80,7 +84,11 @@ public class OfeliaScene : NetworkBehaviour
                     CmdSceneChange("Level 1");
                 }
             }
-            else if (doorCollision2)
+            else
+            {
+                Sign1.enabled = false;
+            } 
+            if (doorCollision2)
             {
                 Sign2.enabled = true;
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
@@ -89,7 +97,11 @@ public class OfeliaScene : NetworkBehaviour
                     CmdSceneChange("Level 3");
                 }
             }
-            else if (doorCollision3)
+            else
+            {
+                Sign2.enabled = false;
+            } 
+            if (doorCollision3)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
                 //NetworkManager.singleton.ServerChangeScene("Level 3");
@@ -118,6 +130,10 @@ public class OfeliaScene : NetworkBehaviour
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
                 }
+                else
+                {
+                    Sign1.enabled = false;
+                }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
@@ -132,6 +148,10 @@ public class OfeliaScene : NetworkBehaviour
                         Sign2.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
                     }
+                }
+                else
+                {
+                    Sign2.enabled = false;
                 }
             }
         }

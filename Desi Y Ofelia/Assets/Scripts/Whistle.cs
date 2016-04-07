@@ -4,13 +4,13 @@ using System.Collections;
 
 public class Whistle : NetworkBehaviour {
     public AudioClip clip;
-    private AudioSource source;
+    private AudioSource audiosource;
 
 
     // Use this for initialization
     void Start()
     {
-        source = this.GetComponent<AudioSource>();
+        audiosource = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,10 +20,16 @@ public class Whistle : NetworkBehaviour {
         {
             if (Input.GetButtonDown("BButton"))
             {
-                source.Play();
+                RpcPlayWhistle();
             }
         }
 	
 	}
+
+    [ClientRpc]
+    void RpcPlayWhistle()
+    {
+        audiosource.Play();
+    }
 
 }
