@@ -60,6 +60,8 @@ public class DesiScene : NetworkBehaviour
                     Sign0.enabled = false;
                 }
             }
+            else
+                Sign0.enabled = false;
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
         {
