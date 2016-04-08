@@ -145,9 +145,9 @@ public class DesiScene : NetworkBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
+            Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
             if (HasCandle())
             {
-                Debug.Log("You are holding a candle");
                 if (doorCollision2)
                 {
                     Sign2.enabled = true;
@@ -162,6 +162,8 @@ public class DesiScene : NetworkBehaviour
                     Sign2.enabled = false;
                 }
             }
+            else
+                Sign2.enabled = false;
         }
 
     }
