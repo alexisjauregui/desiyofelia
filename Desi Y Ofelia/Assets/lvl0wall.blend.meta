@@ -58,6 +58,11 @@ ModelImporter:
     100100: Floor
     100102: Main_Walls
     100104: Walkway_Arches
+    100106: Cube
+    100108: Cube_001
+    100110: Cube_002
+    100112: Cube_003
+    100114: Railing
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -111,6 +116,11 @@ ModelImporter:
     400100: Floor
     400102: Main_Walls
     400104: Walkway_Arches
+    400106: Cube
+    400108: Cube_001
+    400110: Cube_002
+    400112: Cube_003
+    400114: Railing
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -164,6 +174,11 @@ ModelImporter:
     2300100: Floor
     2300102: Main_Walls
     2300104: Walkway_Arches
+    2300106: Cube
+    2300108: Cube_001
+    2300110: Cube_002
+    2300112: Cube_003
+    2300114: Railing
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -217,6 +232,11 @@ ModelImporter:
     3300100: Floor
     3300102: Main_Walls
     3300104: Walkway_Arches
+    3300106: Cube
+    3300108: Cube_001
+    3300110: Cube_002
+    3300112: Cube_003
+    3300114: Railing
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -270,6 +290,11 @@ ModelImporter:
     4300100: Arches
     4300102: Main_Walls
     4300104: Walkway_Arches
+    4300106: Cube
+    4300108: Cube_001
+    4300110: Cube_002
+    4300112: Cube_003
+    4300114: Railing
     7400000: Default Take
     9500000: //RootNode
   materials:
