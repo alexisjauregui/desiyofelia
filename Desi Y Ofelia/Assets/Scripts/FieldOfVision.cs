@@ -37,10 +37,7 @@ public class FieldOfVision : MonoBehaviour {
         }
     }
 
-    void dontLook(Vector3 dirtoTarget, Transform target)
-    {
 
-    }
     
     void FindVisTarget()
     {
@@ -64,6 +61,7 @@ public class FieldOfVision : MonoBehaviour {
                     Debug.Log("Target found!!!");
                     // Add Code Here Stella 
                     look.GetComponentInChildren<CanvasGroup>().alpha = 1;
+                    
                     visibleTargets.Add(target);
 
                 }
@@ -72,11 +70,6 @@ public class FieldOfVision : MonoBehaviour {
                     look.GetComponentInChildren<CanvasGroup>().alpha = 0;
                 }
             }
-
-
-
-
-
         }
     }
 
