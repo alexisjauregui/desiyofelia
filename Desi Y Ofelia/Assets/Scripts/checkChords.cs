@@ -16,6 +16,7 @@ public class checkChords : NetworkBehaviour {
     private Text newText;
     public AudioSource audio;
     bool hasPlayed = false;
+    //private ParticleSystem particle;
 
 
     // Use this for initialization
@@ -36,7 +37,11 @@ public class checkChords : NetworkBehaviour {
             chords = newText.text;
             //Add combo according to levels here!
             if (SceneManager.GetActiveScene().name == "Level 0")
+            {
                 pass = "ABYX";
+                //particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
+                //particle.Stop();
+            }
             else if (SceneManager.GetActiveScene().name == "Level 1")
                 pass = "XXBA";
 
@@ -44,6 +49,7 @@ public class checkChords : NetworkBehaviour {
             if (chords.Contains(pass))
             {
                 Debug.Log("Yes");
+                //particle.Play();
                 if (hasPlayed == false)
                 {
                     hasPlayed = true;
