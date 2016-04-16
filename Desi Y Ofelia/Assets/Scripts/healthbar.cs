@@ -20,16 +20,18 @@ public class healthbar : MonoBehaviour {
         if (Ofelia.GetComponentInChildren<CanvasGroup>().alpha == 1)
         {
             ini_health -= Time.deltaTime * decrimant;
-            Debug.Log(Mathf.Round(ini_health));
+            //Debug.Log(Mathf.Round(ini_health));
 
             rounded = Mathf.CeilToInt(ini_health);
 
-            Timer.text = rounded.ToString();
-            if(rounded < 0)
+            if (rounded < 0)
             {
                 rounded = 0;
             }
-            // If Zero End Game
+
+            Timer.text = rounded.ToString();
+            
+            
             
         }
 	

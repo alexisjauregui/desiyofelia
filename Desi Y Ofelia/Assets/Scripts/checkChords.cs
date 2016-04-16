@@ -25,10 +25,12 @@ public class checkChords : NetworkBehaviour {
         newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
         audio = GetComponent<AudioSource>();
         chords = "";
+        particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
+        particle.Pause();
     }
 	// Update is called once per frame
 	void Update () {
-
+        Debug.Log(particle.isPlaying);
         if (SceneManager.GetActiveScene().name == "Level 0" || SceneManager.GetActiveScene().name == "Level 1")
         {
 
@@ -39,9 +41,8 @@ public class checkChords : NetworkBehaviour {
             if (SceneManager.GetActiveScene().name == "Level 0")
             {
                 pass = "ABYX";
-                particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
-                if(particle.isPlaying)
-                particle.Stop();
+                
+                
             }
             else if (SceneManager.GetActiveScene().name == "Level 1")
                 pass = "XXBA";
@@ -50,7 +51,6 @@ public class checkChords : NetworkBehaviour {
             if (chords.Contains(pass))
             {
                 Debug.Log("Yes");
-                //particle.Play();
                 if (hasPlayed == false)
                 {
                     hasPlayed = true;
@@ -63,6 +63,7 @@ public class checkChords : NetworkBehaviour {
             if (hasPlayed)
             {
                 particle.Play();
+                Debug.Log("HolllA");
             }
         }
         
