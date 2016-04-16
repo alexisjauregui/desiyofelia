@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: fbb405a87410a8d40bbc234d68d07184
-=======
-<<<<<<< HEAD
-guid: a026d26ef54b5854da5edf2ba387268f
-timeCreated: 1460585996
-=======
-guid: 23e6c21c63d0bf843858c886b7394abb
-timeCreated: 1460680560
->>>>>>> 86327f3af91272954aa51a79d231a2b19e88c006
+guid: 0c0124fe07d4e5940ba436113d3990ab
+timeCreated: 1460767863
 licenseType: Free
->>>>>>> develop
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -18,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Plane
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -45,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

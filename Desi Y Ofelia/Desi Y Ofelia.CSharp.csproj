@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\cursor.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
     <Compile Include="Assets\Scripts\growRipple.cs" />
+    <Compile Include="Assets\Scripts\healthbar.cs" />
     <Compile Include="Assets\Scripts\interact.cs" />
     <Compile Include="Assets\Scripts\level3Chords.cs" />
     <Compile Include="Assets\Scripts\levelTimeGate.cs" />
