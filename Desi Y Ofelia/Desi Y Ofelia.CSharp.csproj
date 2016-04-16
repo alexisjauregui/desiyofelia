@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\healthbar.cs" />
     <Compile Include="Assets\Scripts\interact.cs" />
     <Compile Include="Assets\Scripts\level3Chords.cs" />
+    <Compile Include="Assets\Scripts\levelTimeGate.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
     <Compile Include="Assets\Scripts\trailDestroy.cs" />
