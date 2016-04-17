@@ -22,15 +22,18 @@ public class checkChords : NetworkBehaviour {
     // Use this for initialization
     void Start()
     {
-        newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
-        audio = GetComponent<AudioSource>();
-        chords = "";
-        particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
-        particle.Pause();
+        if (SceneManager.GetActiveScene().name == "Level 0" || SceneManager.GetActiveScene().name == "Level 1")
+        {
+            newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
+            audio = GetComponent<AudioSource>();
+            chords = "";
+            particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
+            particle.Pause();
+        }
     }
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(particle.isPlaying);
+
         if (SceneManager.GetActiveScene().name == "Level 0" || SceneManager.GetActiveScene().name == "Level 1")
         {
 
