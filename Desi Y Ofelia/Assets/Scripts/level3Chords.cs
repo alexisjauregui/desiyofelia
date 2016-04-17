@@ -12,6 +12,9 @@ public class level3Chords : NetworkBehaviour {
     private bool pass2;
     private bool pass3;
 
+    private ParticleSystem particleA;
+    private ParticleSystem particleB;
+    private ParticleSystem particleC;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +25,13 @@ public class level3Chords : NetworkBehaviour {
             pass3 = false;
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
+
+            particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
+            particleA.Pause();
+            particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
+            particleB.Pause();
+            particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
+            particleC.Pause();
         }
 	
 	}
@@ -37,14 +47,17 @@ public class level3Chords : NetworkBehaviour {
             if(chords.Contains("BABX"))
             {
                 pass1 = true;
+                particleA.Play();
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
+                particleB.Play();
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
+                particleC.Play();
             }
 
             if(pass1 && pass2 && pass3)
