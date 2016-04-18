@@ -16,6 +16,11 @@ public class level3Chords : NetworkBehaviour {
     private ParticleSystem particleB;
     private ParticleSystem particleC;
 
+    private GameObject towerG;
+    private GameObject towerR;
+    private GameObject towerY;
+    private GameObject towerB;
+
     // Use this for initialization
     void Start () {
         if(SceneManager.GetActiveScene().name == "Level 3")
@@ -32,6 +37,11 @@ public class level3Chords : NetworkBehaviour {
             particleB.Pause();
             particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
             particleC.Pause();
+
+            towerG = GameObject.Find("indicatorG");
+            towerR = GameObject.Find("indicatorR");
+            towerY = GameObject.Find("indicatorY");
+            towerB = GameObject.Find("indicatorB");
         }
 	
 	}
@@ -48,22 +58,26 @@ public class level3Chords : NetworkBehaviour {
             {
                 pass1 = true;
                 particleA.Play();
+                towerG.transform.position = new Vector3(0, -2, 0);
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
                 particleB.Play();
+                towerR.transform.position = new Vector3(0, -2, 0);
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
                 particleC.Play();
+                towerY.transform.position = new Vector3(0, -2, 0);
             }
 
             if(pass1 && pass2 && pass3)
             {
                 Debug.Log("Yass");
                 CmdDestroy();
+                towerB.transform.position = new Vector3(0, -2, 0);
             }
 
         }
