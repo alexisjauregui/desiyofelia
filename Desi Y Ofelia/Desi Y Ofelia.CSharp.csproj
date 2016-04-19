@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\DesiInteract.cs" />
     <Compile Include="Assets\Scripts\DesiPlaySound.cs" />
     <Compile Include="Assets\Scripts\DesiScene.cs" />
+    <Compile Include="Assets\Scripts\DoubleDoorSwitch.cs" />
     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\Heartbeat.cs" />
     <Compile Include="Assets\Scripts\LocalAuthority.cs" />

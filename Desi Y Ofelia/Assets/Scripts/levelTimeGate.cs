@@ -18,6 +18,7 @@ public class levelTimeGate : NetworkBehaviour {
         {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
+            cage = GameObject.FindGameObjectWithTag("Cage");
         }
     }
 
@@ -29,21 +30,13 @@ public class levelTimeGate : NetworkBehaviour {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = newText.text;
 
-            if (chords.Contains("ABXY"))
+            if (chords.Contains("ABXY") && cage.transform.position == new Vector3(15,1,-17))
             {
-                newText.text = "";
-                chords = newText.text;
-                CmdCageMove();
+                cage.GetComponent<Animation>().Play();
                 
             }
         }
     }
 
-    [Command]
-    void CmdCageMove()
-    {
-        cage = GameObject.FindGameObjectWithTag("Cage");
-        Vector3 pos = new Vector3(15, 7, -17);
-        cage.transform.position = pos;
-    }
+   
 }
