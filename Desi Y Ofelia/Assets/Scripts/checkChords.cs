@@ -16,14 +16,20 @@ public class checkChords : NetworkBehaviour {
     private Text newText;
     public AudioSource audio;
     bool hasPlayed = false;
+    private ParticleSystem particle;
 
 
     // Use this for initialization
     void Start()
     {
-        newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
-        audio = GetComponent<AudioSource>();
-        chords = "";
+        if (SceneManager.GetActiveScene().name == "Level 0" || SceneManager.GetActiveScene().name == "Level 1")
+        {
+            newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
+            audio = GetComponent<AudioSource>();
+            chords = "";
+            particle = GameObject.Find("bannerRain").GetComponent<ParticleSystem>();
+            particle.Pause();
+        }
     }
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +42,11 @@ public class checkChords : NetworkBehaviour {
             chords = newText.text;
             //Add combo according to levels here!
             if (SceneManager.GetActiveScene().name == "Level 0")
+            {
                 pass = "ABYX";
+                
+                
+            }
             else if (SceneManager.GetActiveScene().name == "Level 1")
                 pass = "XXBA";
 
@@ -51,6 +61,12 @@ public class checkChords : NetworkBehaviour {
                 }
                 CmdDestroy();
 
+            }
+
+            if (hasPlayed)
+            {
+                particle.Play();
+                Debug.Log("HolllA");
             }
         }
         

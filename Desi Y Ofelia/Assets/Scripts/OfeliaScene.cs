@@ -138,6 +138,7 @@ public class OfeliaScene : NetworkBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
+            Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
                 if (doorCollision2)
@@ -146,7 +147,7 @@ public class OfeliaScene : NetworkBehaviour
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                     {
                         Sign2.enabled = false;
-                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                        CmdSceneChange("Level Lobby");
                     }
                 }
                 else

@@ -12,6 +12,14 @@ public class level3Chords : NetworkBehaviour {
     private bool pass2;
     private bool pass3;
 
+    private ParticleSystem particleA;
+    private ParticleSystem particleB;
+    private ParticleSystem particleC;
+
+    private GameObject towerG;
+    private GameObject towerR;
+    private GameObject towerY;
+    private GameObject towerB;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +30,18 @@ public class level3Chords : NetworkBehaviour {
             pass3 = false;
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
+
+            particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
+            particleA.Pause();
+            particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
+            particleB.Pause();
+            particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
+            particleC.Pause();
+
+            towerG = GameObject.Find("indicatorG");
+            towerR = GameObject.Find("indicatorR");
+            towerY = GameObject.Find("indicatorY");
+            towerB = GameObject.Find("indicatorB");
         }
 	
 	}
@@ -37,20 +57,30 @@ public class level3Chords : NetworkBehaviour {
             if(chords.Contains("BABX"))
             {
                 pass1 = true;
+                particleA.Play();
+                towerG.transform.position = new Vector3(0, -2, 0);
+                GameObject.Find("green").GetComponent<Renderer>().material.color = Color.white;
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
+                particleB.Play();
+                towerR.transform.position = new Vector3(0, -2, 0);
+                GameObject.Find("red").GetComponent<Renderer>().material.color = Color.white;
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
+                particleC.Play();
+                towerY.transform.position = new Vector3(0, -2, 0);
+                GameObject.Find("yellow").GetComponent<Renderer>().material.color = Color.white;
             }
 
             if(pass1 && pass2 && pass3)
             {
                 Debug.Log("Yass");
                 CmdDestroy();
+                towerB.transform.position = new Vector3(0, -2, 0);
             }
 
         }

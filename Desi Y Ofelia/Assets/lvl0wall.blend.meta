@@ -39,6 +39,54 @@ ModelImporter:
     100062: Balcony_Lining_003
     100064: Wall_Lining_003
     100066: Wall_Main_003
+    100068: Arches_Outer
+    100070: Arch_1
+    100072: Arch_2
+    100074: Arch_3
+    100076: Arch_4
+    100078: Arch_Entrance
+    100080: Wall_Outer
+    100082: Outer_Arches___Walls
+    100084: Arch_Walls
+    100086: Outer_Wall
+    100088: Outer_Wall_001
+    100090: Main_Inner_Wall
+    100092: Main_Outer_Wall
+    100094: Circle_003
+    100096: Inner_Temp
+    100098: Arches
+    100100: Floor
+    100102: Main_Walls
+    100104: Walkway_Arches
+    100106: Cube
+    100108: Cube_001
+    100110: Cube_002
+    100112: Cube_003
+    100114: Railing
+    100116: Cube_004
+    100118: Cube_005
+    100120: Cube_006
+    100122: Cube_007
+    100124: Cube_008
+    100126: Cube_009
+    100128: Cube_011
+    100130: Cube_010
+    100132: Cube_012
+    100134: Cube_013
+    100136: East1
+    100138: East2
+    100140: East3
+    100142: East4
+    100144: North1
+    100146: North2
+    100148: North3
+    100150: North4
+    100152: South1
+    100154: South2
+    100156: West1
+    100158: West2
+    100160: West3
+    100162: West4
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -73,6 +121,54 @@ ModelImporter:
     400062: Balcony_Lining_003
     400064: Wall_Lining_003
     400066: Wall_Main_003
+    400068: Arches_Outer
+    400070: Arch_1
+    400072: Arch_2
+    400074: Arch_3
+    400076: Arch_4
+    400078: Arch_Entrance
+    400080: Wall_Outer
+    400082: Outer_Arches___Walls
+    400084: Arch_Walls
+    400086: Outer_Wall
+    400088: Outer_Wall_001
+    400090: Main_Inner_Wall
+    400092: Main_Outer_Wall
+    400094: Circle_003
+    400096: Inner_Temp
+    400098: Arches
+    400100: Floor
+    400102: Main_Walls
+    400104: Walkway_Arches
+    400106: Cube
+    400108: Cube_001
+    400110: Cube_002
+    400112: Cube_003
+    400114: Railing
+    400116: Cube_004
+    400118: Cube_005
+    400120: Cube_006
+    400122: Cube_007
+    400124: Cube_008
+    400126: Cube_009
+    400128: Cube_011
+    400130: Cube_010
+    400132: Cube_012
+    400134: Cube_013
+    400136: East1
+    400138: East2
+    400140: East3
+    400142: East4
+    400144: North1
+    400146: North2
+    400148: North3
+    400150: North4
+    400152: South1
+    400154: South2
+    400156: West1
+    400158: West2
+    400160: West3
+    400162: West4
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -107,6 +203,54 @@ ModelImporter:
     2300062: Balcony_Lining_003
     2300064: Wall_Lining_003
     2300066: Wall_Main_003
+    2300068: Arches_Outer
+    2300070: Arch_1
+    2300072: Arch_2
+    2300074: Arch_3
+    2300076: Arch_4
+    2300078: Arch_Entrance
+    2300080: Wall_Outer
+    2300082: Outer_Arches___Walls
+    2300084: Arch_Walls
+    2300086: Outer_Wall
+    2300088: Outer_Wall_001
+    2300090: Main_Inner_Wall
+    2300092: Main_Outer_Wall
+    2300094: Circle_003
+    2300096: Inner_Temp
+    2300098: Arches
+    2300100: Floor
+    2300102: Main_Walls
+    2300104: Walkway_Arches
+    2300106: Cube
+    2300108: Cube_001
+    2300110: Cube_002
+    2300112: Cube_003
+    2300114: Railing
+    2300116: Cube_004
+    2300118: Cube_005
+    2300120: Cube_006
+    2300122: Cube_007
+    2300124: Cube_008
+    2300126: Cube_009
+    2300128: Cube_011
+    2300130: Cube_010
+    2300132: Cube_012
+    2300134: Cube_013
+    2300136: East1
+    2300138: East2
+    2300140: East3
+    2300142: East4
+    2300144: North1
+    2300146: North2
+    2300148: North3
+    2300150: North4
+    2300152: South1
+    2300154: South2
+    2300156: West1
+    2300158: West2
+    2300160: West3
+    2300162: West4
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -141,6 +285,54 @@ ModelImporter:
     3300062: Balcony_Lining_003
     3300064: Wall_Lining_003
     3300066: Wall_Main_003
+    3300068: Arches_Outer
+    3300070: Arch_1
+    3300072: Arch_2
+    3300074: Arch_3
+    3300076: Arch_4
+    3300078: Arch_Entrance
+    3300080: Wall_Outer
+    3300082: Outer_Arches___Walls
+    3300084: Arch_Walls
+    3300086: Outer_Wall
+    3300088: Outer_Wall_001
+    3300090: Main_Inner_Wall
+    3300092: Main_Outer_Wall
+    3300094: Circle_003
+    3300096: Inner_Temp
+    3300098: Arches
+    3300100: Floor
+    3300102: Main_Walls
+    3300104: Walkway_Arches
+    3300106: Cube
+    3300108: Cube_001
+    3300110: Cube_002
+    3300112: Cube_003
+    3300114: Railing
+    3300116: Cube_004
+    3300118: Cube_005
+    3300120: Cube_006
+    3300122: Cube_007
+    3300124: Cube_008
+    3300126: Cube_009
+    3300128: Cube_011
+    3300130: Cube_010
+    3300132: Cube_012
+    3300134: Cube_013
+    3300136: East1
+    3300138: East2
+    3300140: East3
+    3300142: East4
+    3300144: North1
+    3300146: North2
+    3300148: North3
+    3300150: North4
+    3300152: South1
+    3300154: South2
+    3300156: West1
+    3300158: West2
+    3300160: West3
+    3300162: West4
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -175,6 +367,54 @@ ModelImporter:
     4300062: Arch_Lining_003
     4300064: Wall_Main_003
     4300066: Balcony_Lining_003
+    4300068: Arches_Outer
+    4300070: Arch_4
+    4300072: Arch_3
+    4300074: Arch_2
+    4300076: Arch_1
+    4300078: Arch_Entrance
+    4300080: Wall_Outer
+    4300082: Outer_Arches___Walls
+    4300084: Outer_Wall
+    4300086: Arch_Walls
+    4300088: Outer_Wall_001
+    4300090: Main_Inner_Wall
+    4300092: Main_Outer_Wall
+    4300094: Circle_003
+    4300096: Inner_Temp
+    4300098: Floor
+    4300100: Arches
+    4300102: Main_Walls
+    4300104: Walkway_Arches
+    4300106: Cube
+    4300108: Cube_001
+    4300110: Cube_002
+    4300112: Cube_003
+    4300114: Railing
+    4300116: Cube_011
+    4300118: Cube_009
+    4300120: Cube_008
+    4300122: Cube_007
+    4300124: Cube_006
+    4300126: Cube_005
+    4300128: Cube_004
+    4300130: Cube_013
+    4300132: Cube_012
+    4300134: Cube_010
+    4300136: North2
+    4300138: East3
+    4300140: West2
+    4300142: South1
+    4300144: South2
+    4300146: East1
+    4300148: East2
+    4300150: East4
+    4300152: West4
+    4300154: West3
+    4300156: West1
+    4300158: North4
+    4300160: North3
+    4300162: North1
     7400000: Default Take
     9500000: //RootNode
   materials:
