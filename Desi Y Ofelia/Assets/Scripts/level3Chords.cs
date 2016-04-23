@@ -11,23 +11,32 @@ public class level3Chords : NetworkBehaviour {
     private bool pass1;
     private bool pass2;
     private bool pass3;
+    private bool pass4;
 
     private ParticleSystem particleA;
     private ParticleSystem particleB;
     private ParticleSystem particleC;
+    private ParticleSystem particleD;
 
     private GameObject towerG;
     private GameObject towerR;
     private GameObject towerY;
     private GameObject towerB;
 
+    private GameObject whitebannerY;
+    private GameObject whitebannerR;
+    private GameObject whitebannerB;
+    private GameObject whitebannerG;
+
     // Use this for initialization
-    void Start () {
-        if(SceneManager.GetActiveScene().name == "Level 3")
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Level 3")
         {
             pass1 = false;
             pass2 = false;
             pass3 = false;
+            pass4 = false;
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
 
@@ -37,50 +46,74 @@ public class level3Chords : NetworkBehaviour {
             particleB.Pause();
             particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
             particleC.Pause();
+            particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
+            particleD.Pause();
 
             towerG = GameObject.Find("indicatorG");
             towerR = GameObject.Find("indicatorR");
             towerY = GameObject.Find("indicatorY");
             towerB = GameObject.Find("indicatorB");
+
+            whitebannerY = GameObject.Find("WhiteBanners1");
+            whitebannerR = GameObject.Find("WhiteBanners2");
+            whitebannerB = GameObject.Find("WhiteBanners3");
+            whitebannerG = GameObject.Find("WhiteBanners4");
+
+            whitebannerY.SetActive(false);
+            whitebannerR.SetActive(false);
+            whitebannerB.SetActive(false);
+            whitebannerG.SetActive(false);
+
+
         }
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = newText.text;
 
-            if(chords.Contains("BABX"))
+            if (chords.Contains("BABX"))
             {
                 pass1 = true;
                 particleA.Play();
                 towerG.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("green").GetComponent<Renderer>().material.color = Color.white;
+                GameObject.Find("Green Banners").SetActive(false);
+                whitebannerG.SetActive(true);
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
                 particleB.Play();
                 towerR.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("red").GetComponent<Renderer>().material.color = Color.white;
+                GameObject.Find("Red Banners").SetActive(false);
+                whitebannerR.SetActive(true);
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
                 particleC.Play();
                 towerY.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("yellow").GetComponent<Renderer>().material.color = Color.white;
+                GameObject.Find("Orange Banners").SetActive(false);
+                whitebannerY.SetActive(true);
             }
-
-            if(pass1 && pass2 && pass3)
+            if (chords.Contains("YAXY"))
             {
-                Debug.Log("Yass");
+                pass4 = true;
+                particleD.Play();
+                towerB.transform.position = new Vector3(0, -2, 0);
+                GameObject.Find("Blue Banners").SetActive(false);
+                whitebannerB.SetActive(true);
+            }
+            if (pass1 && pass2 && pass3 && pass4)
+            {
                 CmdDestroy();
                 towerB.transform.position = new Vector3(0, -2, 0);
+                pass1 = pass2 = pass3 = pass4 = false;
             }
 
         }

@@ -13,9 +13,17 @@ ModelImporter:
     100010: //RootNode
     100012: Cube
     100014: Cylinder
+<<<<<<< HEAD
     100016: Cylinder_MeshPart5
     100018: Cylinder_MeshPart6
     100020: Walkway_Arches
+=======
+    100016: Cylinder_001
+    100018: Cylinder_001_MeshPart0
+    100020: Cylinder_001_MeshPart1
+    100022: Cylinder_001_MeshPart2
+    100024: Walkway_Arches
+>>>>>>> develop
     400000: Cylinder_MeshPart0
     400002: Cylinder_MeshPart1
     400004: Cylinder_MeshPart2
@@ -24,33 +32,44 @@ ModelImporter:
     400010: //RootNode
     400012: Cube
     400014: Cylinder
+<<<<<<< HEAD
     400016: Cylinder_MeshPart5
     400018: Cylinder_MeshPart6
     400020: Walkway_Arches
+=======
+    400016: Cylinder_001
+    400018: Cylinder_001_MeshPart0
+    400020: Cylinder_001_MeshPart1
+    400022: Cylinder_001_MeshPart2
+    400024: Walkway_Arches
+>>>>>>> develop
     2300000: Cylinder_MeshPart0
     2300002: Cylinder_MeshPart1
     2300004: Cylinder_MeshPart2
     2300006: Cylinder_MeshPart3
     2300008: Cylinder_MeshPart4
     2300010: Cube
-    2300012: Cylinder_MeshPart5
-    2300014: Cylinder_MeshPart6
+    2300012: Cylinder_001_MeshPart0
+    2300014: Cylinder_001_MeshPart1
+    2300016: Cylinder_001_MeshPart2
     3300000: Cylinder_MeshPart0
     3300002: Cylinder_MeshPart1
     3300004: Cylinder_MeshPart2
     3300006: Cylinder_MeshPart3
     3300008: Cylinder_MeshPart4
     3300010: Cube
-    3300012: Cylinder_MeshPart5
-    3300014: Cylinder_MeshPart6
+    3300012: Cylinder_001_MeshPart0
+    3300014: Cylinder_001_MeshPart1
+    3300016: Cylinder_001_MeshPart2
     4300000: Cylinder_MeshPart0
     4300002: Cylinder_MeshPart1
     4300004: Cylinder_MeshPart2
     4300006: Cylinder_MeshPart3
     4300008: Cylinder_MeshPart4
-    4300010: Cube
-    4300012: Cylinder_MeshPart5
-    4300014: Cylinder_MeshPart6
+    4300010: Cylinder_001_MeshPart0
+    4300012: Cylinder_001_MeshPart1
+    4300014: Cylinder_001_MeshPart2
+    4300016: Cube
     7400000: Default Take
     9500000: //RootNode
   materials:

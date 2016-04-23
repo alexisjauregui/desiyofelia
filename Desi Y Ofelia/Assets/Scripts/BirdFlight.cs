@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BirdFlight : MonoBehaviour {
+public class BirdFlight : MonoBehaviour
+{
     private GameObject Idol;
     private GameObject Bird1;
     private GameObject Bird2;
@@ -13,20 +14,21 @@ public class BirdFlight : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         Bird1 = GameObject.Find("Bird1");
         Bird2 = GameObject.Find("Bird2");
         Bird3 = GameObject.Find("Bird3");
         Bird4 = GameObject.Find("Bird4");
-       
+
         rot = new Vector3(Bird1.transform.eulerAngles.x, Bird1.transform.eulerAngles.y, Bird1.transform.eulerAngles.z);
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Idol = GameObject.Find("Idol(Clone)"))
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Idol = GameObject.Find("Idol(Clone)"))
         {
             if (Idol.transform.eulerAngles.y < 80)
             {
@@ -43,15 +45,15 @@ public class BirdFlight : MonoBehaviour {
                 Position3();
                 Debug.Log("3");
             }
-           if(Idol.transform.eulerAngles.y == 270)
+            if (Idol.transform.eulerAngles.y == 270)
             {
                 Position4();
                 Debug.Log("4");
             }
-           
+
         }
-	
-	}
+
+    }
 
     void Position1()
     {
@@ -103,7 +105,7 @@ public class BirdFlight : MonoBehaviour {
         Bird3.transform.position = new Vector3(30f, 6.25f, -4.3f);
         Bird4.transform.position = new Vector3(30f, 6.25f, 0.6f);
 
-        
+
 
         Bird1.transform.eulerAngles = rot;
         Bird2.transform.eulerAngles = rot;

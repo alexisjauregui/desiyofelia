@@ -4,7 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class levelTimeGate : NetworkBehaviour {
+public class levelTimeGate : NetworkBehaviour
+{
 
     private string pass;
     private string chords;
@@ -15,7 +16,8 @@ public class levelTimeGate : NetworkBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         if (SceneManager.GetActiveScene().name == "Level 4")
         {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
@@ -34,18 +36,18 @@ public class levelTimeGate : NetworkBehaviour {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = newText.text;
 
-            if (chords.Contains("ABXY") && cage.transform.position == new Vector3(15,1,-17)) //Can change chords to any combo
+            if (chords.Contains("ABXY") && cage.transform.position == new Vector3(15, 1, -17)) //Can change chords to any combo
             {
                 cage.GetComponent<Animation>().Play();
                 gatebool = true;
             }
 
-            if (chords.Contains("YAAX") ) //Must add condition for Gate position vector
+            if (chords.Contains("YAAX")) //Must add condition for Gate position vector
             {
                 //gate.GetComponent<Animation>().Play();
             }
         }
     }
 
-   
+
 }
