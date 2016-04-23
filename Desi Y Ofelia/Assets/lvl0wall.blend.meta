@@ -87,6 +87,25 @@ ModelImporter:
     100158: West2
     100160: West3
     100162: West4
+    100164: Circle
+    100166: Circle_001
+    100168: Circle_002
+    100170: blue
+    100172: green
+    100174: red
+    100176: yellow
+    100178: blue1
+    100180: green1
+    100182: red1
+    100184: yellow1
+    100186: x
+    100188: a
+    100190: b
+    100192: y
+    100194: candle
+    100196: candle_001
+    100198: guitar
+    100200: note
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -169,6 +188,25 @@ ModelImporter:
     400158: West2
     400160: West3
     400162: West4
+    400164: Circle
+    400166: Circle_001
+    400168: Circle_002
+    400170: blue
+    400172: green
+    400174: red
+    400176: yellow
+    400178: blue1
+    400180: green1
+    400182: red1
+    400184: yellow1
+    400186: x
+    400188: a
+    400190: b
+    400192: y
+    400194: candle
+    400196: candle_001
+    400198: guitar
+    400200: note
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -251,6 +289,25 @@ ModelImporter:
     2300158: West2
     2300160: West3
     2300162: West4
+    2300164: Circle
+    2300166: Circle_001
+    2300168: Circle_002
+    2300170: blue
+    2300172: green
+    2300174: red
+    2300176: yellow
+    2300178: blue1
+    2300180: green1
+    2300182: red1
+    2300184: yellow1
+    2300186: x
+    2300188: a
+    2300190: b
+    2300192: y
+    2300194: candle
+    2300196: candle_001
+    2300198: guitar
+    2300200: note
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -333,6 +390,25 @@ ModelImporter:
     3300158: West2
     3300160: West3
     3300162: West4
+    3300164: Circle
+    3300166: Circle_001
+    3300168: Circle_002
+    3300170: blue
+    3300172: green
+    3300174: red
+    3300176: yellow
+    3300178: blue1
+    3300180: green1
+    3300182: red1
+    3300184: yellow1
+    3300186: x
+    3300188: a
+    3300190: b
+    3300192: y
+    3300194: candle
+    3300196: candle_001
+    3300198: guitar
+    3300200: note
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -415,6 +491,25 @@ ModelImporter:
     4300158: North4
     4300160: North3
     4300162: North1
+    4300164: Circle_002
+    4300166: Circle_001
+    4300168: Circle
+    4300170: green
+    4300172: yellow
+    4300174: red
+    4300176: blue
+    4300178: green1
+    4300180: yellow1
+    4300182: red1
+    4300184: blue1
+    4300186: x
+    4300188: b
+    4300190: a
+    4300192: y
+    4300194: candle
+    4300196: candle_001
+    4300198: note
+    4300200: guitar
     7400000: Default Take
     9500000: //RootNode
   materials:
