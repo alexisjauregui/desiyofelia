@@ -58,7 +58,7 @@ public class BirdSwitch : MonoBehaviour {
         //Debug.Log(Idol.transform.eulerAngles.y);
 
         Idol.transform.eulerAngles = new Vector3(Idol.transform.eulerAngles.x, Idol.transform.eulerAngles.y+90, Idol.transform.eulerAngles.z);
-
+        Idol.GetComponent<AudioSource>().Play();
 
     }
 
