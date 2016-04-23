@@ -11,10 +11,12 @@ public class level3Chords : NetworkBehaviour {
     private bool pass1;
     private bool pass2;
     private bool pass3;
+    private bool pass4;
 
     private ParticleSystem particleA;
     private ParticleSystem particleB;
     private ParticleSystem particleC;
+    private ParticleSystem particleD;
 
     private GameObject towerG;
     private GameObject towerR;
@@ -28,6 +30,7 @@ public class level3Chords : NetworkBehaviour {
             pass1 = false;
             pass2 = false;
             pass3 = false;
+            pass4 = false;
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
 
@@ -37,6 +40,8 @@ public class level3Chords : NetworkBehaviour {
             particleB.Pause();
             particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
             particleC.Pause();
+            particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
+            particleD.Pause();
 
             towerG = GameObject.Find("indicatorG");
             towerR = GameObject.Find("indicatorR");
@@ -75,10 +80,15 @@ public class level3Chords : NetworkBehaviour {
                 towerY.transform.position = new Vector3(0, -2, 0);
                 GameObject.Find("yellow").GetComponent<Renderer>().material.color = Color.white;
             }
-
-            if(pass1 && pass2 && pass3)
+            if (chords.Contains("YAXY"))
             {
-                Debug.Log("Yass");
+                pass4 = true;
+                particleD.Play();
+                towerB.transform.position = new Vector3(0, -2, 0);
+                GameObject.Find("blue").GetComponent<Renderer>().material.color = Color.white;
+            }
+            if(pass1 && pass2 && pass3 && pass4)
+            {
                 CmdDestroy();
                 towerB.transform.position = new Vector3(0, -2, 0);
             }
