@@ -15,6 +15,7 @@ ModelImporter:
     100014: Cylinder
     100016: Cylinder_MeshPart5
     100018: Cylinder_MeshPart6
+    100020: Walkway_Arches
     400000: Cylinder_MeshPart0
     400002: Cylinder_MeshPart1
     400004: Cylinder_MeshPart2
@@ -25,6 +26,7 @@ ModelImporter:
     400014: Cylinder
     400016: Cylinder_MeshPart5
     400018: Cylinder_MeshPart6
+    400020: Walkway_Arches
     2300000: Cylinder_MeshPart0
     2300002: Cylinder_MeshPart1
     2300004: Cylinder_MeshPart2
