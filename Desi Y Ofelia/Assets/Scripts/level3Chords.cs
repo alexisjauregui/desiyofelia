@@ -77,21 +77,21 @@ public class level3Chords : NetworkBehaviour {
                 pass1 = true;
                 particleA.Play();
                 CmdIndicatorMove(0);
-                RpcBannerChange(0);
+                CmdBannerChange(0);
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
                 particleB.Play();
                 CmdIndicatorMove(1);
-                RpcBannerChange(1);
+                CmdBannerChange(1);
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
                 particleC.Play();
                 CmdIndicatorMove(2);
-                RpcBannerChange(2);
+                CmdBannerChange(2);
 
             }
             if (chords.Contains("YAXY"))
@@ -99,7 +99,7 @@ public class level3Chords : NetworkBehaviour {
                 pass4 = true;
                 particleD.Play();
                 CmdIndicatorMove(3);
-                RpcBannerChange(3);
+                CmdBannerChange(3);
             }
             if (pass1 && pass2 && pass3 && pass4)
             {
@@ -118,7 +118,7 @@ public class level3Chords : NetworkBehaviour {
         NetworkServer.Destroy(networkCage);
     }
 
-    [Command]
+   
     void CmdIndicatorMove(int color)
     {
         if(color == 0)
@@ -132,8 +132,8 @@ public class level3Chords : NetworkBehaviour {
 
     }
 
-    [ClientRpc]
-    void RpcBannerChange(int color)
+   
+    void CmdBannerChange(int color)
     {
         if (color == 0)
         {
