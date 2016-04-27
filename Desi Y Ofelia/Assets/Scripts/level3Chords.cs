@@ -23,10 +23,12 @@ public class level3Chords : NetworkBehaviour {
     private GameObject towerY;
     private GameObject towerB;
 
-    private GameObject whitebannerY;
-    private GameObject whitebannerR;
-    private GameObject whitebannerB;
-    private GameObject whitebannerG;
+    private GameObject Green;
+    private GameObject Red;
+    private GameObject Orange;
+    private GameObject Blue;
+
+    
 
     // Use this for initialization
     void Start()
@@ -54,17 +56,10 @@ public class level3Chords : NetworkBehaviour {
             towerY = GameObject.Find("indicatorY");
             towerB = GameObject.Find("indicatorB");
 
-            whitebannerY = GameObject.Find("WhiteBanners1");
-            whitebannerR = GameObject.Find("WhiteBanners2");
-            whitebannerB = GameObject.Find("WhiteBanners3");
-            whitebannerG = GameObject.Find("WhiteBanners4");
-
-            whitebannerY.SetActive(false);
-            whitebannerR.SetActive(false);
-            whitebannerB.SetActive(false);
-            whitebannerG.SetActive(false);
-
-
+            Green = GameObject.Find("Green Banners");
+            Red = GameObject.Find("Red Banners");
+            Orange = GameObject.Find("Orange Banners");
+            Blue = GameObject.Find("Blue Banners");
         }
 
     }
@@ -81,38 +76,34 @@ public class level3Chords : NetworkBehaviour {
             {
                 pass1 = true;
                 particleA.Play();
-                towerG.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("Green Banners").SetActive(false);
-                whitebannerG.SetActive(true);
+                CmdIndicatorMove(0);
+                CmdBannerChange(0);
             }
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
                 particleB.Play();
-                towerR.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("Red Banners").SetActive(false);
-                whitebannerR.SetActive(true);
+                CmdIndicatorMove(1);
+                CmdBannerChange(1);
             }
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
                 particleC.Play();
-                towerY.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("Orange Banners").SetActive(false);
-                whitebannerY.SetActive(true);
+                CmdIndicatorMove(2);
+                CmdBannerChange(2);
+
             }
             if (chords.Contains("YAXY"))
             {
                 pass4 = true;
                 particleD.Play();
-                towerB.transform.position = new Vector3(0, -2, 0);
-                GameObject.Find("Blue Banners").SetActive(false);
-                whitebannerB.SetActive(true);
+                CmdIndicatorMove(3);
+                CmdBannerChange(3);
             }
             if (pass1 && pass2 && pass3 && pass4)
             {
                 CmdDestroy();
-                towerB.transform.position = new Vector3(0, -2, 0);
                 pass1 = pass2 = pass3 = pass4 = false;
             }
 
@@ -125,5 +116,40 @@ public class level3Chords : NetworkBehaviour {
     {
         GameObject networkCage = GameObject.FindGameObjectWithTag("Cage");
         NetworkServer.Destroy(networkCage);
+    }
+
+   
+    void CmdIndicatorMove(int color)
+    {
+        if(color == 0)
+            towerG.transform.position = new Vector3(0, -2, 0);
+        else if(color == 1)
+            towerR.transform.position = new Vector3(0, -2, 0);
+        else if(color == 2)
+            towerY.transform.position = new Vector3(0, -2, 0);
+        else
+            towerB.transform.position = new Vector3(0, -2, 0);
+
+    }
+
+   
+    void CmdBannerChange(int color)
+    {
+        if (color == 0)
+        {
+            Green.SetActive(false);
+        }
+        else if (color == 1)
+        {
+            Red.SetActive(false);
+        }
+        else if (color == 2)
+        {
+            Orange.SetActive(false);
+        }
+        else
+        {
+            Blue.SetActive(false);
+        }
     }
 }
