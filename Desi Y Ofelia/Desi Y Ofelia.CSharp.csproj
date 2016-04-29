@@ -107,8 +107,11 @@
     <Compile Include="Assets\Scripts\Heartbeat.cs" />
     <Compile Include="Assets\Scripts\LocalAuthority.cs" />
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
+    <Compile Include="Assets\Scripts\NetworkCustom.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OfeliaScene.cs" />
+    <Compile Include="Assets\Scripts\VR\ExampleInteractiveItem.cs" />
+    <Compile Include="Assets\Scripts\VR\VRInteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Whistle.cs" />
     <Compile Include="Assets\Scripts\alwaysface.cs" />
     <Compile Include="Assets\Scripts\buttonChange.cs" />
@@ -125,13 +128,39 @@
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
     <Compile Include="Assets\Scripts\trailDestroy.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\GUIArrows.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\InputWarnings.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\ObjectPool.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\PlatformDependentText.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\Reticle.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\ReturnToMainMenu.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\SelectionRadial.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\SelectionSlider.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UIFader.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UIMovement.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UITint.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\VRCameraFade.cs" />
+    <Compile Include="Assets\VRSampleScenes\Scripts\Utils\VRCameraUI.cs" />
+    <Compile Include="Assets\VRStandardAssets\Scripts\VRDeviceManager.cs" />
+    <Compile Include="Assets\VRStandardAssets\Scripts\VREyeRaycaster.cs" />
+    <Compile Include="Assets\VRStandardAssets\Scripts\VRFPSCounter.cs" />
+    <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
+    <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
+    <Compile Include="Assets\input.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
     <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
+    <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
+    <None Include="Assets\VRSampleScenes\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
+    <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
+    <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
+    <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

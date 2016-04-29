@@ -16,7 +16,8 @@ public class grabndrop : MonoBehaviour
 
     void Start()
     {
-        PickUp = GameObject.FindGameObjectWithTag("Pickup");
+        if(SceneManager.GetActiveScene().name != "Level Lobby")
+            PickUp = GameObject.FindGameObjectWithTag("Pickup");
         
     }
 

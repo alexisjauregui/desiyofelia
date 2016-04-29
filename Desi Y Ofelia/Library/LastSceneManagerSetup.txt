@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Level 0.unity
+=======
+- path: C:/Users/swong30/Documents/desiyofelia2/Desi Y Ofelia/Assets/Scenes/StartMenu.unity
+>>>>>>> develop
   isLoaded: 1
   isActive: 1
