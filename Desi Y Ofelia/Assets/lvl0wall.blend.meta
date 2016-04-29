@@ -107,6 +107,43 @@ ModelImporter:
     100198: guitar
     100200: note
     100202: Cage
+    100204: note_001
+    100206: note_002
+    100208: note_003
+    100210: note_004
+    100212: blue_001
+    100214: blue_002
+    100216: blue_003
+    100218: blue_004
+    100220: blue_x
+    100222: green_a
+    100224: red_b
+    100226: yellow_y
+    100228: arrow
+    100230: hint3_arrow
+    100232: hint3_cage
+    100234: hint3_candle
+    100236: hint3_guitar
+    100238: hint3_notes
+    100240: hint2_bannerBlue
+    100242: hint2_bannerGreen
+    100244: hint2_bannerRed
+    100246: hint2_bannerYellow
+    100248: hint2_buttonBlue
+    100250: hint2_buttonBlueX
+    100252: hint2_buttonGreen
+    100254: hint2_buttonGreenA
+    100256: hint2_buttonRed
+    100258: hint2_buttonRedB
+    100260: hint2_buttonYellow
+    100262: hint2_buttonYellowY
+    100264: hint1_arrow
+    100266: hint1_desi
+    100268: hint1_eye
+    100270: hint1_ofelia
+    100272: hint1_x
+    100274: hint2_x
+    100276: hint2_arrow
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -209,6 +246,43 @@ ModelImporter:
     400198: guitar
     400200: note
     400202: Cage
+    400204: note_001
+    400206: note_002
+    400208: note_003
+    400210: note_004
+    400212: blue_001
+    400214: blue_002
+    400216: blue_003
+    400218: blue_004
+    400220: blue_x
+    400222: green_a
+    400224: red_b
+    400226: yellow_y
+    400228: arrow
+    400230: hint3_arrow
+    400232: hint3_cage
+    400234: hint3_candle
+    400236: hint3_guitar
+    400238: hint3_notes
+    400240: hint2_bannerBlue
+    400242: hint2_bannerGreen
+    400244: hint2_bannerRed
+    400246: hint2_bannerYellow
+    400248: hint2_buttonBlue
+    400250: hint2_buttonBlueX
+    400252: hint2_buttonGreen
+    400254: hint2_buttonGreenA
+    400256: hint2_buttonRed
+    400258: hint2_buttonRedB
+    400260: hint2_buttonYellow
+    400262: hint2_buttonYellowY
+    400264: hint1_arrow
+    400266: hint1_desi
+    400268: hint1_eye
+    400270: hint1_ofelia
+    400272: hint1_x
+    400274: hint2_x
+    400276: hint2_arrow
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -311,6 +385,43 @@ ModelImporter:
     2300198: guitar
     2300200: note
     2300202: Cage
+    2300204: note_001
+    2300206: note_002
+    2300208: note_003
+    2300210: note_004
+    2300212: blue_001
+    2300214: blue_002
+    2300216: blue_003
+    2300218: blue_004
+    2300220: blue_x
+    2300222: green_a
+    2300224: red_b
+    2300226: yellow_y
+    2300228: arrow
+    2300230: hint3_arrow
+    2300232: hint3_cage
+    2300234: hint3_candle
+    2300236: hint3_guitar
+    2300238: hint3_notes
+    2300240: hint2_bannerBlue
+    2300242: hint2_bannerGreen
+    2300244: hint2_bannerRed
+    2300246: hint2_bannerYellow
+    2300248: hint2_buttonBlue
+    2300250: hint2_buttonBlueX
+    2300252: hint2_buttonGreen
+    2300254: hint2_buttonGreenA
+    2300256: hint2_buttonRed
+    2300258: hint2_buttonRedB
+    2300260: hint2_buttonYellow
+    2300262: hint2_buttonYellowY
+    2300264: hint1_arrow
+    2300266: hint1_desi
+    2300268: hint1_eye
+    2300270: hint1_ofelia
+    2300272: hint1_x
+    2300274: hint2_x
+    2300276: hint2_arrow
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -413,6 +524,43 @@ ModelImporter:
     3300198: guitar
     3300200: note
     3300202: Cage
+    3300204: note_001
+    3300206: note_002
+    3300208: note_003
+    3300210: note_004
+    3300212: blue_001
+    3300214: blue_002
+    3300216: blue_003
+    3300218: blue_004
+    3300220: blue_x
+    3300222: green_a
+    3300224: red_b
+    3300226: yellow_y
+    3300228: arrow
+    3300230: hint3_arrow
+    3300232: hint3_cage
+    3300234: hint3_candle
+    3300236: hint3_guitar
+    3300238: hint3_notes
+    3300240: hint2_bannerBlue
+    3300242: hint2_bannerGreen
+    3300244: hint2_bannerRed
+    3300246: hint2_bannerYellow
+    3300248: hint2_buttonBlue
+    3300250: hint2_buttonBlueX
+    3300252: hint2_buttonGreen
+    3300254: hint2_buttonGreenA
+    3300256: hint2_buttonRed
+    3300258: hint2_buttonRedB
+    3300260: hint2_buttonYellow
+    3300262: hint2_buttonYellowY
+    3300264: hint1_arrow
+    3300266: hint1_desi
+    3300268: hint1_eye
+    3300270: hint1_ofelia
+    3300272: hint1_x
+    3300274: hint2_x
+    3300276: hint2_arrow
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -515,6 +663,43 @@ ModelImporter:
     4300198: note
     4300200: guitar
     4300202: Cage
+    4300204: note_001
+    4300206: note_004
+    4300208: note_003
+    4300210: note_002
+    4300212: blue_004
+    4300214: blue_003
+    4300216: blue_002
+    4300218: blue_001
+    4300220: red_b
+    4300222: green_a
+    4300224: yellow_y
+    4300226: blue_x
+    4300228: arrow
+    4300230: hint3_arrow
+    4300232: hint3_notes
+    4300234: hint3_guitar
+    4300236: hint3_candle
+    4300238: hint3_cage
+    4300240: hint2_bannerGreen
+    4300242: hint2_bannerYellow
+    4300244: hint2_bannerRed
+    4300246: hint2_buttonRedB
+    4300248: hint2_buttonGreenA
+    4300250: hint2_buttonYellowY
+    4300252: hint2_buttonBlueX
+    4300254: hint2_buttonGreen
+    4300256: hint2_buttonYellow
+    4300258: hint2_buttonRed
+    4300260: hint2_buttonBlue
+    4300262: hint2_bannerBlue
+    4300264: hint1_x
+    4300266: hint1_arrow
+    4300268: hint1_eye
+    4300270: hint1_desi
+    4300272: hint1_ofelia
+    4300274: hint2_x
+    4300276: hint2_arrow
     7400000: Default Take
     9500000: //RootNode
   materials:

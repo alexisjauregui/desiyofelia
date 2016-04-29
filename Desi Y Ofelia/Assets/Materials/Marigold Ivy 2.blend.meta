@@ -1,65 +1,25 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: fa8af80cb691b27489655b44f480b1e3
-timeCreated: 1461375890
-=======
-guid: 50d24721a7f445844b7e7e0b9bdaad6c
-timeCreated: 1461371421
->>>>>>> develop
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-<<<<<<< HEAD
-    100000: Cube
-    100002: Cylinder_002
-    100004: Cylinder_002_MeshPart0
-    100006: Cylinder_002_MeshPart1
-    100008: Cylinder_002_MeshPart2
-    100010: //RootNode
-    100012: Walkway_Arches
-    400000: Cube
-    400002: Cylinder_002
-    400004: Cylinder_002_MeshPart0
-    400006: Cylinder_002_MeshPart1
-    400008: Cylinder_002_MeshPart2
-    400010: //RootNode
-    400012: Walkway_Arches
-    2300000: Cube
-    2300002: Cylinder_002_MeshPart0
-    2300004: Cylinder_002_MeshPart1
-    2300006: Cylinder_002_MeshPart2
-    3300000: Cube
-    3300002: Cylinder_002_MeshPart0
-    3300004: Cylinder_002_MeshPart1
-    3300006: Cylinder_002_MeshPart2
+    100000: Cylinder_002_MeshPart0
+    100002: Cylinder_002_MeshPart1
+    100004: Cylinder_002_MeshPart2
+    100006: //RootNode
+    400000: Cylinder_002_MeshPart0
+    400002: Cylinder_002_MeshPart1
+    400004: Cylinder_002_MeshPart2
+    400006: //RootNode
+    2300000: Cylinder_002_MeshPart0
+    2300002: Cylinder_002_MeshPart1
+    2300004: Cylinder_002_MeshPart2
+    3300000: Cylinder_002_MeshPart0
+    3300002: Cylinder_002_MeshPart1
+    3300004: Cylinder_002_MeshPart2
     4300000: Cylinder_002_MeshPart0
     4300002: Cylinder_002_MeshPart1
     4300004: Cylinder_002_MeshPart2
-    4300006: Cube
-=======
-    100000: Cylinder_001
-    100002: Cylinder_001_MeshPart0
-    100004: Cylinder_001_MeshPart1
-    100006: Cylinder_001_MeshPart2
-    100008: //RootNode
-    100010: Walkway_Arches
-    400000: Cylinder_001
-    400002: Cylinder_001_MeshPart0
-    400004: Cylinder_001_MeshPart1
-    400006: Cylinder_001_MeshPart2
-    400008: //RootNode
-    400010: Walkway_Arches
-    2300000: Cylinder_001_MeshPart0
-    2300002: Cylinder_001_MeshPart1
-    2300004: Cylinder_001_MeshPart2
-    3300000: Cylinder_001_MeshPart0
-    3300002: Cylinder_001_MeshPart1
-    3300004: Cylinder_001_MeshPart2
-    4300000: Cylinder_001_MeshPart0
-    4300002: Cylinder_001_MeshPart1
-    4300004: Cylinder_001_MeshPart2
->>>>>>> develop
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -86,7 +46,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
