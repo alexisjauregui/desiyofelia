@@ -144,6 +144,8 @@ ModelImporter:
     100272: hint1_x
     100274: hint2_x
     100276: hint2_arrow
+    100278: hint4_candle
+    100280: hint4_hand
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -283,6 +285,8 @@ ModelImporter:
     400272: hint1_x
     400274: hint2_x
     400276: hint2_arrow
+    400278: hint4_candle
+    400280: hint4_hand
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -422,6 +426,8 @@ ModelImporter:
     2300272: hint1_x
     2300274: hint2_x
     2300276: hint2_arrow
+    2300278: hint4_candle
+    2300280: hint4_hand
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -561,6 +567,8 @@ ModelImporter:
     3300272: hint1_x
     3300274: hint2_x
     3300276: hint2_arrow
+    3300278: hint4_candle
+    3300280: hint4_hand
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -700,6 +708,8 @@ ModelImporter:
     4300272: hint1_ofelia
     4300274: hint2_x
     4300276: hint2_arrow
+    4300278: hint4_candle
+    4300280: hint4_hand
     7400000: Default Take
     9500000: //RootNode
   materials:
