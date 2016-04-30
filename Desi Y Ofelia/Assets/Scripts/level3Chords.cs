@@ -42,24 +42,22 @@ public class level3Chords : NetworkBehaviour {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
 
-            particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
-            particleA.Pause();
-            particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
-            particleB.Pause();
-            particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
-            particleC.Pause();
-            particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
-            particleD.Pause();
 
-            towerG = GameObject.Find("indicatorG");
-            towerR = GameObject.Find("indicatorR");
-            towerY = GameObject.Find("indicatorY");
-            towerB = GameObject.Find("indicatorB");
 
-            Green = GameObject.Find("Green Banners");
-            Red = GameObject.Find("Red Banners");
-            Orange = GameObject.Find("Orange Banners");
-            Blue = GameObject.Find("Blue Banners");
+            
+
+
+           
+
+        
+
+
+
+
+
+
+
+
         }
 
     }
@@ -77,6 +75,7 @@ public class level3Chords : NetworkBehaviour {
             if (chords.Contains("BABX"))
             {
                 pass1 = true;
+                particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
                 particleA.Play();
                 CmdIndicatorMove(0);
                 CmdBannerChange(0);
@@ -84,6 +83,8 @@ public class level3Chords : NetworkBehaviour {
             if (chords.Contains("ABXY"))
             {
                 pass2 = true;
+
+                particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
                 particleB.Play();
                 CmdIndicatorMove(1);
                 CmdBannerChange(1);
@@ -91,6 +92,7 @@ public class level3Chords : NetworkBehaviour {
             if (chords.Contains("AYBA"))
             {
                 pass3 = true;
+                particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
                 particleC.Play();
                 CmdIndicatorMove(2);
                 CmdBannerChange(2);
@@ -99,6 +101,7 @@ public class level3Chords : NetworkBehaviour {
             if (chords.Contains("YAXY"))
             {
                 pass4 = true;
+                particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
                 particleD.Play();
                 CmdIndicatorMove(3);
                 CmdBannerChange(3);
@@ -113,44 +116,59 @@ public class level3Chords : NetworkBehaviour {
 
     }
 
-   
+   [Command]
     void CmdDestroy()
     {
         GameObject networkCage = GameObject.FindGameObjectWithTag("Cage");
         NetworkServer.Destroy(networkCage);
     }
 
-   
+   [Command]
     void CmdIndicatorMove(int color)
     {
-        if(color == 0)
+        if (color == 0)
+        {
+            towerG = GameObject.Find("indicatorG");
             towerG.transform.position = new Vector3(0, -2, 0);
-        else if(color == 1)
+        }
+        else if (color == 1)
+        {
+            towerR = GameObject.Find("indicatorR");
             towerR.transform.position = new Vector3(0, -2, 0);
-        else if(color == 2)
+        }
+        else if (color == 2)
+        {
+            towerY = GameObject.Find("indicatorY");
             towerY.transform.position = new Vector3(0, -2, 0);
+        }
         else
+        {
+            towerB = GameObject.Find("indicatorB");
             towerB.transform.position = new Vector3(0, -2, 0);
-
+        }
     }
 
-   
+   [Command]
     void CmdBannerChange(int color)
     {
         if (color == 0)
         {
+            Green = GameObject.Find("Green Banners");
             Green.SetActive(false);
         }
         else if (color == 1)
         {
+            Red = GameObject.Find("Red Banners");
             Red.SetActive(false);
         }
         else if (color == 2)
         {
+            Orange = GameObject.Find("Orange Banners");
             Orange.SetActive(false);
         }
         else
         {
+            Blue = GameObject.Find("Blue Banners");
             Blue.SetActive(false);
         }
     }
