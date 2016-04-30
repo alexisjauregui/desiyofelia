@@ -18,15 +18,7 @@ public class level3Chords : NetworkBehaviour {
     private ParticleSystem particleC;
     private ParticleSystem particleD;
 
-    private GameObject towerG;
-    private GameObject towerR;
-    private GameObject towerY;
-    private GameObject towerB;
 
-    private GameObject Green;
-    private GameObject Red;
-    private GameObject Orange;
-    private GameObject Blue;
 
     
 
@@ -52,7 +44,7 @@ public class level3Chords : NetworkBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
+	        newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = newText.text;
 
             if (chords.Contains("BABX"))
@@ -61,7 +53,7 @@ public class level3Chords : NetworkBehaviour {
                 particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
                 particleA.Play();
                 CmdIndicatorMove(0);
-                CmdBannerChange(0);
+                //CmdBannerChange(0);
             }
             if (chords.Contains("ABXY"))
             {
@@ -70,7 +62,7 @@ public class level3Chords : NetworkBehaviour {
                 particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
                 particleB.Play();
                 CmdIndicatorMove(1);
-                CmdBannerChange(1);
+                //CmdBannerChange(1);
             }
             if (chords.Contains("AYBA"))
             {
@@ -78,7 +70,7 @@ public class level3Chords : NetworkBehaviour {
                 particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
                 particleC.Play();
                 CmdIndicatorMove(2);
-                CmdBannerChange(2);
+                //CmdBannerChange(2);
 
             }
             if (chords.Contains("YAXY"))
@@ -87,7 +79,7 @@ public class level3Chords : NetworkBehaviour {
                 particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
                 particleD.Play();
                 CmdIndicatorMove(3);
-                CmdBannerChange(3);
+                //CmdBannerChange(3);
             }
             if (pass1 && pass2 && pass3 && pass4)
             {
@@ -106,28 +98,28 @@ public class level3Chords : NetworkBehaviour {
         NetworkServer.Destroy(networkCage);
     }
 
-   [Command]
+	[Command]
     void CmdIndicatorMove(int color)
     {
         if (color == 0)
         {
-            towerG = GameObject.Find("indicatorG");
-            towerG.transform.position = new Vector3(0, -2, 0);
+			GameObject towerG = GameObject.Find("indicatorG(Clone)");
+			NetworkServer.Destroy (towerG);
         }
         else if (color == 1)
         {
-            towerR = GameObject.Find("indicatorR");
-            towerR.transform.position = new Vector3(0, -2, 0);
+			GameObject towerR = GameObject.Find("indicatorR(Clone)");
+			NetworkServer.Destroy (towerR);
         }
         else if (color == 2)
         {
-            towerY = GameObject.Find("indicatorY");
-            towerY.transform.position = new Vector3(0, -2, 0);
+			GameObject towerY = GameObject.Find("indicatorY(Clone)");
+			NetworkServer.Destroy (towerY);
         }
         else
         {
-            towerB = GameObject.Find("indicatorB");
-            towerB.transform.position = new Vector3(0, -2, 0);
+			GameObject towerB = GameObject.Find("indicatorB(Clone)");
+			NetworkServer.Destroy (towerB);
         }
     }
 
@@ -136,23 +128,23 @@ public class level3Chords : NetworkBehaviour {
     {
         if (color == 0)
         {
-            Green = GameObject.Find("Green Banners");
-            Green.SetActive(false);
+			GameObject Green = GameObject.Find("Green Banners(Clone)");
+			NetworkServer.Destroy (Green);
         }
         else if (color == 1)
         {
-            Red = GameObject.Find("Red Banners");
-            Red.SetActive(false);
+			GameObject Red = GameObject.Find("Red Banners(Clone)");
+			NetworkServer.Destroy (Red);
         }
         else if (color == 2)
         {
-            Orange = GameObject.Find("Orange Banners");
-            Orange.SetActive(false);
+			GameObject Orange = GameObject.Find("Orange Banners(Clone)");
+			NetworkServer.Destroy (Orange);
         }
         else
         {
-            Blue = GameObject.Find("Blue Banners");
-            Blue.SetActive(false);
+			GameObject Blue = GameObject.Find("Blue Banners(Clone)");
+			NetworkServer.Destroy (Blue);
         }
     }
 }

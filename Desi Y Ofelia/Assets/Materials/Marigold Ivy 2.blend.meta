@@ -7,10 +7,14 @@ ModelImporter:
     100002: Cylinder_002_MeshPart1
     100004: Cylinder_002_MeshPart2
     100006: //RootNode
+    100008: Cylinder_002
+    100010: Walkway_Arches
     400000: Cylinder_002_MeshPart0
     400002: Cylinder_002_MeshPart1
     400004: Cylinder_002_MeshPart2
     400006: //RootNode
+    400008: Cylinder_002
+    400010: Walkway_Arches
     2300000: Cylinder_002_MeshPart0
     2300002: Cylinder_002_MeshPart1
     2300004: Cylinder_002_MeshPart2
