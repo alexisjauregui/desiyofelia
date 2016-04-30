@@ -41,23 +41,6 @@ public class level3Chords : NetworkBehaviour {
             pass4 = false;
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
-
-
-
-            
-
-
-           
-
-        
-
-
-
-
-
-
-
-
         }
 
     }
