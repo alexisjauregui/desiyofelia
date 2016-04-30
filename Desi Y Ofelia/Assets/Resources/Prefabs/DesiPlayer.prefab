@@ -741,6 +741,9 @@ GameObject:
   - 114: {fileID: 11498420}
   - 114: {fileID: 11462724}
   - 114: {fileID: 11447326}
+  - 114: {fileID: 11491848}
+  - 114: {fileID: 11428048}
+  - 114: {fileID: 11479702}
   m_Layer: 9
   m_Name: DesiPlayer
   m_TagString: DesiPlayer
@@ -2003,6 +2006,18 @@ MonoBehaviour:
   fadeInTexture: {fileID: 0}
   speedRotationIncrement: 0.05
   layerName: Default
+--- !u!114 &11428048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46bd441eb9759c4dbf9f239dd3d7eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 0}
 --- !u!114 &11433282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2203,6 +2218,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 22859d5949136e5489601d57a654c722, type: 3}
   - {fileID: 8300000, guid: 45e2aaa0cd350bc428db433bc3777760, type: 3}
   - {fileID: 8300000, guid: c78ecd65a654c5a4a9ae0c2cdc2c64bb, type: 3}
+--- !u!114 &11479702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ad0e72a93301d469c6d60d6b053763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2256,6 +2282,17 @@ MonoBehaviour:
   HmdRotatesY: 1
   GravityModifier: 1
   useProfileData: 1
+--- !u!114 &11491848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9899a7225bbbd4fb92b65ecd1e138d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11493696
 MonoBehaviour:
   m_ObjectHideFlags: 1

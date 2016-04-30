@@ -67,6 +67,8 @@ public class level3Chords : NetworkBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
@@ -111,7 +113,7 @@ public class level3Chords : NetworkBehaviour {
 
     }
 
-    [Command]
+   
     void CmdDestroy()
     {
         GameObject networkCage = GameObject.FindGameObjectWithTag("Cage");
