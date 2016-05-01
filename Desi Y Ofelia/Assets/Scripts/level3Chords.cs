@@ -18,10 +18,6 @@ public class level3Chords : NetworkBehaviour {
     private ParticleSystem particleC;
     private ParticleSystem particleD;
 
-
-
-    
-
     // Use this for initialization
     void Start()
     {
@@ -34,14 +30,11 @@ public class level3Chords : NetworkBehaviour {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
             chords = "";
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
 	        newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
@@ -53,7 +46,7 @@ public class level3Chords : NetworkBehaviour {
                 particleA = GameObject.Find("greenRain").GetComponent<ParticleSystem>();
                 particleA.Play();
                 CmdIndicatorMove(0);
-                //CmdBannerChange(0);
+                CmdBannerChange(0);
             }
             if (chords.Contains("ABXY"))
             {
@@ -62,7 +55,7 @@ public class level3Chords : NetworkBehaviour {
                 particleB = GameObject.Find("redRain").GetComponent<ParticleSystem>();
                 particleB.Play();
                 CmdIndicatorMove(1);
-                //CmdBannerChange(1);
+                CmdBannerChange(1);
             }
             if (chords.Contains("AYBA"))
             {
@@ -70,7 +63,7 @@ public class level3Chords : NetworkBehaviour {
                 particleC = GameObject.Find("yellowRain").GetComponent<ParticleSystem>();
                 particleC.Play();
                 CmdIndicatorMove(2);
-                //CmdBannerChange(2);
+                CmdBannerChange(2);
 
             }
             if (chords.Contains("YAXY"))
@@ -79,7 +72,7 @@ public class level3Chords : NetworkBehaviour {
                 particleD = GameObject.Find("blueRain").GetComponent<ParticleSystem>();
                 particleD.Play();
                 CmdIndicatorMove(3);
-                //CmdBannerChange(3);
+                CmdBannerChange(3);
             }
             if (pass1 && pass2 && pass3 && pass4)
             {
@@ -98,7 +91,7 @@ public class level3Chords : NetworkBehaviour {
         NetworkServer.Destroy(networkCage);
     }
 
-	[Command]
+   [Command]
     void CmdIndicatorMove(int color)
     {
         if (color == 0)

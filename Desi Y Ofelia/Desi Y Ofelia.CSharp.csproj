@@ -110,6 +110,7 @@
     <Compile Include="Assets\Scripts\NetworkCustom.cs" />
     <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
     <Compile Include="Assets\Scripts\OfeliaScene.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\VR\ExampleInteractiveItem.cs" />
     <Compile Include="Assets\Scripts\VR\VRInteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Whistle.cs" />

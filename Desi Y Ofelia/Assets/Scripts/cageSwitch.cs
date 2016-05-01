@@ -7,10 +7,7 @@ using System.Collections;
 /*
    Cage Switch should be renamed
    Code Gets input from Ofelia Places corresponding letter to button. 
-
-    Code Is attached to Ofelia.
-    Current Max of code is 4 inputs. 
-
+   Code Is attached to Ofelia.
 */
 
 public class cageSwitch : NetworkBehaviour
@@ -29,7 +26,6 @@ public class cageSwitch : NetworkBehaviour
     private float startTime;
     private float elapseTime; 
 
-
     void Start()
     {
         passCode = "";
@@ -39,10 +35,9 @@ public class cageSwitch : NetworkBehaviour
 		currentPosition = Ofelia.position;
         Rot = new Quaternion(0, 90, 90, 0);
 
-        //timed Reset
+        //Timed Reset
         startTime = Time.time;
     }
-
 
     // Update is called once per frame
     void Update()
@@ -54,9 +49,7 @@ public class cageSwitch : NetworkBehaviour
         currentPosition = Ofelia.position;
         currentPosition.y = 0.1f;
 
-        
-        
-
+        //Resets after 2 seconds
         elapseTime = Time.time - startTime;
 
         if(elapseTime > 2)
@@ -94,14 +87,6 @@ public class cageSwitch : NetworkBehaviour
                 startTime = Time.time;
             }
         }
-
-        // if (SceneManager.GetActiveScene().name == "Level 0")
-        /* {
-             if (passCode.Length > 4)
-             {
-                 passCode = "";
-             }
-      */
     }
 }
 
