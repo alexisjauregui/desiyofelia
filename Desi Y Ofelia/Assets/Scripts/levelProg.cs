@@ -9,6 +9,7 @@ public class levelProg : MonoBehaviour {
     bool level3 = false;
     string currentLevel;
     string lastlevel;
+    GameObject Moon;
 
     void Awake()
     {
@@ -39,9 +40,12 @@ public class levelProg : MonoBehaviour {
 
     void lobbyProg()
     {
-        if (level3)
+        if (lastlevel == "Level 3")
         {
             Destroy(GameObject.Find("Cover"));
+            Moon = GameObject.Find("Moon");
+            Moon.transform.position = new Vector3(2.42f, 24f, 112.75f);
+
         }
 
     }
