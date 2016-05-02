@@ -10,6 +10,7 @@ public class levelProg : MonoBehaviour {
     string currentLevel;
     string lastlevel;
     GameObject Moon;
+    GameObject MoonHall;
 
     void Awake()
     {
@@ -44,8 +45,9 @@ public class levelProg : MonoBehaviour {
         {
             Destroy(GameObject.Find("Cover"));
             Moon = GameObject.Find("Moon");
+            MoonHall = GameObject.Find("MoonHall");
             Moon.transform.position = new Vector3(2.42f, 24f, 112.75f);
-
+            MoonHall.transform.position = new Vector3(2.66f, 23.606f, 141.074f);
         }
 
     }

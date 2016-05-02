@@ -24,7 +24,8 @@ public class Restart : NetworkBehaviour {
             if (Input.GetButtonDown("AButton"))
             {
                 Debug.Log("A is pressed");
-                CmdSceneChange("StartMenu");
+                NetworkManager.singleton.ServerChangeScene("StartMenu");
+                //CmdSceneChange("StartMenu");
             }
         }
 	}
