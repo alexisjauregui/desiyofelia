@@ -32,23 +32,23 @@ public class BirdFlight : MonoBehaviour
         {
             if (Idol.transform.eulerAngles.y < 80)
             {
+                Position4();
+                Debug.Log("4");
+            }
+            if (Idol.transform.eulerAngles.y > 80 && Idol.transform.eulerAngles.y < 95)
+            {
                 Position1();
                 Debug.Log("1");
             }
-            if (Idol.transform.eulerAngles.y > 80 && Idol.transform.eulerAngles.y < 95)
+            if (Idol.transform.eulerAngles.y > 170 && Idol.transform.eulerAngles.y < 190)
             {
                 Position2();
                 Debug.Log("2");
             }
-            if (Idol.transform.eulerAngles.y > 170 && Idol.transform.eulerAngles.y < 190)
+            if (Idol.transform.eulerAngles.y == 270)
             {
                 Position3();
                 Debug.Log("3");
-            }
-            if (Idol.transform.eulerAngles.y == 270)
-            {
-                Position4();
-                Debug.Log("4");
             }
 
         }

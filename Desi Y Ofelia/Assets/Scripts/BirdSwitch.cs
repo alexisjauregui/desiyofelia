@@ -39,6 +39,7 @@ public class BirdSwitch : MonoBehaviour {
     {
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
+            Debug.Log(hit);
             if(hit.collider.name == "Idol(Clone)")
             {
                 return true;
