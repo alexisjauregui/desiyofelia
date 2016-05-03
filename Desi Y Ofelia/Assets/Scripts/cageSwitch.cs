@@ -34,6 +34,7 @@ public class cageSwitch : NetworkBehaviour
         // Ripple Effect
 		currentPosition = Ofelia.position;
         Rot = new Quaternion(0, 90, 90, 0);
+     
 
         //Timed Reset
         startTime = Time.time;
@@ -47,7 +48,7 @@ public class cageSwitch : NetworkBehaviour
 
         //Ripple 
         currentPosition = Ofelia.position;
-        currentPosition.y = 0.1f;
+        //currentPosition.y = 0.1f;
 
         //Resets after 2 seconds
         elapseTime = Time.time - startTime;
