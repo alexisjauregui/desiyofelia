@@ -148,6 +148,13 @@ ModelImporter:
     100280: hint4_hand
     100282: hint5_holdhands
     100284: hint5_platform
+    100286: hint5_holdhands_001
+    100288: hint5
+    100290: hint5_form
+    100292: hint5_form_001
+    100294: hint5_001
+    100296: Walkway_Arches_001
+    100298: hint1
     400000: //RootNode
     400002: Plane
     400004: Plane_001
@@ -291,6 +298,13 @@ ModelImporter:
     400280: hint4_hand
     400282: hint5_holdhands
     400284: hint5_platform
+    400286: hint5_holdhands_001
+    400288: hint5
+    400290: hint5_form
+    400292: hint5_form_001
+    400294: hint5_001
+    400296: Walkway_Arches_001
+    400298: hint1
     2300000: //RootNode
     2300002: Plane
     2300004: Plane_001
@@ -434,6 +448,13 @@ ModelImporter:
     2300280: hint4_hand
     2300282: hint5_holdhands
     2300284: hint5_platform
+    2300286: hint5_holdhands_001
+    2300288: hint5
+    2300290: hint5_form
+    2300292: hint5_form_001
+    2300294: hint5_001
+    2300296: Walkway_Arches_001
+    2300298: hint1
     3300000: //RootNode
     3300002: Plane
     3300004: Plane_001
@@ -577,6 +598,13 @@ ModelImporter:
     3300280: hint4_hand
     3300282: hint5_holdhands
     3300284: hint5_platform
+    3300286: hint5_holdhands_001
+    3300288: hint5
+    3300290: hint5_form
+    3300292: hint5_form_001
+    3300294: hint5_001
+    3300296: Walkway_Arches_001
+    3300298: hint1
     4300000: Plane
     4300002: Plane_004
     4300004: Plane_003
@@ -720,6 +748,13 @@ ModelImporter:
     4300280: hint4_hand
     4300282: hint5_platform
     4300284: hint5_holdhands
+    4300286: hint5_holdhands_001
+    4300288: hint5
+    4300290: hint5_form
+    4300292: hint5_form_001
+    4300294: hint5_001
+    4300296: Walkway_Arches_001
+    4300298: hint1
     7400000: Default Take
     9500000: //RootNode
   materials:
