@@ -49,7 +49,7 @@ public class ObjectSpawn : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            Vector3 newpos = new Vector3(-25, 1f, 25f);
+            Vector3 newpos = new Vector3(-25, 2.1f, 25f);
             GameObject spawnNetworkCage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/cage"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkCage);
         }
@@ -72,7 +72,7 @@ public class ObjectSpawn : NetworkBehaviour {
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            Vector3 newpos = new Vector3(-25, 0.7f, 25f);
+            Vector3 newpos = new Vector3(-25, 1.8f, 25f);
             GameObject spawnNetworkcandle = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CandleHolder"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkcandle);
 
