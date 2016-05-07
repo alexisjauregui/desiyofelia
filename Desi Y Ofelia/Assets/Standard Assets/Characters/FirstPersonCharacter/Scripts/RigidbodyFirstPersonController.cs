@@ -22,6 +22,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             [HideInInspector]
             public float CurrentTargetSpeed = 8f;
 
+
 #if !MOBILE_INPUT
             private bool m_Running;
 #endif

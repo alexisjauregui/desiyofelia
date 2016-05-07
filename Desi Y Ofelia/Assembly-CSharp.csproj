@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\NetworkCustom.cs" />
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\OfeliaScene.cs" />
+     <Compile Include="Assets\Scripts\Restart.cs" />
      <Compile Include="Assets\Scripts\VR\ExampleInteractiveItem.cs" />
      <Compile Include="Assets\Scripts\VR\VRInteractiveItem.cs" />
      <Compile Include="Assets\Scripts\Whistle.cs" />
@@ -142,10 +143,6 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A3240636-BAE3-0EEE-12D6-5C2AD8953746}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
