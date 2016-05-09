@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\VR\ExampleInteractiveItem.cs" />
     <Compile Include="Assets\Scripts\VR\VRInteractiveItem.cs" />
+    <Compile Include="Assets\Scripts\Walking.cs" />
     <Compile Include="Assets\Scripts\Whistle.cs" />
     <Compile Include="Assets\Scripts\alwaysface.cs" />
     <Compile Include="Assets\Scripts\buttonChange.cs" />

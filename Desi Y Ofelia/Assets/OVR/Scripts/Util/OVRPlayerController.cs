@@ -93,9 +93,6 @@ public class OVRPlayerController : MonoBehaviour
 	private bool prevHatLeft = false;
 	private bool prevHatRight = false;
 	private float SimulationRate = 60f;
-	public Animation anim;
-	public string animateWalk;
-	public string animateStand;
 
 	void Start()
 	{
@@ -103,8 +100,6 @@ public class OVRPlayerController : MonoBehaviour
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
 		CameraRig.transform.localPosition = p;
-		anim = GetComponent<Animation> ();
-		anim.Play (animateStand);
 	}
 
 	void Awake()
@@ -224,8 +219,6 @@ public class OVRPlayerController : MonoBehaviour
 
 	public virtual void UpdateMovement()
 	{
-		
-		anim.Play (animateStand);
 
 		if (HaltUpdateMovement)
 			return;
@@ -276,19 +269,15 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (moveForward) {
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * Vector3.forward);
-			anim.Play (animateWalk);
 		}
 		if (moveBack) {
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * BackAndSideDampen * Vector3.back);
-			anim.Play (animateWalk);
 		}
 		if (moveLeft) {
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.left);
-			anim.Play (animateWalk);
 		}
 		if (moveRight) {
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.right);
-			anim.Play (animateWalk);
 		}
 		Vector3 euler = transform.rotation.eulerAngles;
 
