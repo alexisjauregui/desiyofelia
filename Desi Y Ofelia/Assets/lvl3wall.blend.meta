@@ -14,6 +14,7 @@ ModelImporter:
     100012: hint5
     100014: Buildings_door
     100016: door
+    100018: Street_Lamps
     400000: Buildings
     400002: //RootNode
     400004: Platform
@@ -23,6 +24,7 @@ ModelImporter:
     400012: hint5
     400014: Buildings_door
     400016: door
+    400018: Street_Lamps
     2300000: Buildings
     2300002: Platform
     2300004: hintBird
@@ -31,6 +33,7 @@ ModelImporter:
     2300010: hint5
     2300012: Buildings_door
     2300014: door
+    2300016: Street_Lamps
     3300000: Buildings
     3300002: Platform
     3300004: hintBird
@@ -39,6 +42,7 @@ ModelImporter:
     3300010: hint5
     3300012: Buildings_door
     3300014: door
+    3300016: Street_Lamps
     4300000: Buildings
     4300002: Platform
     4300004: hintIdol
@@ -47,6 +51,7 @@ ModelImporter:
     4300010: hint5
     4300012: Buildings_door
     4300014: door
+    4300016: Street_Lamps
     7400000: Default Take
     9500000: //RootNode
   materials:
