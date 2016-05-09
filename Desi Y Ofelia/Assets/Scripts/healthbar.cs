@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class healthbar : MonoBehaviour {
+public class healthbar : NetworkBehaviour {
 
 	private float ini_health = 10;
     private int decrimant = 1;
@@ -27,12 +28,11 @@ public class healthbar : MonoBehaviour {
             if (rounded < 0)
             {
                 rounded = 0;
+               
             }
 
             Timer.text = rounded.ToString();
-            
-            
-            
+                        
         }
 	
 	}

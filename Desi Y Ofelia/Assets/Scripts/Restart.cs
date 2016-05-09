@@ -7,6 +7,7 @@ using System.Collections;
 public class Restart : NetworkBehaviour {
     Text newText;
     bool reset = false;
+    int check;
 
 
 	// Update is called once per frame
@@ -17,16 +18,25 @@ public class Restart : NetworkBehaviour {
         {
             newText.text = "Try Again?";
             reset = true;
+            check = 0;
+            
         }
 
         if (reset)
         {
-            if (Input.GetButtonDown("AButton"))
+            if (Input.GetButtonDown("AButton") && check > 50)
             {
                 Debug.Log("A is pressed");
+                NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                //CmdSceneChange("StartMenu");
+            }
+            if (Input.GetButtonDown("BButton"))
+            {
                 NetworkManager.singleton.ServerChangeScene("StartMenu");
                 //CmdSceneChange("StartMenu");
             }
+
+            check++;
         }
 	}
 

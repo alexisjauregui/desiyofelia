@@ -106,9 +106,9 @@ public class DesiScene : NetworkBehaviour
             } 
             if (doorCollision3)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
-                //NetworkManager.singleton.ServerChangeScene("Level 3");
+                Debug.Log("WAIT FOR YOUR PARTNER Final");
+                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                NetworkManager.singleton.ServerChangeScene("Final");
             }
             else if (doorCollision4)
             {

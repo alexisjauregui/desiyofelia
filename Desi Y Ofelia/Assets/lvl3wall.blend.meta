@@ -10,48 +10,63 @@ ModelImporter:
     100004: Platform
     100006: hintBird
     100008: hintIdol
+<<<<<<< HEAD
     100010: hintBird_001
     100012: hint5
     100014: Buildings_door
     100016: door
     100018: Street_Lamps
+=======
+>>>>>>> feature/endgame2
     400000: Buildings
     400002: //RootNode
     400004: Platform
     400006: hintBird
     400008: hintIdol
+<<<<<<< HEAD
     400010: hintBird_001
     400012: hint5
     400014: Buildings_door
     400016: door
     400018: Street_Lamps
+=======
+>>>>>>> feature/endgame2
     2300000: Buildings
     2300002: Platform
     2300004: hintBird
     2300006: hintIdol
+<<<<<<< HEAD
     2300008: hintBird_001
     2300010: hint5
     2300012: Buildings_door
     2300014: door
     2300016: Street_Lamps
+=======
+>>>>>>> feature/endgame2
     3300000: Buildings
     3300002: Platform
     3300004: hintBird
     3300006: hintIdol
+<<<<<<< HEAD
     3300008: hintBird_001
     3300010: hint5
     3300012: Buildings_door
     3300014: door
     3300016: Street_Lamps
+=======
+>>>>>>> feature/endgame2
     4300000: Buildings
     4300002: Platform
     4300004: hintIdol
     4300006: hintBird
+<<<<<<< HEAD
     4300008: hintBird_001
     4300010: hint5
     4300012: Buildings_door
     4300014: door
     4300016: Street_Lamps
+=======
+>>>>>>> feature/endgame2
     7400000: Default Take
     9500000: //RootNode
   materials:
