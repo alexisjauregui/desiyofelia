@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [AddComponentMenu("Network/NetworkManagerHUD")]
@@ -9,9 +10,19 @@ using System.Collections;
 public class NetworkCustom : MonoBehaviour {
 
     public NetworkManager manager;
+    private RawImage splash;
+    private GameObject bg;
+
 	// Use this for initialization
 	void Start () {
-	
+        if (SceneManager.GetActiveScene().name == "Start Menu")
+        {
+            bg = GameObject.Find("bg");
+            bg.SetActive(false);
+            splash = GameObject.Find("Splash").GetComponent<RawImage>();
+            splash.CrossFadeAlpha(0.0f, 3.0f, false);
+
+        }
 	}
 
     void Awake()
@@ -22,8 +33,12 @@ public class NetworkCustom : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
+        if (SceneManager.GetActiveScene().name == "Start Menu")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                bg.SetActive(true);
+        }
+            if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
