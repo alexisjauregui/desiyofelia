@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Final.unity
-=======
 - path: Assets/Scenes/Start Menu.unity
->>>>>>> feature/Start_Menu
   isLoaded: 1
   isActive: 1

@@ -1,72 +1,40 @@
 fileFormatVersion: 2
 guid: 48b899ec2166fa9459dba2bb2f4f1fce
-timeCreated: 1457727589
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: Buildings
-    100002: //RootNode
-    100004: Platform
+    100002: door
+    100004: hint5
     100006: hintBird
-    100008: hintIdol
-<<<<<<< HEAD
-    100010: hintBird_001
-    100012: hint5
-    100014: Buildings_door
-    100016: door
-    100018: Street_Lamps
-=======
->>>>>>> feature/endgame2
+    100008: //RootNode
+    100010: Platform
+    100012: Street_Lamps
     400000: Buildings
-    400002: //RootNode
-    400004: Platform
+    400002: door
+    400004: hint5
     400006: hintBird
-    400008: hintIdol
-<<<<<<< HEAD
-    400010: hintBird_001
-    400012: hint5
-    400014: Buildings_door
-    400016: door
-    400018: Street_Lamps
-=======
->>>>>>> feature/endgame2
+    400008: //RootNode
+    400010: Platform
+    400012: Street_Lamps
     2300000: Buildings
-    2300002: Platform
-    2300004: hintBird
-    2300006: hintIdol
-<<<<<<< HEAD
-    2300008: hintBird_001
-    2300010: hint5
-    2300012: Buildings_door
-    2300014: door
-    2300016: Street_Lamps
-=======
->>>>>>> feature/endgame2
+    2300002: door
+    2300004: hint5
+    2300006: hintBird
+    2300008: Platform
+    2300010: Street_Lamps
     3300000: Buildings
-    3300002: Platform
-    3300004: hintBird
-    3300006: hintIdol
-<<<<<<< HEAD
-    3300008: hintBird_001
-    3300010: hint5
-    3300012: Buildings_door
-    3300014: door
-    3300016: Street_Lamps
-=======
->>>>>>> feature/endgame2
-    4300000: Buildings
-    4300002: Platform
-    4300004: hintIdol
-    4300006: hintBird
-<<<<<<< HEAD
-    4300008: hintBird_001
-    4300010: hint5
-    4300012: Buildings_door
-    4300014: door
-    4300016: Street_Lamps
-=======
->>>>>>> feature/endgame2
+    3300002: door
+    3300004: hint5
+    3300006: hintBird
+    3300008: Platform
+    3300010: Street_Lamps
+    4300000: Street_Lamps
+    4300002: hintBird
+    4300004: Buildings
+    4300006: Platform
+    4300008: hint5
+    4300010: door
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -93,7 +61,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
