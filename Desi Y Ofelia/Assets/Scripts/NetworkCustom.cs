@@ -37,18 +37,6 @@ public class NetworkCustom : MonoBehaviour {
             {
                 manager.StartClient();
             }
-            if (GameObject.Find("Status").GetComponent<Text>().text == "host")
-            {
-                manager.StartHost();
-                GameObject.Find("Status").GetComponent<Text>().text = "";
-                GetComponent<NetManagerCustom>().playerPrefabIndex = 0;
-            }
-            if (GameObject.Find("Status").GetComponent<Text>().text == "join")
-            {
-                manager.StartClient();
-                GameObject.Find("Status").GetComponent<Text>().text = "";
-                GetComponent<NetManagerCustom>().playerPrefabIndex = 1;
-            }
             manager.networkAddress = GameObject.Find("InputField").GetComponent<InputField>().text;
         }
         if (NetworkServer.active && NetworkClient.active)
@@ -59,5 +47,17 @@ public class NetworkCustom : MonoBehaviour {
             }
         }
 
+    }
+
+    public void Host()
+    {
+        GetComponent<NetManagerCustom>().playerPrefabIndex = 0;
+        manager.StartHost(); 
+    }
+
+    public void Join()
+    {
+        GetComponent<NetManagerCustom>().playerPrefabIndex = 1;
+        manager.StartClient();
     }
 }
