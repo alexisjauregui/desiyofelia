@@ -36,7 +36,10 @@ public class NetworkCustom : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "Start Menu")
         {
             if (Input.GetKeyDown(KeyCode.Space))
+            {
                 bg.SetActive(true);
+                splash.gameObject.SetActive(false);
+            }
         }
             if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
         {
