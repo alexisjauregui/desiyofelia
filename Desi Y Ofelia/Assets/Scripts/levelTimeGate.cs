@@ -12,7 +12,11 @@ public class levelTimeGate : NetworkBehaviour
     private Text newText;
     private GameObject cage;
     private GameObject gate;
+    private GameObject Switch;
     private bool gatebool;
+    public float distanceToSee;
+    public RaycastHit hit;
+
 
 
     // Use this for initialization
@@ -25,6 +29,10 @@ public class levelTimeGate : NetworkBehaviour
             cage = GameObject.FindGameObjectWithTag("Cage");
             //gate = GameObject.FindGameObjectWithTag("Gate");  Need Gate Asset
             gatebool = false;
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            distanceToSee = 2;
         }
     }
 
@@ -46,8 +54,37 @@ public class levelTimeGate : NetworkBehaviour
             {
                 //gate.GetComponent<Animation>().Play();
             }
+
+            if (seeingSwitch())
+                if (Input.GetButtonDown("AButton"))
+                    CmdTurnSwitch();
         }
+
     }
 
+    bool seeingSwitch()
+    {
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+        {
+            Debug.Log(hit);
+            if (hit.collider.name == "CageSwitch(Clone)")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
 
+    void CmdTurnSwitch()
+    {
+        Switch = GameObject.Find("CageSwitch(Clone)");
+        
+
+        //transform switch
+
+    }
 }

@@ -10,6 +10,7 @@ public class ObjectSpawn : NetworkBehaviour {
     public GameObject idol;
     public GameObject[] indicator;
     public GameObject[] banner;
+    public GameObject CageSwitch;
 
 
     // Use this for initialization
@@ -26,6 +27,7 @@ public class ObjectSpawn : NetworkBehaviour {
                      banner[1].transform.position, banner[1].transform.rotation,
                      banner[2].transform.position, banner[2].transform.rotation,
                      banner[3].transform.position, banner[3].transform.rotation);
+        CmdswitchSpawn(CageSwitch.transform.position, CageSwitch.transform.rotation);
     }
 	
 	// Update is called once per frame
@@ -73,6 +75,13 @@ public class ObjectSpawn : NetworkBehaviour {
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
             Vector3 newpos = new Vector3(-25, 1.8f, 25f);
+            GameObject spawnNetworkcandle = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CandleHolder"), newpos, rot);
+            NetworkServer.Spawn(spawnNetworkcandle);
+
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            Vector3 newpos = new Vector3(-29, 0.5f, 15f);
             GameObject spawnNetworkcandle = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CandleHolder"), newpos, rot);
             NetworkServer.Spawn(spawnNetworkcandle);
 
@@ -130,4 +139,14 @@ public class ObjectSpawn : NetworkBehaviour {
         }
 
     }
+
+    /*[Command]
+    void CmdswitchSpawn(Vector3 pos, Quaternion rot)
+    {
+        if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            GameObject spawnNetworkSwitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CageSwitch"), pos, rot);
+            NetworkServer.Spawn(spawnNetworkSwitch);
+        }
+    }*/
 }
