@@ -140,7 +140,7 @@ public class ObjectSpawn : NetworkBehaviour {
 
     }
 
-    /*[Command]
+    [Command]
     void CmdswitchSpawn(Vector3 pos, Quaternion rot)
     {
         if (SceneManager.GetActiveScene().name == "Level 4")
@@ -148,5 +148,5 @@ public class ObjectSpawn : NetworkBehaviour {
             GameObject spawnNetworkSwitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CageSwitch"), pos, rot);
             NetworkServer.Spawn(spawnNetworkSwitch);
         }
-    }*/
+    }
 }
