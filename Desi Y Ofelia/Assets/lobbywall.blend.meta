@@ -47,6 +47,14 @@ ModelImporter:
     100078: MoonHall
     100080: Stairs
     100082: Ramp
+    100084: Rails
+    100086: Plane_001
+    100088: Rails_001
+    100090: Rails_Left
+    100092: Rails_Right
+    100094: Walls_Main
+    100096: Wall_Main
+    100098: Floor
     400000: //RootNode
     400002: Balcony_Left_1
     400004: Balcony_Left_2
@@ -89,6 +97,14 @@ ModelImporter:
     400078: MoonHall
     400080: Stairs
     400082: Ramp
+    400084: Rails
+    400086: Plane_001
+    400088: Rails_001
+    400090: Rails_Left
+    400092: Rails_Right
+    400094: Walls_Main
+    400096: Wall_Main
+    400098: Floor
     2300000: //RootNode
     2300002: Balcony_Left_1
     2300004: Balcony_Left_2
@@ -131,6 +147,14 @@ ModelImporter:
     2300078: MoonHall
     2300080: Stairs
     2300082: Ramp
+    2300084: Rails
+    2300086: Plane_001
+    2300088: Rails_001
+    2300090: Rails_Left
+    2300092: Rails_Right
+    2300094: Walls_Main
+    2300096: Wall_Main
+    2300098: Floor
     3300000: //RootNode
     3300002: Balcony_Left_1
     3300004: Balcony_Left_2
@@ -173,6 +197,14 @@ ModelImporter:
     3300078: MoonHall
     3300080: Stairs
     3300082: Ramp
+    3300084: Rails
+    3300086: Plane_001
+    3300088: Rails_001
+    3300090: Rails_Left
+    3300092: Rails_Right
+    3300094: Walls_Main
+    3300096: Wall_Main
+    3300098: Floor
     4300000: Plane
     4300002: Plane_002
     4300004: Plane_000
@@ -216,6 +248,14 @@ ModelImporter:
     4300080: Stairs
     4300082: Moon
     4300084: Ramp
+    4300086: Rails
+    4300088: Plane_001
+    4300090: Rails_001
+    4300092: Rails_Right
+    4300094: Rails_Left
+    4300096: Walls_Main
+    4300098: Wall_Main
+    4300100: Floor
     7400000: Default Take
     9500000: //RootNode
   materials:
