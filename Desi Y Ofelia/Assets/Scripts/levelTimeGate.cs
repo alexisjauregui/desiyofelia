@@ -55,14 +55,19 @@ public class levelTimeGate : NetworkBehaviour
                 //gate.GetComponent<Animation>().Play();
             }
 
-            if (seeingSwitch())
-                if (Input.GetButtonDown("AButton"))
-                    CmdTurnSwitch();
+            if (seeingCageSwitch())
+            {
+                if (isLocalPlayer)
+                {
+                    if (Input.GetButtonDown("AButton"))
+                        CmdTurnCageSwitch();
+                }
+            }
         }
 
     }
 
-    bool seeingSwitch()
+    bool seeingCageSwitch()
     {
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
@@ -79,12 +84,38 @@ public class levelTimeGate : NetworkBehaviour
         return false;
     }
 
-    void CmdTurnSwitch()
+    bool seeingDoorSwitch()
+    {
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+        {
+            Debug.Log(hit);
+            if (hit.collider.name == "DoorSwitch(Clone)")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    [Command]
+    void CmdTurnCageSwitch()
     {
         Switch = GameObject.Find("CageSwitch(Clone)");
         
 
         //transform switch
 
+    }
+
+    [Command]
+    void CmdTurnDoorSwitch()
+    {
+        Switch = GameObject.Find("DoorSwitch(Clone)");
+
+        //transform switch
     }
 }

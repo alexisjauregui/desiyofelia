@@ -11,6 +11,7 @@ public class ObjectSpawn : NetworkBehaviour {
     public GameObject[] indicator;
     public GameObject[] banner;
     public GameObject CageSwitch;
+    public GameObject DoorSwitch;
 
 
     // Use this for initialization
@@ -27,7 +28,7 @@ public class ObjectSpawn : NetworkBehaviour {
                      banner[1].transform.position, banner[1].transform.rotation,
                      banner[2].transform.position, banner[2].transform.rotation,
                      banner[3].transform.position, banner[3].transform.rotation);
-        CmdswitchSpawn(CageSwitch.transform.position, CageSwitch.transform.rotation);
+        CmdswitchSpawn(CageSwitch.transform.position, CageSwitch.transform.rotation, DoorSwitch.transform.position, DoorSwitch.transform.rotation);
     }
 	
 	// Update is called once per frame
@@ -141,12 +142,15 @@ public class ObjectSpawn : NetworkBehaviour {
     }
 
     [Command]
-    void CmdswitchSpawn(Vector3 pos, Quaternion rot)
+    void CmdswitchSpawn(Vector3 pos1, Quaternion rot1, Vector3 pos2, Quaternion rot2)
     {
         if (SceneManager.GetActiveScene().name == "Level 4")
         {
-            GameObject spawnNetworkSwitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CageSwitch"), pos, rot);
-            NetworkServer.Spawn(spawnNetworkSwitch);
+            GameObject spawnNetworkCageSwitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/CageSwitch"), pos1, rot1);
+            NetworkServer.Spawn(spawnNetworkCageSwitch);
+
+            GameObject spawnNetworkDoorSwitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/DoorSwitch"), pos2, rot2);
+            NetworkServer.Spawn(spawnNetworkDoorSwitch);
         }
     }
 }
