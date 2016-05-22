@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\checkChords.cs" />
     <Compile Include="Assets\Scripts\checkSound.cs" />
+    <Compile Include="Assets\Scripts\countdown.cs" />
     <Compile Include="Assets\Scripts\cursor.cs" />
     <Compile Include="Assets\Scripts\grabndrop.cs" />
     <Compile Include="Assets\Scripts\growRipple.cs" />
