@@ -12,7 +12,11 @@ public class levelTimeGate : NetworkBehaviour
     private Text newText;
     private GameObject cage;
     private GameObject gate;
+    private GameObject Switch;
     private bool gatebool;
+    public float distanceToSee;
+    public RaycastHit hit;
+
 
 
     // Use this for initialization
@@ -25,6 +29,10 @@ public class levelTimeGate : NetworkBehaviour
             cage = GameObject.FindGameObjectWithTag("Cage");
             //gate = GameObject.FindGameObjectWithTag("Gate");  Need Gate Asset
             gatebool = false;
+        }
+        if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            distanceToSee = 2;
         }
     }
 
@@ -46,8 +54,86 @@ public class levelTimeGate : NetworkBehaviour
             {
                 //gate.GetComponent<Animation>().Play();
             }
+
+            if (seeingCageSwitch())
+            {
+                if (isLocalPlayer)
+                {
+                    if (Input.GetButtonDown("AButton"))
+                    {
+                        GameObject CageSwitch = GameObject.Find("CageSwitch");
+                        CageSwitch.GetComponent<Animator>().Play("TimeGateCageSwitch");
+                    }
+                }
+            }
+
+            if (seeingDoorSwitch())
+            {
+                Debug.Log("lever");
+                if (isLocalPlayer)
+                {
+                    if (Input.GetButtonDown("AButton"))
+                    {
+                        GameObject entrance = GameObject.Find("Entrance");
+                        GameObject DoorSwitch = GameObject.Find("DoorSwitch");
+                        DoorSwitch.GetComponent<Animator>().Play("TimeGateDoorSwitch");
+                        entrance.GetComponent<Animator>().Play("TimeGateEntrance");
+                    }
+                }
+            }
         }
+
     }
 
+    bool seeingCageSwitch()
+    {
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+        {
+            Debug.Log(hit);
+            if (hit.collider.name == "CageSwitch")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
 
+    bool seeingDoorSwitch()
+    {
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
+        {
+            Debug.Log(hit);
+            if (hit.collider.name == "DoorSwitch")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    [Command]
+    void CmdTurnCageSwitch()
+    {
+        Switch = GameObject.Find("CageSwitch(Clone)");
+        
+
+        //transform switch
+
+    }
+
+    [Command]
+    void CmdTurnDoorSwitch()
+    {
+        Switch = GameObject.Find("DoorSwitch(Clone)");
+
+        //transform switch
+    }
 }
