@@ -45,7 +45,7 @@ public class levelProg : MonoBehaviour {
         {
             Destroy(GameObject.Find("Cover"));
             Moon = GameObject.Find("Moon");
-            MoonHall = GameObject.Find("MoonHall");
+            //MoonHall = GameObject.Find("MoonHall");
             Moon.transform.position = new Vector3(2.47f, 23.87f, 40.98f);
             //MoonHall.transform.position = new Vector3(2.66f, 23.606f, 141.074f);
         }
