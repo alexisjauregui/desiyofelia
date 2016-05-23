@@ -15,6 +15,14 @@ ModelImporter:
     100014: Wall_Lining
     100016: Wall_Upper_Lining
     100018: Walls
+    100020: Plane
+    100022: Plane_001
+    100024: Doors
+    100026: Doors2
+    100028: WallsMain
+    100030: WallsMain2
+    100032: WallsMain3
+    100034: Doors3
     400000: Ceiling
     400002: Ceiling_Wood_Beams
     400004: Door_Linings
@@ -25,6 +33,14 @@ ModelImporter:
     400014: Wall_Lining
     400016: Wall_Upper_Lining
     400018: Walls
+    400020: Plane
+    400022: Plane_001
+    400024: Doors
+    400026: Doors2
+    400028: WallsMain
+    400030: WallsMain2
+    400032: WallsMain3
+    400034: Doors3
     2300000: Ceiling
     2300002: Ceiling_Wood_Beams
     2300004: Door_Linings
@@ -34,6 +50,14 @@ ModelImporter:
     2300012: Wall_Lining
     2300014: Wall_Upper_Lining
     2300016: Walls
+    2300018: Plane
+    2300020: Plane_001
+    2300022: Doors
+    2300024: Doors2
+    2300026: WallsMain
+    2300028: WallsMain2
+    2300030: WallsMain3
+    2300032: Doors3
     3300000: Ceiling
     3300002: Ceiling_Wood_Beams
     3300004: Door_Linings
@@ -43,6 +67,14 @@ ModelImporter:
     3300012: Wall_Lining
     3300014: Wall_Upper_Lining
     3300016: Walls
+    3300018: Plane
+    3300020: Plane_001
+    3300022: Doors
+    3300024: Doors2
+    3300026: WallsMain
+    3300028: WallsMain2
+    3300030: WallsMain3
+    3300032: Doors3
     4300000: FloorInner2
     4300002: FloorOuter
     4300004: FloorInner1
@@ -52,6 +84,14 @@ ModelImporter:
     4300012: Wall_Lining
     4300014: Ceiling
     4300016: Walls
+    4300018: Plane
+    4300020: Plane_001
+    4300022: Doors
+    4300024: Doors2
+    4300026: WallsMain
+    4300028: WallsMain2
+    4300030: WallsMain3
+    4300032: Doors3
     7400000: Default Take
     9500000: //RootNode
   materials:
