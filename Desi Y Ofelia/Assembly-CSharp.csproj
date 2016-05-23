@@ -75,6 +75,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <Compile Include="Assets\Scripts\BirdFlight.cs" />
      <Compile Include="Assets\Scripts\BirdSwitch.cs" />
+     <Compile Include="Assets\Scripts\DeathSceneChange.cs" />
      <Compile Include="Assets\Scripts\DesiInteract.cs" />
      <Compile Include="Assets\Scripts\DesiPlaySound.cs" />
      <Compile Include="Assets\Scripts\DesiScene.cs" />
@@ -84,6 +85,7 @@
      <Compile Include="Assets\Scripts\LocalAuthority.cs" />
      <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
      <Compile Include="Assets\Scripts\NetworkCustom.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\OfeliaScene.cs" />
      <Compile Include="Assets\Scripts\Restart.cs" />
@@ -96,6 +98,7 @@
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
      <Compile Include="Assets\Scripts\checkChords.cs" />
      <Compile Include="Assets\Scripts\checkSound.cs" />
+     <Compile Include="Assets\Scripts\countdown.cs" />
      <Compile Include="Assets\Scripts\cursor.cs" />
      <Compile Include="Assets\Scripts\grabndrop.cs" />
      <Compile Include="Assets\Scripts\growRipple.cs" />
