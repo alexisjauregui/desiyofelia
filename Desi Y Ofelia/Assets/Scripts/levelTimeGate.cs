@@ -60,18 +60,24 @@ public class levelTimeGate : NetworkBehaviour
                 if (isLocalPlayer)
                 {
                     if (Input.GetButtonDown("AButton"))
-                        CmdTurnCageSwitch();
+                    {
+                        GameObject CageSwitch = GameObject.Find("CageSwitch");
+                        CageSwitch.GetComponent<Animator>().Play("TimeGateCageSwitch");
+                    }
                 }
             }
 
             if (seeingDoorSwitch())
             {
+                Debug.Log("lever");
                 if (isLocalPlayer)
                 {
                     if (Input.GetButtonDown("AButton"))
                     {
                         GameObject entrance = GameObject.Find("Entrance");
-                        entrance.GetComponent<Animation>().Play();
+                        GameObject DoorSwitch = GameObject.Find("DoorSwitch");
+                        DoorSwitch.GetComponent<Animator>().Play("TimeGateDoorSwitch");
+                        entrance.GetComponent<Animator>().Play("TimeGateEntrance");
                     }
                 }
             }
