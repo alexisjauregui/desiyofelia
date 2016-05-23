@@ -49,11 +49,11 @@ public class NetworkCustom : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.H))
             {
-                manager.StartHost();
+                Host();
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
-                manager.StartClient();
+                Join();
             }
             manager.networkAddress = GameObject.Find("InputField").GetComponent<InputField>().text;
         }

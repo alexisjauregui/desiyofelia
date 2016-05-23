@@ -56,6 +56,7 @@ ModelImporter:
     100096: Wall_Main
     100098: Floor
     100100: Lamps
+    100102: Cube
     400000: //RootNode
     400002: Balcony_Left_1
     400004: Balcony_Left_2
@@ -107,6 +108,7 @@ ModelImporter:
     400096: Wall_Main
     400098: Floor
     400100: Lamps
+    400102: Cube
     2300000: //RootNode
     2300002: Balcony_Left_1
     2300004: Balcony_Left_2
@@ -158,6 +160,7 @@ ModelImporter:
     2300096: Wall_Main
     2300098: Floor
     2300100: Lamps
+    2300102: Cube
     3300000: //RootNode
     3300002: Balcony_Left_1
     3300004: Balcony_Left_2
@@ -209,6 +212,7 @@ ModelImporter:
     3300096: Wall_Main
     3300098: Floor
     3300100: Lamps
+    3300102: Cube
     4300000: Plane
     4300002: Plane_002
     4300004: Plane_000
@@ -261,6 +265,7 @@ ModelImporter:
     4300098: Wall_Main
     4300100: Floor
     4300102: Lamps
+    4300104: Cube
     7400000: Default Take
     9500000: //RootNode
   materials:
