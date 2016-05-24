@@ -10,6 +10,7 @@ using System.Collections;
 public class NetworkCustom : MonoBehaviour {
 
     public NetworkManager manager;
+    public InputField ip;
     private RawImage splash;
     private GameObject bg;
 
@@ -17,11 +18,10 @@ public class NetworkCustom : MonoBehaviour {
 	void Start () {
         if (SceneManager.GetActiveScene().name == "Start Menu")
         {
-            bg = GameObject.Find("bg");
-            bg.SetActive(false);
+            bg = GameObject.Find("blackscreen");
             splash = GameObject.Find("Splash").GetComponent<RawImage>();
             splash.CrossFadeAlpha(0.0f, 3.0f, false);
-
+            ip.GetComponent<InputField>().text = "128.114.52.";
         }
 	}
 
@@ -37,7 +37,7 @@ public class NetworkCustom : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                bg.SetActive(true);
+                bg.SetActive(false);
                 splash.gameObject.SetActive(false);
             }
         }
@@ -55,7 +55,7 @@ public class NetworkCustom : MonoBehaviour {
             {
                 Join();
             }
-            manager.networkAddress = GameObject.Find("InputField").GetComponent<InputField>().text;
+            manager.networkAddress = ip.GetComponent<InputField>().text;
         }
         if (NetworkServer.active && NetworkClient.active)
         {

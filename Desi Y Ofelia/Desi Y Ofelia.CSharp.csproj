@@ -118,6 +118,8 @@
     <Compile Include="Assets\Scripts\Walking.cs" />
     <Compile Include="Assets\Scripts\Whistle.cs" />
     <Compile Include="Assets\Scripts\alwaysface.cs" />
+    <Compile Include="Assets\Scripts\bgchange.cs" />
+    <Compile Include="Assets\Scripts\bgchange1.cs" />
     <Compile Include="Assets\Scripts\buttonChange.cs" />
     <Compile Include="Assets\Scripts\cageSwitch.cs" />
     <Compile Include="Assets\Scripts\checkChords.cs" />
