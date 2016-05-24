@@ -130,6 +130,7 @@ public class DesiScene : NetworkBehaviour
                 Debug.Log("You are holding a candle");
                 if (doorCollision1)
                 {
+                    Sign1 = GameObject.Find("Sign1").GetComponent<Text>();
                     Sign1.enabled = true;
                     if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                     {
