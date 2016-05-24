@@ -21,7 +21,7 @@ public class NetworkCustom : MonoBehaviour {
             bg = GameObject.Find("blackscreen");
             splash = GameObject.Find("Splash").GetComponent<RawImage>();
             splash.CrossFadeAlpha(0.0f, 3.0f, false);
-            ip.GetComponent<InputField>().text = "128.114.52.";
+            //ip.GetComponent<InputField>().text = "128.114.52.";
         }
 	}
 
@@ -49,13 +49,15 @@ public class NetworkCustom : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.H))
             {
-                Host();
+                GetComponent<NetManagerCustom>().playerPrefabIndex = 0;
+                manager.StartHost();
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
-                Join();
+                GetComponent<NetManagerCustom>().playerPrefabIndex = 1;
+                manager.StartClient();
             }
-            manager.networkAddress = ip.GetComponent<InputField>().text;
+            manager.networkAddress = GameObject.Find("InputField").GetComponent<InputField>().text;
         }
         if (NetworkServer.active && NetworkClient.active)
         {

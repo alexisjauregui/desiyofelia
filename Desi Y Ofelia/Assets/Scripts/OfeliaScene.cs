@@ -48,11 +48,11 @@ public class OfeliaScene : NetworkBehaviour
                 if (doorCollision0)
                 {
                     Sign0.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                     {
                         Sign0.enabled = false;
                         CmdSceneChange("Level Lobby");
-                    }
+                    }*/
                 }
                 else
                 {
@@ -65,11 +65,11 @@ public class OfeliaScene : NetworkBehaviour
             if (doorCollision0)
             {
                 Sign0.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                 {
                     Sign0.enabled = false;
                     CmdSceneChange("Level 0");
-                }
+                }*/
             }
             else
             {
@@ -78,11 +78,11 @@ public class OfeliaScene : NetworkBehaviour
             if (doorCollision1)
             {
                 Sign1.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                 {
                     Sign1.enabled = false;
                     CmdSceneChange("Level 1");
-                }
+                }*/
             }
             else
             {
@@ -91,11 +91,11 @@ public class OfeliaScene : NetworkBehaviour
             if (doorCollision2)
             {
                 Sign2.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                 {
                     Sign2.enabled = false;
                     CmdSceneChange("Level 3");
-                }
+                }*/
             }
             else
             {
@@ -124,11 +124,11 @@ public class OfeliaScene : NetworkBehaviour
                 if (doorCollision1)
                 {
                     Sign1.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                     {
                         Sign1.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
-                    }
+                    }*/
                 }
                 else
                 {
@@ -144,11 +144,11 @@ public class OfeliaScene : NetworkBehaviour
                 if (doorCollision2)
                 {
                     Sign2.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                   /* if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
                     {
                         Sign2.enabled = false;
                         CmdSceneChange("Level Lobby");
-                    }
+                    }*/
                 }
                 else
                 {
