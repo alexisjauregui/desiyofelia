@@ -23,6 +23,16 @@ ModelImporter:
     100030: WallsMain2
     100032: WallsMain3
     100034: Doors3
+    100036: Ceiling1
+    100038: Floor1
+    100040: Doors1
+    100042: WallsMain1
+    100044: Doors4
+    100046: Floor2
+    100048: Floor3
+    100050: Lanturn
+    100052: Lanturn_001
+    100054: Ceiling2
     400000: Ceiling
     400002: Ceiling_Wood_Beams
     400004: Door_Linings
@@ -41,6 +51,16 @@ ModelImporter:
     400030: WallsMain2
     400032: WallsMain3
     400034: Doors3
+    400036: Ceiling1
+    400038: Floor1
+    400040: Doors1
+    400042: WallsMain1
+    400044: Doors4
+    400046: Floor2
+    400048: Floor3
+    400050: Lanturn
+    400052: Lanturn_001
+    400054: Ceiling2
     2300000: Ceiling
     2300002: Ceiling_Wood_Beams
     2300004: Door_Linings
@@ -58,6 +78,16 @@ ModelImporter:
     2300028: WallsMain2
     2300030: WallsMain3
     2300032: Doors3
+    2300034: Ceiling1
+    2300036: Floor1
+    2300038: Doors1
+    2300040: WallsMain1
+    2300042: Doors4
+    2300044: Floor2
+    2300046: Floor3
+    2300048: Lanturn
+    2300050: Lanturn_001
+    2300052: Ceiling2
     3300000: Ceiling
     3300002: Ceiling_Wood_Beams
     3300004: Door_Linings
@@ -75,6 +105,16 @@ ModelImporter:
     3300028: WallsMain2
     3300030: WallsMain3
     3300032: Doors3
+    3300034: Ceiling1
+    3300036: Floor1
+    3300038: Doors1
+    3300040: WallsMain1
+    3300042: Doors4
+    3300044: Floor2
+    3300046: Floor3
+    3300048: Lanturn
+    3300050: Lanturn_001
+    3300052: Ceiling2
     4300000: FloorInner2
     4300002: FloorOuter
     4300004: FloorInner1
@@ -92,6 +132,16 @@ ModelImporter:
     4300028: WallsMain2
     4300030: WallsMain3
     4300032: Doors3
+    4300034: Ceiling1
+    4300036: Floor1
+    4300038: WallsMain1
+    4300040: Doors1
+    4300042: Floor2
+    4300044: Doors4
+    4300046: Floor3
+    4300048: Lanturn_001
+    4300050: Lanturn
+    4300052: Ceiling2
     7400000: Default Take
     9500000: //RootNode
   materials:
