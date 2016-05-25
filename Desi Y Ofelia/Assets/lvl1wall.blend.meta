@@ -33,6 +33,20 @@ ModelImporter:
     100050: Lanturn
     100052: Lanturn_001
     100054: Ceiling2
+    100056: Doors1A
+    100058: Doors1B
+    100060: Doors2A
+    100062: Doors2B
+    100064: WallsMain1_001
+    100066: WallsMain1_MeshPart0
+    100068: WallsMain1_MeshPart1
+    100070: WallsMain1A
+    100072: WallsMain1A_MeshPart0
+    100074: WallsMain1A_MeshPart1
+    100076: WallsMain1B
+    100078: WallsMain1B_001
+    100080: WallsMain1B_002
+    100082: WallsMain2A
     400000: Ceiling
     400002: Ceiling_Wood_Beams
     400004: Door_Linings
@@ -61,6 +75,20 @@ ModelImporter:
     400050: Lanturn
     400052: Lanturn_001
     400054: Ceiling2
+    400056: Doors1A
+    400058: Doors1B
+    400060: Doors2A
+    400062: Doors2B
+    400064: WallsMain1_001
+    400066: WallsMain1_MeshPart0
+    400068: WallsMain1_MeshPart1
+    400070: WallsMain1A
+    400072: WallsMain1A_MeshPart0
+    400074: WallsMain1A_MeshPart1
+    400076: WallsMain1B
+    400078: WallsMain1B_001
+    400080: WallsMain1B_002
+    400082: WallsMain2A
     2300000: Ceiling
     2300002: Ceiling_Wood_Beams
     2300004: Door_Linings
@@ -88,6 +116,19 @@ ModelImporter:
     2300048: Lanturn
     2300050: Lanturn_001
     2300052: Ceiling2
+    2300054: Doors1A
+    2300056: Doors1B
+    2300058: Doors2A
+    2300060: Doors2B
+    2300062: WallsMain1_001
+    2300064: WallsMain1_MeshPart0
+    2300066: WallsMain1_MeshPart1
+    2300068: WallsMain1A_MeshPart0
+    2300070: WallsMain1A_MeshPart1
+    2300072: WallsMain1B
+    2300074: WallsMain1B_001
+    2300076: WallsMain1B_002
+    2300078: WallsMain2A
     3300000: Ceiling
     3300002: Ceiling_Wood_Beams
     3300004: Door_Linings
@@ -115,6 +156,19 @@ ModelImporter:
     3300048: Lanturn
     3300050: Lanturn_001
     3300052: Ceiling2
+    3300054: Doors1A
+    3300056: Doors1B
+    3300058: Doors2A
+    3300060: Doors2B
+    3300062: WallsMain1_001
+    3300064: WallsMain1_MeshPart0
+    3300066: WallsMain1_MeshPart1
+    3300068: WallsMain1A_MeshPart0
+    3300070: WallsMain1A_MeshPart1
+    3300072: WallsMain1B
+    3300074: WallsMain1B_001
+    3300076: WallsMain1B_002
+    3300078: WallsMain2A
     4300000: FloorInner2
     4300002: FloorOuter
     4300004: FloorInner1
@@ -142,6 +196,19 @@ ModelImporter:
     4300048: Lanturn_001
     4300050: Lanturn
     4300052: Ceiling2
+    4300054: WallsMain1_001
+    4300056: Doors2B
+    4300058: Doors2A
+    4300060: Doors1B
+    4300062: Doors1A
+    4300064: WallsMain1_MeshPart0
+    4300066: WallsMain1_MeshPart1
+    4300068: WallsMain1B_001
+    4300070: WallsMain1B
+    4300072: WallsMain1A_MeshPart0
+    4300074: WallsMain1A_MeshPart1
+    4300076: WallsMain1B_002
+    4300078: WallsMain2A
     7400000: Default Take
     9500000: //RootNode
   materials:
