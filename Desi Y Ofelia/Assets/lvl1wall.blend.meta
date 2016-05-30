@@ -47,6 +47,12 @@ ModelImporter:
     100078: WallsMain1B_001
     100080: WallsMain1B_002
     100082: WallsMain2A
+    100084: WallsMain2B
+    100086: WallsMain2B_MeshPart0
+    100088: WallsMain2B_MeshPart1
+    100090: WallsMain2B_001
+    100092: WallsMain2B_002
+    100094: WallsMain3A
     400000: Ceiling
     400002: Ceiling_Wood_Beams
     400004: Door_Linings
@@ -89,6 +95,12 @@ ModelImporter:
     400078: WallsMain1B_001
     400080: WallsMain1B_002
     400082: WallsMain2A
+    400084: WallsMain2B
+    400086: WallsMain2B_MeshPart0
+    400088: WallsMain2B_MeshPart1
+    400090: WallsMain2B_001
+    400092: WallsMain2B_002
+    400094: WallsMain3A
     2300000: Ceiling
     2300002: Ceiling_Wood_Beams
     2300004: Door_Linings
@@ -129,6 +141,12 @@ ModelImporter:
     2300074: WallsMain1B_001
     2300076: WallsMain1B_002
     2300078: WallsMain2A
+    2300080: WallsMain2B
+    2300082: WallsMain2B_MeshPart0
+    2300084: WallsMain2B_MeshPart1
+    2300086: WallsMain2B_001
+    2300088: WallsMain2B_002
+    2300090: WallsMain3A
     3300000: Ceiling
     3300002: Ceiling_Wood_Beams
     3300004: Door_Linings
@@ -169,6 +187,12 @@ ModelImporter:
     3300074: WallsMain1B_001
     3300076: WallsMain1B_002
     3300078: WallsMain2A
+    3300080: WallsMain2B
+    3300082: WallsMain2B_MeshPart0
+    3300084: WallsMain2B_MeshPart1
+    3300086: WallsMain2B_001
+    3300088: WallsMain2B_002
+    3300090: WallsMain3A
     4300000: FloorInner2
     4300002: FloorOuter
     4300004: FloorInner1
@@ -209,6 +233,12 @@ ModelImporter:
     4300074: WallsMain1A_MeshPart1
     4300076: WallsMain1B_002
     4300078: WallsMain2A
+    4300080: WallsMain2B
+    4300082: WallsMain2B_MeshPart0
+    4300084: WallsMain2B_MeshPart1
+    4300086: WallsMain2B_002
+    4300088: WallsMain2B_001
+    4300090: WallsMain3A
     7400000: Default Take
     9500000: //RootNode
   materials:
