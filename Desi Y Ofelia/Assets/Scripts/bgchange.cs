@@ -3,12 +3,12 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class bgchange : MonoBehaviour, ISelectHandler {
+public class bgchange : MonoBehaviour, ISelectHandler, IDeselectHandler {
 
     public Texture desibg;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	    
 	}
 	
@@ -21,5 +21,11 @@ public class bgchange : MonoBehaviour, ISelectHandler {
     {
         GameObject bg = GameObject.Find("bg");
         bg.GetComponent<RawImage>().texture = desibg;
+        this.GetComponent<Image>().color = Color.white;
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        this.GetComponent<Image>().color = Color.black;
     }
 }

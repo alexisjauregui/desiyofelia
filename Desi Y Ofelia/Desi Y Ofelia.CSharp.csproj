@@ -154,7 +154,7 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRFPSCounter.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
-    <Compile Include="Assets\input.cs" />
+    <Compile Include="Assets\trailer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />

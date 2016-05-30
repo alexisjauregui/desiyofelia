@@ -14,6 +14,7 @@ public class DesiScene : NetworkBehaviour
     public Text Sign2;
     public Text Sign3;
     public Text Sign4;
+    public GameObject spawn;
     [SerializeField]
     public bool doorCollision0;
     [SerializeField]
@@ -71,6 +72,7 @@ public class DesiScene : NetworkBehaviour
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
                     Sign0.enabled = false;
+                    spawn.transform.position = new Vector3(-4, 1, -34);
                     NetworkManager.singleton.ServerChangeScene("Level 0");
                 }
             }
@@ -84,6 +86,7 @@ public class DesiScene : NetworkBehaviour
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
                     Sign1.enabled = false;
+                    spawn.transform.position = new Vector3(9, 1, -22);
                     NetworkManager.singleton.ServerChangeScene("Level 1");
                 }
             }
@@ -97,6 +100,7 @@ public class DesiScene : NetworkBehaviour
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
                 {
                     Sign2.enabled = false;
+                    spawn.transform.position = new Vector3(-5, 1, -4);
                     NetworkManager.singleton.ServerChangeScene("Level 3");
                 }
             }

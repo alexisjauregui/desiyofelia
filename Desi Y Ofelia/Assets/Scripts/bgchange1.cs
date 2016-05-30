@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class bgchange1 : MonoBehaviour, ISelectHandler {
+public class bgchange1 : MonoBehaviour, ISelectHandler, IDeselectHandler {
 
     public Texture skullbg;
 
@@ -25,5 +25,11 @@ public class bgchange1 : MonoBehaviour, ISelectHandler {
     {
         GameObject bg = GameObject.Find("bg");
         bg.GetComponent<RawImage>().texture = skullbg;
+        this.GetComponent<Image>().color = Color.white;
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        this.GetComponent<Image>().color = Color.black;
     }
 }
