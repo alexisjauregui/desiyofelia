@@ -42,8 +42,8 @@ public class levelProg : MonoBehaviour {
             lobbyLocks();
             lobbyEnd();
         }
-	
-	}
+
+    }
 
 
     /*
@@ -71,7 +71,9 @@ public class levelProg : MonoBehaviour {
             Door1 = GameObject.Find("Door1");
             Door1.transform.position = new Vector3(12.21f, 4.55f, -24.85f);
             GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
-        }
+            GameObject.Find("DoorRight1").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                                                                                transform.localRotation.eulerAngles.y-45,
+                                                                                transform.localRotation.eulerAngles.z);
 
         if(lastlevel == "Level 1")
         {
@@ -82,7 +84,11 @@ public class levelProg : MonoBehaviour {
 
             GameObject.Find("Marigold1").transform.position = new Vector3(10f,-0.8f,-22.1f);
             GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f,-0.8f,-3.7f);
-        }
+
+           GameObject.Find("DoorRight2").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                                                                             transform.localRotation.eulerAngles.y - 45,
+                                                                             transform.localRotation.eulerAngles.z);
+            }
 
     }
 }
