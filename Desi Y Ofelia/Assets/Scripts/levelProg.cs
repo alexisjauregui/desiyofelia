@@ -7,7 +7,8 @@ using System.Collections;
 */
 
 
-public class levelProg : MonoBehaviour {
+public class levelProg : MonoBehaviour
+{
     string currentLevel;
     string lastlevel;
     GameObject Moon;
@@ -26,13 +27,13 @@ public class levelProg : MonoBehaviour {
     {
         //Tracks the current and laat level
         if (currentLevel != SceneManager.GetActiveScene().name)
-        { 
+        {
             lastlevel = currentLevel;
         }
 
         currentLevel = SceneManager.GetActiveScene().name;
 
-        Debug.Log("current: "+currentLevel);
+        Debug.Log("current: " + currentLevel);
         Debug.Log("last: " + lastlevel);
 
         //Checks to see if currently in the lobby.
@@ -58,7 +59,7 @@ public class levelProg : MonoBehaviour {
             Destroy(GameObject.Find("Cover"));
             Moon = GameObject.Find("Moon");
             Moon.transform.position = new Vector3(2.47f, 23.87f, 40.98f);
-            
+
         }
 
     }
@@ -66,29 +67,29 @@ public class levelProg : MonoBehaviour {
     //Opens levels based on whether or not player finished last level
     void lobbyLocks()
     {
-        if(lastlevel == "Level 0")
+        if (lastlevel == "Level 0")
         {
             Door1 = GameObject.Find("Door1");
             Door1.transform.position = new Vector3(12.21f, 4.55f, -24.85f);
             GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
             GameObject.Find("DoorRight1").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                                                                                transform.localRotation.eulerAngles.y-45,
+                                                                                transform.localRotation.eulerAngles.y - 45,
                                                                                 transform.localRotation.eulerAngles.z);
+        }
 
-        if(lastlevel == "Level 1")
+        if (lastlevel == "Level 1")
         {
             Door1 = GameObject.Find("Door1");
             Door1.transform.position = new Vector3(12.21f, 4.55f, -24.85f);
             Door2 = GameObject.Find("Door2");
             Door2.transform.position = new Vector3(-9.75f, 4.63f, -3.35f);
 
-            GameObject.Find("Marigold1").transform.position = new Vector3(10f,-0.8f,-22.1f);
-            GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f,-0.8f,-3.7f);
+            GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
+            GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f, -0.8f, -3.7f);
 
-           GameObject.Find("DoorRight2").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                                                                             transform.localRotation.eulerAngles.y - 45,
-                                                                             transform.localRotation.eulerAngles.z);
-            }
-
+            GameObject.Find("DoorRight2").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                                                                              transform.localRotation.eulerAngles.y - 45,
+                                                                              transform.localRotation.eulerAngles.z);
+        }
     }
 }
