@@ -94,6 +94,8 @@
      <Compile Include="Assets\Scripts\Walking.cs" />
      <Compile Include="Assets\Scripts\Whistle.cs" />
      <Compile Include="Assets\Scripts\alwaysface.cs" />
+     <Compile Include="Assets\Scripts\bgchange.cs" />
+     <Compile Include="Assets\Scripts\bgchange1.cs" />
      <Compile Include="Assets\Scripts\buttonChange.cs" />
      <Compile Include="Assets\Scripts\cageSwitch.cs" />
      <Compile Include="Assets\Scripts\checkChords.cs" />
@@ -128,7 +130,7 @@
      <Compile Include="Assets\VRStandardAssets\Scripts\VRFPSCounter.cs" />
      <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
      <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
-     <Compile Include="Assets\input.cs" />
+     <Compile Include="Assets\trailer.cs" />
      <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />

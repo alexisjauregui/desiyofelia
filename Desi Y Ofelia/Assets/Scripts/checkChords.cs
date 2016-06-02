@@ -44,7 +44,7 @@ public class checkChords : NetworkBehaviour {
             if (SceneManager.GetActiveScene().name == "Level 0")
             {
                 pass = "ABYX";
-                
+
                 
             }
             else if (SceneManager.GetActiveScene().name == "Level 1")
@@ -53,20 +53,21 @@ public class checkChords : NetworkBehaviour {
 
             if (chords.Contains(pass))
             {
-                Debug.Log("Yes");
                 if (hasPlayed == false)
                 {
                     hasPlayed = true;
                     audio.Play();
                 }
                 CmdDestroy();
-
+				if (SceneManager.GetActiveScene().name == "Level 0")
+					Cmdlevel0Destroy ();
+				if (SceneManager.GetActiveScene().name == "Level 1")
+					Cmdlevel1Destroy ();
             }
 
             if (hasPlayed)
             {
                 particle.Play();
-                Debug.Log("HolllA");
             }
         }
         
@@ -79,5 +80,19 @@ public class checkChords : NetworkBehaviour {
         NetworkServer.Destroy(networkCage);
     }
 
-    
+	[Command]
+	void Cmdlevel0Destroy()
+	{
+		GameObject networkBanner = GameObject.Find ("Banner Holder(Clone)");
+		NetworkServer.Destroy(networkBanner);
+	}
+
+	[Command]
+	void Cmdlevel1Destroy()
+	{
+		GameObject networkBanner = GameObject.Find ("Banner Holder(Clone)");
+		NetworkServer.Destroy(networkBanner);
+		GameObject networkBanner1 = GameObject.Find ("Banner Holder1(Clone)");
+		NetworkServer.Destroy(networkBanner1);
+	}
 }

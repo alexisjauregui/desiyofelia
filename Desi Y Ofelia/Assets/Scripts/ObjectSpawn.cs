@@ -12,6 +12,9 @@ public class ObjectSpawn : NetworkBehaviour {
     public GameObject[] banner;
     public GameObject CageSwitch;
     public GameObject DoorSwitch;
+	public GameObject level0banner;
+	public GameObject level1banner;
+	public GameObject level1banner1;
 
 
     // Use this for initialization
@@ -29,6 +32,8 @@ public class ObjectSpawn : NetworkBehaviour {
                      banner[2].transform.position, banner[2].transform.rotation,
                      banner[3].transform.position, banner[3].transform.rotation);
         CmdswitchSpawn(CageSwitch.transform.position, CageSwitch.transform.rotation, DoorSwitch.transform.position, DoorSwitch.transform.rotation);
+		CmdLevel0Spawn(level0banner.transform.position, level0banner.transform.rotation);
+		CmdLevel1Spawn(level1banner.transform.position, level1banner.transform.rotation, level1banner1.transform.position, level1banner1.transform.rotation );
     }
 	
 	// Update is called once per frame
@@ -153,4 +158,27 @@ public class ObjectSpawn : NetworkBehaviour {
             NetworkServer.Spawn(spawnNetworkDoorSwitch);
         }
     }
+
+	[Command]
+	void CmdLevel0Spawn(Vector3 pos, Quaternion rot)
+	{
+		if (SceneManager.GetActiveScene ().name == "Level 0") 
+		{
+			GameObject Banners = (GameObject)Instantiate (Resources.Load<GameObject> ("Prefabs/Level 0/Banner Holder"), pos, rot);
+			NetworkServer.Spawn (Banners);
+		}
+	}
+
+	[Command]
+	void CmdLevel1Spawn(Vector3 pos, Quaternion rot, Vector3 pos1, Quaternion rot1)
+	{
+		if (SceneManager.GetActiveScene ().name == "Level 1") 
+		{
+			GameObject Banners = (GameObject)Instantiate (Resources.Load<GameObject> ("Prefabs/Level 1/Banner Holder"), pos, rot);
+			NetworkServer.Spawn (Banners);
+
+			GameObject Banners1 = (GameObject)Instantiate (Resources.Load<GameObject> ("Prefabs/Level 1/Banner Holder1"), pos1, rot1);
+			NetworkServer.Spawn (Banners1);
+		}
+	}
 }
