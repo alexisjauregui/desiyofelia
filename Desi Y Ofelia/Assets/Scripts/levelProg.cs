@@ -88,7 +88,7 @@ public class levelProg : MonoBehaviour
             GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f, -0.8f, -3.7f);
 
             GameObject.Find("DoorRight2").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                                                                              transform.localRotation.eulerAngles.y - 45,
+                                                                              transform.localRotation.eulerAngles.y + 45,
                                                                               transform.localRotation.eulerAngles.z);
         }
     }

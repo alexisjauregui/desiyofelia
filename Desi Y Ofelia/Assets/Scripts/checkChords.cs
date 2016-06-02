@@ -83,7 +83,7 @@ public class checkChords : NetworkBehaviour {
 	[Command]
 	void Cmdlevel0Destroy()
 	{
-		GameObject networkBanner = GameObject.Find ("Banner Holder(Clone)");
+		GameObject networkBanner = GameObject.Find ("Bannerlv0(Clone)");
 		NetworkServer.Destroy(networkBanner);
 	}
 

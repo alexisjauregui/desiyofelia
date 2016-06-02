@@ -164,7 +164,7 @@ public class ObjectSpawn : NetworkBehaviour {
 	{
 		if (SceneManager.GetActiveScene ().name == "Level 0") 
 		{
-			GameObject Banners = (GameObject)Instantiate (Resources.Load<GameObject> ("Prefabs/Level 0/Banner Holder"), pos, rot);
+			GameObject Banners = (GameObject)Instantiate (Resources.Load<GameObject> ("Prefabs/Level 0/Bannerlv0"), pos, rot);
 			NetworkServer.Spawn (Banners);
 		}
 	}

@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class BirdSwitch : MonoBehaviour {
+public class BirdSwitch : NetworkBehaviour {
     private GameObject Idol;
     public RaycastHit hit;
     public float distanceToSee;
@@ -26,10 +26,13 @@ public class BirdSwitch : MonoBehaviour {
         {
             if (seeingIdol())
             {
-               if (Input.GetButtonDown("AButton"))
-                {
-                    CmdTurnIdol();
-                }
+				if (isLocalPlayer) 
+				{
+					if (Input.GetButtonDown ("AButton")) 
+					{
+						CmdTurnIdol ();
+					}
+				}
             }
 
         }
