@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\checkChords.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ObjectSpawn.cs">
     <Files>
-      <File FileName="Assets\Scripts\ObjectSpawn.cs" Line="167" Column="104" />
+      <File FileName="Assets\Scripts\ObjectSpawn.cs" Line="167" Column="113" />
       <File FileName="Assets\Scripts\BirdSwitch.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DesiScene.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\healthbar.cs" Line="1" Column="1" />
@@ -10,7 +10,7 @@
       <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\OVR\Scripts\Util\OVRPlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\level3Chords.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\checkChords.cs" Line="86" Column="57" />
+      <File FileName="Assets\Scripts\checkChords.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OVRScreenFadeOut.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OVRScreenFadeOutCLIENT.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OfeliaScene.cs" Line="1" Column="1" />
