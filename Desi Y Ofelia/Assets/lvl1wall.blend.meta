@@ -59,6 +59,7 @@ ModelImporter:
     100102: Banners_MeshPart1
     100104: Banners_MeshPart2
     100106: Banners_MeshPart3
+    100108: Table
     400000: Ceiling
     400002: Ceiling_Wood_Beams
     400004: Door_Linings
@@ -113,6 +114,7 @@ ModelImporter:
     400102: Banners_MeshPart1
     400104: Banners_MeshPart2
     400106: Banners_MeshPart3
+    400108: Table
     2300000: Ceiling
     2300002: Ceiling_Wood_Beams
     2300004: Door_Linings
@@ -164,6 +166,7 @@ ModelImporter:
     2300096: Banners_MeshPart1
     2300098: Banners_MeshPart2
     2300100: Banners_MeshPart3
+    2300102: Table
     3300000: Ceiling
     3300002: Ceiling_Wood_Beams
     3300004: Door_Linings
@@ -215,6 +218,7 @@ ModelImporter:
     3300096: Banners_MeshPart1
     3300098: Banners_MeshPart2
     3300100: Banners_MeshPart3
+    3300102: Table
     4300000: FloorInner2
     4300002: FloorOuter
     4300004: FloorInner1
@@ -266,6 +270,7 @@ ModelImporter:
     4300096: Banners_MeshPart1
     4300098: Banners_MeshPart2
     4300100: Banners_MeshPart3
+    4300102: Table
     7400000: Default Take
     9500000: //RootNode
   materials:
