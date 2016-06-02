@@ -14,7 +14,12 @@ public class DesiScene : NetworkBehaviour
     public Text Sign2;
     public Text Sign3;
     public Text Sign4;
-    private bool ready;
+	private bool ready;
+    private bool ready0;
+	private bool ready1;
+	private bool ready3;
+	private bool ready4;
+	private bool readyf;
     //public GameObject spawn;
     [SerializeField]
     public bool doorCollision0;
@@ -38,12 +43,17 @@ public class DesiScene : NetworkBehaviour
         Sign1.enabled = false;
         Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
         Sign2.enabled = false;
-        ready = false;
+		ready = false;
+		ready0 = false;
+		ready1 = false;
+		ready3 = false;
+		ready4 = false;
+		readyf = false;
     }
 
     void OnLevelWasLoaded(int level)
     {
-        ready = false;
+		ready = false;
     }
 
     // Update is called once per frame
@@ -58,7 +68,7 @@ public class DesiScene : NetworkBehaviour
                 {
                     if (IsClose())
                     {
-                        if (!ready)
+						if (!ready)
                         {
                             GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
                             ready = true;
@@ -73,23 +83,22 @@ public class DesiScene : NetworkBehaviour
             {
                 if (IsClose())
                 {
-                    if (!ready)
+                    if (!ready0)
                     {
                         GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 0");
-                        ready = true;
+                        ready0 = true;
                     }
                 }
             }
             if (doorCollision1)
             {
-                Sign1.enabled = true;
                 if (IsClose())
                 {
                     //spawn.transform.position = new Vector3(9, 1, -22);
-                    if (!ready)
+                    if (!ready1)
                     {
                         GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 1");
-                        ready = true;
+                        ready1 = true;
                     }
                 }
             }
@@ -98,10 +107,10 @@ public class DesiScene : NetworkBehaviour
                 if (IsClose())
                 {
                     //spawn.transform.position = new Vector3(-5, 1, -4);
-                    if (!ready)
+                    if (!ready3)
                     {
                         GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 3");
-                        ready = true;
+                        ready3 = true;
                     }
                 }
             }
@@ -110,10 +119,10 @@ public class DesiScene : NetworkBehaviour
                 Debug.Log("WAIT FOR YOUR PARTNER Final");
                 if (IsClose())
                 {
-                    if (!ready)
+                    if (!readyf)
                     {
                         GetComponentInChildren<OVRScreenFadeOut>().Fade("Final");
-                        ready = true;
+                        readyf = true;
                     }
                 }
             }
@@ -134,7 +143,6 @@ public class DesiScene : NetworkBehaviour
         {
             if (HasCandle())
             {
-                Debug.Log("You are holding a candle");
                 if (doorCollision1)
                 {
                     Sign1 = GameObject.Find("Sign1").GetComponent<Text>();

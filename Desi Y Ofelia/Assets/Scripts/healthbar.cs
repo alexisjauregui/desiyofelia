@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class healthbar : NetworkBehaviour {
+public class healthbar : MonoBehaviour {
 
 	private float ini_health = 10;
     private int decrimant = 1;

@@ -1,16 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OVRScreenFadeOutCLIENT.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DesiScene.cs">
     <Files>
+      <File FileName="Assets\Scripts\healthbar.cs" Line="7" Column="39" />
       <File FileName="Assets\Scripts\levelProg.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ObjectSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectSpawn.cs" Line="35" Column="30" />
       <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\OVR\Scripts\Util\OVRPlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\level3Chords.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\checkChords.cs" Line="41" Column="1" />
+      <File FileName="Assets\Scripts\checkChords.cs" Line="29" Column="25" />
       <File FileName="Assets\Scripts\OVRScreenFadeOut.cs" Line="69" Column="3" />
-      <File FileName="Assets\Scripts\DesiScene.cs" Line="77" Column="22" />
+      <File FileName="Assets\Scripts\DesiScene.cs" Line="138" Column="33" />
       <File FileName="Assets\Scripts\OVRScreenFadeOutCLIENT.cs" Line="60" Column="36" />
+      <File FileName="Assets\Scripts\OfeliaScene.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
