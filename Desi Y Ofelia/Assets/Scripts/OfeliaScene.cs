@@ -14,6 +14,7 @@ public class OfeliaScene : NetworkBehaviour
     public Text Sign2;
     public Text Sign3;
     public Text Sign4;
+    private bool ready;
     [SerializeField]
     public bool doorCollision0;
     [SerializeField]
@@ -36,6 +37,12 @@ public class OfeliaScene : NetworkBehaviour
         Sign1.enabled = false;
         Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
         Sign2.enabled = false;
+        ready = false;
+    }
+
+    void OnLevelWasLoaded(int level)
+    {
+        ready = false;
     }
 
     // Update is called once per frame
@@ -47,16 +54,14 @@ public class OfeliaScene : NetworkBehaviour
             {
                 if (doorCollision0)
                 {
-                    Sign0.enabled = true;
-                    /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                     {
-                        Sign0.enabled = false;
-                        CmdSceneChange("Level Lobby");
-                    }*/
-                }
-                else
-                {
-                    Sign0.enabled = false;
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                            ready = true;
+                        }
+                    }
                 }
             }
         }
@@ -64,43 +69,37 @@ public class OfeliaScene : NetworkBehaviour
         {
             if (doorCollision0)
             {
-                Sign0.enabled = true;
-                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                 {
-                    Sign0.enabled = false;
-                    CmdSceneChange("Level 0");
-                }*/
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
-            else
-            {
-                Sign0.enabled = false;
-            } 
             if (doorCollision1)
             {
-                Sign1.enabled = true;
-                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                 {
-                    Sign1.enabled = false;
-                    CmdSceneChange("Level 1");
-                }*/
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
-            else
-            {
-                Sign1.enabled = false;
-            } 
             if (doorCollision2)
             {
-                Sign2.enabled = true;
-                /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                 {
-                    Sign2.enabled = false;
-                    CmdSceneChange("Level 3");
-                }*/
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
-            else
-            {
-                Sign2.enabled = false;
-            } 
             if (doorCollision3)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
@@ -123,36 +122,31 @@ public class OfeliaScene : NetworkBehaviour
             {
                 if (doorCollision1)
                 {
-                    Sign1.enabled = true;
-                    /*if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                     {
-                        Sign1.enabled = false;
-                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
-                    }*/
-                }
-                else
-                {
-                    Sign1.enabled = false;
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                            ready = true;
+                        }
+                    }
                 }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
         {
-            Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {
                 if (doorCollision2)
                 {
-                    Sign2.enabled = true;
-                   /* if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("DesiPlayer").transform.position) < 4)
+                    if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
                     {
-                        Sign2.enabled = false;
-                        CmdSceneChange("Level Lobby");
-                    }*/
-                }
-                else
-                {
-                    Sign2.enabled = false;
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                            ready = true;
+                        }
+                    }
                 }
             }
         }
@@ -191,11 +185,7 @@ public class OfeliaScene : NetworkBehaviour
             doorCollision5 = false;
     }
 
-    [ServerCallback]
-    void CmdSceneChange(string level)
-    {
-        NetworkManager.singleton.ServerChangeScene(level);
-    }
+
 
 
 

@@ -86,6 +86,8 @@
      <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
      <Compile Include="Assets\Scripts\NetworkCustom.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\OVRScreenFadeOut.cs" />
+     <Compile Include="Assets\Scripts\OVRScreenFadeOutCLIENT.cs" />
      <Compile Include="Assets\Scripts\ObjectSpawn.cs" />
      <Compile Include="Assets\Scripts\OfeliaScene.cs" />
      <Compile Include="Assets\Scripts\Restart.cs" />

@@ -14,6 +14,7 @@ public class DesiScene : NetworkBehaviour
     public Text Sign2;
     public Text Sign3;
     public Text Sign4;
+    private bool ready;
     //public GameObject spawn;
     [SerializeField]
     public bool doorCollision0;
@@ -37,93 +38,95 @@ public class DesiScene : NetworkBehaviour
         Sign1.enabled = false;
         Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
         Sign2.enabled = false;
+        ready = false;
+    }
+
+    void OnLevelWasLoaded(int level)
+    {
+        ready = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (SceneManager.GetActiveScene().name == "Level 0")
         {
+            //ready = false;
             if (HasCandle())
             {
                 if (doorCollision0)
                 {
-                    Sign0.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                    if (IsClose())
                     {
-                        Sign0.enabled = false;
-                        NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                            ready = true;
+                        }
                     }
                 }
-                else
-                {
-                    Sign0.enabled = false;
-                }
             }
-            else
-                Sign0.enabled = false;
         }
         else if (SceneManager.GetActiveScene().name == "Level Lobby")
         {
             if (doorCollision0)
             {
-                Sign0.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                if (IsClose())
                 {
-                    Sign0.enabled = false;
-    
-                    NetworkManager.singleton.ServerChangeScene("Level 0");
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 0");
+                        ready = true;
+                    }
                 }
-            }
-            else
-            {
-                Sign0.enabled = false;
             }
             if (doorCollision1)
             {
                 Sign1.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                if (IsClose())
                 {
-                    Sign1.enabled = false;
                     //spawn.transform.position = new Vector3(9, 1, -22);
-                    NetworkManager.singleton.ServerChangeScene("Level 1");
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 1");
+                        ready = true;
+                    }
                 }
-            }
-            else
-            {
-                Sign1.enabled = false;
             }
             if (doorCollision2)
             {
-                Sign2.enabled = true;
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                if (IsClose())
                 {
-                    Sign2.enabled = false;
                     //spawn.transform.position = new Vector3(-5, 1, -4);
-                    NetworkManager.singleton.ServerChangeScene("Level 3");
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 3");
+                        ready = true;
+                    }
                 }
             }
-            else
-            {
-                Sign2.enabled = false;
-            } 
             if (doorCollision3)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER Final");
-                if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
-                NetworkManager.singleton.ServerChangeScene("Final");
+                if (IsClose())
+                {
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Final");
+                        ready = true;
+                    }
+                }
             }
             else if (doorCollision4)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
-                // if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                // if (IsClose())
                 //NetworkManager.singleton.ServerChangeScene("Level 4");
             }
             else if (doorCollision5)
             {
                 Debug.Log("WAIT FOR YOUR PARTNER");
-                //if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                //if (IsClose())
                 //NetworkManager.singleton.ServerChangeScene("Level 5");
             }
         }
@@ -136,7 +139,7 @@ public class DesiScene : NetworkBehaviour
                 {
                     Sign1 = GameObject.Find("Sign1").GetComponent<Text>();
                     Sign1.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                    if (IsClose())
                     {
                         Sign1.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
@@ -156,7 +159,7 @@ public class DesiScene : NetworkBehaviour
                 if (doorCollision2)
                 {
                     Sign2.enabled = true;
-                    if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4)
+                    if (IsClose())
                     {
                         Sign2.enabled = false;
                         NetworkManager.singleton.ServerChangeScene("Level Lobby");
@@ -212,5 +215,9 @@ public class DesiScene : NetworkBehaviour
         return false;
     }
 
+    public bool IsClose()
+    {
+        return (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("OfeliaPlayer").transform.position) < 4);
+    }
 
 }
