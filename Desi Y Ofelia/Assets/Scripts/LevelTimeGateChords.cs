@@ -24,7 +24,8 @@ public class LevelTimeGateChords : NetworkBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (SceneManager.GetActiveScene().name == "Level 4")
         {
             newText = GameObject.FindGameObjectWithTag("Switch").GetComponent<Text>();
@@ -35,14 +36,27 @@ public class LevelTimeGateChords : NetworkBehaviour {
 
             if (chords.Contains("XBYX") && cage.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("New State")) //Can change chords to any combo
             {
-                cage.GetComponent<Animator>().Play("TimeGateCage");
+                CmdmoveCage();
             }
 
             if (chords.Contains("BBAX") && gate.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("New State")) //Must add condition for Gate position vector
             {
-                gate.GetComponent<Animator>().Play("TimeGate");
+                CmdmoveGate();
             }
 
         }
+
+    }
+
+    [Command]
+    void CmdmoveCage()
+    {
+        cage.GetComponent<Animator>().Play("TimeGateCage");
+    }
+
+    [Command]
+    void CmdmoveGate()
+    {
+        gate.GetComponent<Animator>().Play("TimeGate");
     }
 }

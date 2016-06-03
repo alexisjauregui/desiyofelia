@@ -70,7 +70,7 @@ public class levelProg : MonoBehaviour
     */
     void lobbyEnd()
     {
-        if (lastlevel == "Level 3")
+        if (lastlevel == "Level 4")
         {
             Destroy(GameObject.Find("Cover"));
             Moon = GameObject.Find("Moon");
