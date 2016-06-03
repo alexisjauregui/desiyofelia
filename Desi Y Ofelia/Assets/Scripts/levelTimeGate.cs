@@ -50,7 +50,7 @@ public class levelTimeGate : NetworkBehaviour
             firstdoor = GameObject.FindGameObjectWithTag("FirstDoor");
             seconddoor = GameObject.FindGameObjectWithTag("SecondDoor");
             gate = GameObject.FindGameObjectWithTag("Gate");
-
+            Debug.Log(chords);
             if (chords.Contains("XBYX") && cage.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("New State")) //Can change chords to any combo
             {
                 cage.GetComponent<Animator>().Play("TimeGateCage");

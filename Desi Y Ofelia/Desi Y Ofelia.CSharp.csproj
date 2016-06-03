@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\DoubleDoorSwitch.cs" />
     <Compile Include="Assets\Scripts\FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\Heartbeat.cs" />
+    <Compile Include="Assets\Scripts\LevelTimeGateChords.cs" />
     <Compile Include="Assets\Scripts\LocalAuthority.cs" />
     <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
     <Compile Include="Assets\Scripts\NetworkCustom.cs" />
