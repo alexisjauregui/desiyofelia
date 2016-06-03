@@ -26,8 +26,8 @@ public class Restart : NetworkBehaviour {
         {
             if (Input.GetButtonDown("AButton") && check > 50)
             {
-                Debug.Log("A is pressed");
-                NetworkManager.singleton.ServerChangeScene("Level Lobby");
+                string level = GameObject.Find("Tracker").GetComponent<levelProg>().lastlevel;
+                NetworkManager.singleton.ServerChangeScene(level);
                 //CmdSceneChange("StartMenu");
             }
             if (Input.GetButtonDown("BButton"))

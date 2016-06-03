@@ -22,11 +22,12 @@ public class BirdSwitch : NetworkBehaviour {
     // Update is called once per frame
     void Update()
     {
+       
         if (SceneManager.GetActiveScene().name == "Level 3")
         {
             if (seeingIdol())
             {
-				if (isLocalPlayer) 
+				if (GetComponentInParent<NetworkIdentity>().isLocalPlayer) 
 				{
 					if (Input.GetButtonDown ("AButton")) 
 					{

@@ -31,12 +31,6 @@ public class OfeliaScene : NetworkBehaviour
     // Use this for initialization
     void Start()
     {
-        Sign0 = GameObject.Find("Sign0").GetComponent<Text>();
-        Sign0.enabled = false;
-        Sign1 = GameObject.Find("Sign1").GetComponent<Text>();
-        Sign1.enabled = false;
-        Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
-        Sign2.enabled = false;
         ready = false;
     }
 
@@ -102,18 +96,36 @@ public class OfeliaScene : NetworkBehaviour
             }
             if (doorCollision3)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                //NetworkManager.singleton.ServerChangeScene("Level 3");
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
+                {
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
             else if (doorCollision4)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                //NetworkManager.singleton.ServerChangeScene("Level 4");
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
+                {
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
             else if (doorCollision5)
             {
-                Debug.Log("WAIT FOR YOUR PARTNER");
-                //NetworkManager.singleton.ServerChangeScene("Level 5");
+                if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
+                {
+                    if (!ready)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                        ready = true;
+                    }
+                }
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level 1")
@@ -134,6 +146,23 @@ public class OfeliaScene : NetworkBehaviour
             }
         }
         else if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
+            {
+                if (doorCollision2)
+                {
+                    if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().IsClose())
+                    {
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOutCLIENT>().Fade();
+                            ready = true;
+                        }
+                    }
+                }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 4")
         {
             if (GameObject.FindGameObjectWithTag("DesiPlayer").GetComponent<DesiScene>().HasCandle())
             {

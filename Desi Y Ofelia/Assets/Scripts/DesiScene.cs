@@ -37,12 +37,6 @@ public class DesiScene : NetworkBehaviour
     // Use this for initialization
     void Start()
     {
-        Sign0 = GameObject.Find("Sign0").GetComponent<Text>();
-        Sign0.enabled = false;
-        Sign1 = GameObject.Find("Sign1").GetComponent<Text>();
-        Sign1.enabled = false;
-        Sign2 = GameObject.Find("Sign2").GetComponent<Text>();
-        Sign2.enabled = false;
 		ready = false;
 		ready0 = false;
 		ready1 = false;
@@ -129,9 +123,12 @@ public class DesiScene : NetworkBehaviour
 				if (doorCollision1) {
 					if (IsClose ()) {
 
-                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
-                        ready = true;
-					}
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                            ready = true;
+                        }
+                    }
 				}
 			}
 		} else if (SceneManager.GetActiveScene ().name == "Level 3") 
@@ -142,9 +139,12 @@ public class DesiScene : NetworkBehaviour
 				{
 					if (IsClose ()) 
 					{
-                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
-                        ready = true;
-					}
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                            ready = true;
+                        }
+                    }
 				}
 			}
 		}
@@ -156,8 +156,11 @@ public class DesiScene : NetworkBehaviour
                 {
                     if (IsClose())
                     {
-                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
-                        ready = true;
+                        if (!ready)
+                        {
+                            GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                            ready = true;
+                        }
                     }
                 }
             }
