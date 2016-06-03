@@ -102,7 +102,7 @@ public class levelProg : MonoBehaviour
             Door2 = GameObject.Find("Door2");
             Door2.transform.position = new Vector3(-9.75f, 4.63f, -3.35f);
             Door4 = GameObject.Find("Door4");
-            Door4.transform.position = new Vector3(13.85f, 3.57f, 33f);
+            Door4.transform.position = new Vector3(11.85f, 4.57f, 8f);
 
             GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
             GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f, -0.8f, -3.7f);
@@ -123,7 +123,7 @@ public class levelProg : MonoBehaviour
             Door2 = GameObject.Find("Door2");
             Door2.transform.position = new Vector3(-9.75f, 4.63f, -3.35f);
             Door4 = GameObject.Find("Door4");
-            Door4.transform.position = new Vector3(13.85f, 3.57f, 33f);
+            Door4.transform.position = new Vector3(11.85f, 4.57f, 8f);
 
             GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
             GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f, -0.8f, -3.7f);
