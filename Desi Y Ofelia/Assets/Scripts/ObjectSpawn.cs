@@ -186,17 +186,21 @@ public class ObjectSpawn : NetworkBehaviour {
         if (SceneManager.GetActiveScene().name == "Level 4")
         {
             GameObject doorswitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/DoorSwitch"), pos0, rot0);
-            GameObject cageswitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/CageSwitch"), pos1, rot1);
-            GameObject firstdoor = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/FirstDoor"), pos2, rot2);
-            GameObject seconddoor = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/SecondDoor"), pos3, rot3);
-            GameObject Gate = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/Gate"), pos4, rot4);
-            GameObject cage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/Cage"), pos5, rot5);
-
             NetworkServer.Spawn(doorswitch);
+
+            GameObject cageswitch = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/CageSwitch"), pos1, rot1);
             NetworkServer.Spawn(cageswitch);
+
+            GameObject firstdoor = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/FirstDoor"), pos2, rot2);
             NetworkServer.Spawn(firstdoor);
+
+            GameObject seconddoor = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/SecondDoor"), pos3, rot3);
             NetworkServer.Spawn(seconddoor);
+
+            GameObject Gate = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/Gate"), pos4, rot4);
             NetworkServer.Spawn(Gate);
+
+            GameObject cage = (GameObject)Instantiate(Resources.Load<GameObject>("Prefabs/Level 4/Cage"), pos5, rot5);
             NetworkServer.Spawn(cage);
 
         }
