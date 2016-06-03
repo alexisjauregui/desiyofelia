@@ -69,7 +69,7 @@ public class levelTimeGate : NetworkBehaviour
                 {
                     if (Input.GetButtonDown("AButton"))
                     {
-                        GameObject CageSwitch = GameObject.Find("CageSwitch(Clone)");
+                        GameObject CageSwitch = GameObject.Find("CageSwitch");
                         if(seconddoor.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Closed"))
                         {
                             seconddoor.GetComponent<Animator>().Play("SecondDoorOpen");
@@ -93,7 +93,7 @@ public class levelTimeGate : NetworkBehaviour
                     if (Input.GetButtonDown("AButton"))
                     {
                         GameObject entrance = GameObject.Find("Entrance");
-                        GameObject DoorSwitch = GameObject.Find("DoorSwitch(Clone)");
+                        GameObject DoorSwitch = GameObject.Find("DoorSwitch");
                         DoorSwitch.GetComponent<Animator>().Play("TimeGateDoorSwitch");
                         entrance.GetComponent<Animator>().Play("TimeGateEntrance"); 
                     }
@@ -108,7 +108,7 @@ public class levelTimeGate : NetworkBehaviour
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
             Debug.Log(hit);
-            if (hit.collider.name == "CageSwitch(Clone)")
+            if (hit.collider.name == "CageSwitch")
             {
                 return true;
             }
@@ -125,7 +125,7 @@ public class levelTimeGate : NetworkBehaviour
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, distanceToSee))
         {
             Debug.Log(hit);
-            if (hit.collider.name == "DoorSwitch(Clone)")
+            if (hit.collider.name == "DoorSwitch")
             {
                 return true;
             }

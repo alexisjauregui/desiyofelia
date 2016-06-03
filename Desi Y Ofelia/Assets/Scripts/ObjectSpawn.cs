@@ -37,12 +37,12 @@ public class ObjectSpawn : NetworkBehaviour {
                      banner[3].transform.position, banner[3].transform.rotation);
 		CmdLevel0Spawn(level0banner.transform.position, level0banner.transform.rotation);
 		CmdLevel1Spawn(level1banner.transform.position, level1banner.transform.rotation, level1banner1.transform.position, level1banner1.transform.rotation );
-        CmdLevel4Spawn(DoorSwitch.transform.position, DoorSwitch.transform.rotation,
+        /*CmdLevel4Spawn(DoorSwitch.transform.position, DoorSwitch.transform.rotation,
                        CageSwitch.transform.position, CageSwitch.transform.rotation,
                        firstdoor.transform.position, firstdoor.transform.rotation,
                        seconddoor.transform.position, seconddoor.transform.rotation,
                        gate.transform.position, gate.transform.rotation,
-                       cage1.transform.position, cage1.transform.rotation);
+                       cage1.transform.position, cage1.transform.rotation);*/
         
     }
 	
