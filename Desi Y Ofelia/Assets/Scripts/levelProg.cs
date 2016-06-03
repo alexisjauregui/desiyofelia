@@ -14,6 +14,7 @@ public class levelProg : MonoBehaviour
     GameObject Moon;
     GameObject Door1;
     GameObject Door2;
+    GameObject Door4;
     GameObject Marigold1;
     GameObject Marigold2;
 
@@ -83,13 +84,20 @@ public class levelProg : MonoBehaviour
             Door1.transform.position = new Vector3(12.21f, 4.55f, -24.85f);
             Door2 = GameObject.Find("Door2");
             Door2.transform.position = new Vector3(-9.75f, 4.63f, -3.35f);
+            Door4 = GameObject.Find("Door4");
+            Door4.transform.position = new Vector3(13.85f, 3.57f, 33f);
 
             GameObject.Find("Marigold1").transform.position = new Vector3(10f, -0.8f, -22.1f);
             GameObject.Find("Marigold2").transform.position = new Vector3(-6.4f, -0.8f, -3.7f);
+            GameObject.Find("Marigold3").transform.position = new Vector3(10f, -0.8f, 7.72f);
 
             GameObject.Find("DoorRight2").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
                                                                               transform.localRotation.eulerAngles.y + 45,
                                                                               transform.localRotation.eulerAngles.z);
+
+            GameObject.Find("DoorRight3").transform.rotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                                                                             transform.localRotation.eulerAngles.y - 45,
+                                                                             transform.localRotation.eulerAngles.z);
         }
     }
 }

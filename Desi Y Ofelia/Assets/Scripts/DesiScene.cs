@@ -106,11 +106,20 @@ public class DesiScene : NetworkBehaviour
 						readyf = true;
 					}
 				}
-			} else if (doorCollision4) {
-				Debug.Log ("WAIT FOR YOUR PARTNER");
-				// if (IsClose())
-				//NetworkManager.singleton.ServerChangeScene("Level 4");
-			} else if (doorCollision5) {
+			}
+            if (doorCollision4)
+            {
+                if (IsClose())
+                {
+                    //spawn.transform.position = new Vector3(-5, 1, -4);
+                    if (!ready4)
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level 4");
+                        ready4 = true;
+                    }
+                }
+            }
+            else if (doorCollision5) {
 				Debug.Log ("WAIT FOR YOUR PARTNER");
 				//if (IsClose())
 				//NetworkManager.singleton.ServerChangeScene("Level 5");
@@ -120,7 +129,8 @@ public class DesiScene : NetworkBehaviour
 				if (doorCollision1) {
 					if (IsClose ()) {
 
-						NetworkManager.singleton.ServerChangeScene ("Level Lobby");
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                        ready = true;
 					}
 				}
 			}
@@ -132,11 +142,26 @@ public class DesiScene : NetworkBehaviour
 				{
 					if (IsClose ()) 
 					{
-						NetworkManager.singleton.ServerChangeScene ("Level Lobby");
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                        ready = true;
 					}
 				}
 			}
 		}
+        else if (SceneManager.GetActiveScene().name == "Level 4")
+        {
+            if (HasCandle())
+            {
+                if (doorCollision4)
+                {
+                    if (IsClose())
+                    {
+                        GetComponentInChildren<OVRScreenFadeOut>().Fade("Level Lobby");
+                        ready = true;
+                    }
+                }
+            }
+        }
 
     }
 
