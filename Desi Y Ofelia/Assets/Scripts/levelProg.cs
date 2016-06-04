@@ -72,7 +72,7 @@ public class levelProg : MonoBehaviour
     {
         if (lastlevel == "Level 3")
         {
-            Destroy(GameObject.Find("Cover"));
+            GameObject.Find("Cover").transform.position = new Vector3(-1000f, 1000f, 1000f) ;
             Moon = GameObject.Find("Moon");
             Moon.transform.position = new Vector3(2.47f, 23.87f, 40.98f);
 
