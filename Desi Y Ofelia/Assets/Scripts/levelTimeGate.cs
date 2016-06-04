@@ -64,7 +64,6 @@ public class levelTimeGate : NetworkBehaviour
 
             if (seeingCageSwitch())
             {
-                Debug.Log("lever");
                 if (isLocalPlayer)
                 {
                     if (Input.GetButtonDown("AButton"))
